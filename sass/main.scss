@@ -8,13 +8,13 @@
 
 html {
 	font-size: 10px;
+	scroll-behavior: smooth;
 }
 
 body {
 	font-family: 'Montserrat', sans-serif;
 	color: $main-dark;
 	background-color: $main-bright;
-	
 }
 
 .wrapper {
@@ -33,9 +33,9 @@ body {
 
 .hamburger {
 	position: fixed;
-	top: 10px;
-	right: 10px;
-	padding: 20px;
+	top: 30px;
+	right: 20px;
+	padding: 10px;
 	z-index: 100;
 }
 
@@ -47,11 +47,11 @@ body {
 	align-items: center;
 	height: 100vh;
 	width: 100vw;
-	transform: translateX(100%);
+	transform: translateX(200%);
 	background-image: $main-gradient;
 	list-style: none;
 	z-index: 10;
-	transition: transform .3s;
+	transition: transform 0.3s;
 	li {
 		padding: 25px;
 		text-align: center;
@@ -77,16 +77,29 @@ body {
 // HEADER
 
 .header {
+	position: relative;
 	height: 100vh;
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
-	
+	background-image: $main-gradient;
+	z-index: -11;
+	animation: showup 2s;
+
+
+	&__bgc-gradient {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 93vw;
+		background-color: $main-bright;
+		z-index: -10;
+	}
 
 	&__heading {
-		
 		margin-top: 3vh;
-		margin-left: 4vw;
+		margin-left: 8vw;
 
 		&--name {
 			font-size: 2.2rem;
@@ -100,15 +113,18 @@ body {
 		}
 		&--company {
 			margin-left: 40px;
-			font-size: 2rem;
+			font-size: 2em;
 			font-weight: 400;
 		}
 	}
 
+	&__profile {
+		display: none;
+	}
+
 	&__img {
-		display: flex;
-		justify-content: center;
-		margin-top: 3vh;
+		text-align: center;
+		margin-top: 5vh;
 		width: 100%;
 
 		img {
@@ -118,13 +134,13 @@ body {
 	}
 	&__social-media {
 		position: absolute;
-		top: 70px;
-		right: 32px;
+		top: 80px;
+		right: 27px;
 		display: flex;
 		flex-direction: column;
 		font-size: 2.5rem;
 		a {
-			padding: 5px;
+			padding: 10px;
 			color: $main-dark;
 		}
 	}
@@ -142,19 +158,258 @@ body {
 		}
 
 		&-text {
-			padding: 3vh 10vw;
+			margin: auto 10px;
 			font-size: 1.2rem;
+			letter-spacing: 1px;
+		}
+	}
+}
+
+// MAIN
+main {
+	height: 100vh;
+}
+
+
+
+// MEDIA
+// Small
+@media (min-width: 576px) {
+	.header {
+		&__bgc-gradient {
+			height: 74vw;
+		}
+		&__heading {
+			&--name {
+				font-size: 3rem;
+			}
+			&--underline {
+				width: 280px;
+			}
+			&--company {
+				font-size: 2.5rem;
+			}
+		}
+		&__img {
+			img {
+				width: 70%;
+			}
+		}
+		&__textbox {
+			&-title {
+				font-size: 2.5rem;
+			}
+
+			&-text {
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
+
+// MEDIUM
+@media (min-width: 768px) {
+	.hamburger {
+		top: 30px;
+		right: 35px;
+	}
+	.header {
+		&__bgc-gradient {
+			height: 67vw;
+		}
+		&__img {
+			img {
+				width: 60%;
+			}
+		}
+		&__social-media {
+			top: 100px;
+			right: 40px;
+			font-size: 3rem;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.hamburger {
+		display: none;
+	}
+	.nav {
+		&__desktop {
+			position: fixed;
+			width: 100%;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			list-style: none;
+			line-height: 50px;
+			background-color: $main-bright;
+		li {
+				margin: 0 40px;
+
+				a {
+					padding: 5px 10px;
+					font-size: 1.5rem;
+					font-weight: bold;
+					text-transform: uppercase;
+					text-decoration: none;
+					color: $main-dark;
+					transition: color 0.3s, background-color 0.3s;
+				}
+
+				a:hover {
+					color: $main-bright;
+					background-color: $main-dark;
+				}
+			}
+		}
+		&__underline {
+			position: absolute;
+			top: 50px;
+			left: 15vw;
+			right: 15vw;
+			height: 2px;
+			background-color: $main-dark;
+		}
+	}
+	.header {
+		&__bgc-gradient {
+			height: 75vh;
+		}
+		&__heading {
+			position: absolute;
+			top: 12vh;
+			right: 60vw;
+			&--name {
+				margin-bottom: 10px;
+			}
+			&--underline {
+				display: none;
+			}
+		}
+		&__profile {
+			position: absolute;
+			top: 17vh;
+			left: 60vw;
+			display: inline;
+			font-size: 3rem;
+			font-weight: 400;
 		}
 
+		&__social-media {
+			position: absolute;
+			top: 85vh;
+			left: 63vw;
+			flex-direction: row;
+			font-size: 4rem;
+			a {
+				margin: auto 30px;
+				color: $main-bright;
+				transition: scale .3s;
+			}
+			a:hover {
+				scale: 1.5;
+			}
+		}
+		&__img {
+			img {
+				position: absolute;
+				bottom: 15vh;
+				right: 55vw;
+				width: 400px;
+			}
+		}
+		&__lines {
+			&--horizontal {
+				position: absolute;
+				top: 250px;
+				left: 50%;
+				transform: translateX(-50%);
+				height: 1px;
+				width: 85%;
+				background-color: $main-dark;
+				animation: lines-horizontal 1s;
+			}
+			&--vertical-dark {
+				position: absolute;
+				top: 130px;
+				left: 50vw;
+				height: 600px;
+				width: 1px;
+				background-color: $main-dark;
+				animation: lines-vertical-dark 1s;
+			}
+			&--vertical-bright {
+				position: absolute;
+				bottom: 0;
+				left: 50vw;
+				height: 25vh;
+				width: 1px;
+				background-color: $main-bright;
+				animation: lines-vertical-bright 1s;
+			}
+		}
+		&__textbox {
+			position: absolute;
+			top: 300px;
+			left: 55vw;
+			right: 7vw;
+			max-width: 500px;
+			color: $main-dark;
+
+			&-title {
+				text-transform: uppercase;
+			}
+
+			&-text {
+				margin-top: 15px;
+				font-size: 1.8rem;
+			}
+		}
 	}
-	&__bgc {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		height: 50vh;
-		background-image: $main-gradient;
-		z-index: -10;
-		
+}
+
+@media (min-width: 1200px) {
+	.header {
+		&__img {
+			img {
+				bottom: 10vh;
+				width: 450px;
+			}
+		}
+	}
+
+}
+
+// ANIMATIONS
+@keyframes showup {
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+@keyframes lines-horizontal {
+	from {
+		left: -100%;
+	}
+	to{
+		left: 50%;
+	}
+}
+@keyframes lines-vertical-dark {
+	from {
+		top: -730px;
+	}
+	to{
+		left: 50%;
+	}
+}
+@keyframes lines-vertical-bright {
+	from {
+		bottom: -840px;
+	}
+	to{
+		left: 50%;
 	}
 }
