@@ -17,17 +17,11 @@ body {
 	background-color: $main-bright;
 }
 
-.wrapper {
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1200px;
-}
-.underline {
-	margin: 10px;
-	width: 100px;
-	height: 2px;
-	background-color: $main-bright;
-}
+// .wrapper {
+// 	margin: 0 auto;
+// 	width: 100%;
+// 	max-width: 1200px;
+// }
 
 // NAV MOBILE
 
@@ -78,60 +72,78 @@ body {
 
 .header {
 	position: relative;
-	height: 100vh;
-	width: 100vw;
 	display: flex;
 	flex-direction: column;
-	background-image: $main-gradient;
-	z-index: -11;
 	animation: showup 2s;
 
-
-	&__bgc-gradient {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		height: 93vw;
-		background-color: $main-bright;
-		z-index: -10;
-	}
-
 	&__heading {
-		margin-top: 3vh;
-		margin-left: 8vw;
+		margin-top: 5%;
+		margin-left: 5%;
+		width:65%;
+		text-align: center;
 
 		&--name {
 			font-size: 2.2rem;
 			font-weight: 400;
 		}
-		&--underline {
-			margin: 5px 10px;
+		&--name::after {
+			content: '';
+			display: block;
+			margin: auto;
 			height: 1px;
-			width: 200px;
+			width: 80%;
 			background-color: $main-dark;
 		}
 		&--company {
-			margin-left: 40px;
-			font-size: 2em;
+			font-size: 2rem;
 			font-weight: 400;
 		}
 	}
-
-	&__profile {
-		display: none;
-	}
-
 	&__img {
 		text-align: center;
-		margin-top: 5vh;
-		width: 100%;
+		margin: 10% auto 5%;
 
 		img {
-			width: 80%;
+			height: 50%;
+			max-width: 95%;
 			border-radius: 50%;
 		}
 	}
+
+	&__textbox {
+		margin-bottom: 5%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		color: $main-bright;
+		width: 100%;
+
+		&--profile {
+			display: none;
+		}
+		&--title {
+			font-size: 2rem;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		&--title::after {
+			content: '';
+			display: block;
+			margin: 10px;
+			width: 100px;
+			height: 2px;
+			background-color: $main-bright;
+		}
+
+		&--text {
+			margin: 10px 5%;
+			font-size: 1.2rem;
+			letter-spacing: 1px;
+		}
+	}
+
+	
 	&__social-media {
 		position: absolute;
 		top: 80px;
@@ -144,24 +156,13 @@ body {
 			color: $main-dark;
 		}
 	}
-	&__textbox {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		margin-top: 3vh;
-		color: $main-bright;
-
-		&-title {
-			text-transform: uppercase;
-		}
-
-		&-text {
-			margin: auto 10px;
-			font-size: 1.2rem;
-			letter-spacing: 1px;
-		}
+	&__gradient {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 50%;
+		background-image: $main-gradient;
+		z-index: -10;
 	}
 }
 
@@ -170,15 +171,10 @@ main {
 	height: 100vh;
 }
 
-
-
 // MEDIA
 // Small
 @media (min-width: 576px) {
 	.header {
-		&__bgc-gradient {
-			height: 74vw;
-		}
 		&__heading {
 			&--name {
 				font-size: 3rem;
@@ -190,17 +186,13 @@ main {
 				font-size: 2.5rem;
 			}
 		}
-		&__img {
-			img {
-				width: 70%;
-			}
-		}
+
 		&__textbox {
-			&-title {
+			&--title {
 				font-size: 2.5rem;
 			}
 
-			&-text {
+			&--text {
 				font-size: 1.8rem;
 			}
 		}
@@ -214,14 +206,6 @@ main {
 		right: 35px;
 	}
 	.header {
-		&__bgc-gradient {
-			height: 67vw;
-		}
-		&__img {
-			img {
-				width: 60%;
-			}
-		}
 		&__social-media {
 			top: 100px;
 			right: 40px;
@@ -243,11 +227,12 @@ main {
 			list-style: none;
 			line-height: 50px;
 			background-color: $main-bright;
-		li {
-				margin: 0 40px;
+			z-index: 100;
+			li {
+				margin: 0 30px;
 
 				a {
-					padding: 5px 10px;
+					padding: 10px 25px;
 					font-size: 1.5rem;
 					font-weight: bold;
 					text-transform: uppercase;
@@ -262,78 +247,108 @@ main {
 				}
 			}
 		}
-		&__underline {
+		&__desktop::after {
+			content: '';
 			position: absolute;
 			top: 50px;
-			left: 15vw;
-			right: 15vw;
+			left: 15%;
+			right: 15%;
 			height: 2px;
 			background-color: $main-dark;
 		}
 	}
 	.header {
-		&__bgc-gradient {
-			height: 75vh;
-		}
+		height: 100vh;
+		flex-wrap: wrap;
 		&__heading {
-			position: absolute;
-			top: 12vh;
-			right: 60vw;
+			margin: 15vh 0 0;
+			padding-left: 5%;
+			width: 50%;
+			height: 20%;
 			&--name {
 				margin-bottom: 10px;
 			}
-			&--underline {
+			&--name::after{
 				display: none;
 			}
+			&--company::after{
+				content: '';
+				display: block;
+				margin: 5vh 5vw;
+				width: 80vw;
+				height: 1px;
+				background-color: $main-dark;
+				animation: lines-horizontal 1s;
+			}
 		}
-		&__profile {
-			position: absolute;
-			top: 17vh;
-			left: 60vw;
-			display: inline;
-			font-size: 3rem;
-			font-weight: 400;
+
+		&__img {
+			margin: 0;
+			padding-left: 5%;
+			width: 50%;
+			img {
+			height: 60vh;
+			}
+		}
+
+		&__textbox {
+			margin-top: 20vh;
+			padding-right: 5%;
+			width: 50%;
+			color: $main-dark;
+			background-image: none;
+
+			&--profile {
+				display: inline-block;
+				font-size: 3rem;
+				font-weight: 400;
+			}
+			&--title {
+				margin-top: 15%;
+			}
+			&--title::after {
+				background-color: $main-dark;
+			}
+
+			&--text {
+				max-width: 80%;
+				font-size: 1.8rem;
+				background-color: $main-bright;
+				border-radius: 8px;
+			}
 		}
 
 		&__social-media {
 			position: absolute;
-			top: 85vh;
-			left: 63vw;
+			top: 83%;
+			right: 5%;
 			flex-direction: row;
 			font-size: 4rem;
 			a {
-				margin: auto 30px;
+				margin: auto 20px;
 				color: $main-bright;
-				transition: scale .3s;
+				transition: scale 0.3s;
 			}
 			a:hover {
-				scale: 1.5;
+				scale: 1.2;
 			}
 		}
-		&__img {
-			img {
-				position: absolute;
-				bottom: 15vh;
-				right: 55vw;
-				width: 400px;
-			}
+		
+		&__gradient {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 25%;
+			background-image: $main-gradient;
+			z-index: -10;
 		}
 		&__lines {
-			&--horizontal {
-				position: absolute;
-				top: 250px;
-				left: 50%;
-				transform: translateX(-50%);
-				height: 1px;
-				width: 85%;
-				background-color: $main-dark;
-				animation: lines-horizontal 1s;
-			}
+			
 			&--vertical-dark {
 				position: absolute;
-				top: 130px;
+				bottom: 25vh;
 				left: 50vw;
-				height: 600px;
+				height: 55vh;
 				width: 1px;
 				background-color: $main-dark;
 				animation: lines-vertical-dark 1s;
@@ -348,68 +363,43 @@ main {
 				animation: lines-vertical-bright 1s;
 			}
 		}
-		&__textbox {
-			position: absolute;
-			top: 300px;
-			left: 55vw;
-			right: 7vw;
-			max-width: 500px;
-			color: $main-dark;
-
-			&-title {
-				text-transform: uppercase;
-			}
-
-			&-text {
-				margin-top: 15px;
-				font-size: 1.8rem;
-			}
-		}
 	}
 }
 
-@media (min-width: 1200px) {
-	.header {
-		&__img {
-			img {
-				bottom: 10vh;
-				width: 450px;
-			}
-		}
-	}
+// @media (min-width: 1200px) {
 
-}
+// }
 
 // ANIMATIONS
-@keyframes showup {
-	from{
-		opacity: 0;
-	}
-	to{
-		opacity: 1;
-	}
-}
-@keyframes lines-horizontal {
-	from {
-		left: -100%;
-	}
-	to{
-		left: 50%;
-	}
-}
-@keyframes lines-vertical-dark {
-	from {
-		top: -730px;
-	}
-	to{
-		left: 50%;
-	}
-}
-@keyframes lines-vertical-bright {
-	from {
-		bottom: -840px;
-	}
-	to{
-		left: 50%;
-	}
-}
+// @keyframes showup {
+// 	from{
+// 		opacity: 0;
+// 	}
+// 	to{
+// 		opacity: 1;
+// 	}
+// }
+// @keyframes lines-horizontal {
+// 	from {
+// 		left: -100%;
+// 	}
+// 	to{
+// 		left: 50%;
+// 	}
+// }
+// @keyframes lines-vertical-dark {
+// 	from {
+// 		top: -730px;
+// 	}
+// 	to{
+// 		left: 50%;
+// 	}
+// }
+// @keyframes lines-vertical-bright {
+// 	from {
+// 		bottom: -840px;
+// 	}
+// 	to{
+// 		left: 50%;
+// 	}
+// }
