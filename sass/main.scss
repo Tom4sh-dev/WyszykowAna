@@ -361,35 +361,35 @@ main {
 // }
 
 // ANIMATIONS
-// @keyframes showup {
-// 	from{
-// 		opacity: 0;
-// 	}
-// 	to{
-// 		opacity: 1;
-// 	}
-// }
-// @keyframes lines-horizontal {
-// 	from {
-// 		left: -100%;
-// 	}
-// 	to{
-// 		left: 50%;
-// 	}
-// }
-// @keyframes lines-vertical-dark {
-// 	from {
-// 		top: -730px;
-// 	}
-// 	to{
-// 		left: 50%;
-// 	}
-// }
-// @keyframes lines-vertical-bright {
-// 	from {
-// 		bottom: -840px;
-// 	}
-// 	to{
-// 		left: 50%;
-// 	}
-// }
+@keyframes showup {
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+@keyframes lines-horizontal {
+	from {
+		left: -100%;
+	}
+	to{
+		left: 50%;
+	}
+}
+@keyframes lines-vertical-dark {
+	from {
+		top: -730px;
+	}
+	to{
+		left: 50%;
+	}
+}
+@keyframes lines-vertical-bright {
+	from {
+		bottom: -840px;
+	}
+	to{
+		left: 50%;
+	}
+}
