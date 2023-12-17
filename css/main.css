@@ -59,7 +59,6 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  animation: showup 2s;
 }
 .header__heading {
   margin-top: 5%;
@@ -88,8 +87,7 @@ body {
   margin: 10% auto 5%;
 }
 .header__img img {
-  height: 50%;
-  max-width: 95%;
+  width: 95%;
   border-radius: 50%;
 }
 .header__textbox {
@@ -238,6 +236,7 @@ main {
     width: 50%;
   }
   .header__img img {
+    width: auto;
     height: 60vh;
   }
   .header__textbox {
