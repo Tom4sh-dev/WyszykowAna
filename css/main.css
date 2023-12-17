@@ -54,14 +54,14 @@ body {
 }
 .header__heading {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 5%;
   width: 100%;
   text-align: center;
 }
 .header__heading--logo img {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
 }
 .header__heading--branding .name {
   font-size: 2rem;
@@ -80,8 +80,6 @@ body {
   font-weight: 400;
 }
 .header__heading .hamburger {
-  top: 20px;
-  padding: 10px;
   z-index: 100;
 }
 .header__img {
