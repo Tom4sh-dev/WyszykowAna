@@ -15,14 +15,6 @@ body {
   background-color: #fafafa;
 }
 
-.hamburger {
-  position: fixed;
-  top: 30px;
-  right: 20px;
-  padding: 10px;
-  z-index: 100;
-}
-
 .nav__mobile {
   position: fixed;
   display: flex;
@@ -61,16 +53,21 @@ body {
   flex-direction: column;
 }
 .header__heading {
-  margin-top: 5%;
-  margin-left: 5%;
-  width: 65%;
+  display: flex;
+  justify-content: space-around;
+  padding: 5%;
+  width: 100%;
   text-align: center;
 }
-.header__heading--name {
-  font-size: 2.2rem;
+.header__heading--logo img {
+  height: 50px;
+  width: 50px;
+}
+.header__heading--branding .name {
+  font-size: 2rem;
   font-weight: 400;
 }
-.header__heading--name::after {
+.header__heading--branding .name::after {
   content: "";
   display: block;
   margin: auto;
@@ -78,9 +75,14 @@ body {
   width: 80%;
   background-color: #4f4f4f;
 }
-.header__heading--company {
-  font-size: 2rem;
+.header__heading--branding .company {
+  font-size: 1.8rem;
   font-weight: 400;
+}
+.header__heading .hamburger {
+  top: 20px;
+  padding: 10px;
+  z-index: 100;
 }
 .header__img {
   text-align: center;

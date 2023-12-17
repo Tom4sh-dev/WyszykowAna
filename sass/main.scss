@@ -25,13 +25,13 @@ body {
 
 // NAV MOBILE
 
-.hamburger {
-	position: fixed;
-	top: 30px;
-	right: 20px;
-	padding: 10px;
-	z-index: 100;
-}
+// .hamburger {
+// 	position: fixed;
+// 	top: 30px;
+// 	right: 20px;
+// 	padding: 10px;
+// 	z-index: 100;
+// }
 
 .nav__mobile {
 	position: fixed;
@@ -76,26 +76,44 @@ body {
 	flex-direction: column;
 
 	&__heading {
-		margin-top: 5%;
-		margin-left: 5%;
-		width: 65%;
+		display: flex;
+		justify-content: space-around;
+		padding: 5%;
+		// margin-top: 5%;
+		// margin-left: 5%;
+		width: 100%;
 		text-align: center;
 
-		&--name {
-			font-size: 2.2rem;
-			font-weight: 400;
+		&--logo {
+			img {
+				height: 50px;
+				width: 50px;
+			}
 		}
-		&--name::after {
-			content: '';
-			display: block;
-			margin: auto;
-			height: 1px;
-			width: 80%;
-			background-color: $main-dark;
+
+		&--branding {
+			.name {
+				font-size: 2rem;
+				font-weight: 400;
+			}
+			.name::after {
+				content: '';
+				display: block;
+				margin: auto;
+				height: 1px;
+				width: 80%;
+				background-color: $main-dark;
+			}
+			.company {
+				font-size: 1.8rem;
+				font-weight: 400;
+			}
 		}
-		&--company {
-			font-size: 2rem;
-			font-weight: 400;
+
+		.hamburger {
+			top: 20px;
+			padding: 10px;
+			z-index: 100;
 		}
 	}
 	&__img {
@@ -201,7 +219,7 @@ main {
 
 // MEDIUM
 // @media (min-width: 768px) {
-	
+
 // }
 @media (min-width: 992px) {
 	.hamburger {
@@ -361,10 +379,10 @@ main {
 
 // ANIMATIONS
 @keyframes showup {
-	from{
+	from {
 		opacity: 0;
 	}
-	to{
+	to {
 		opacity: 1;
 	}
 }
@@ -372,7 +390,7 @@ main {
 	from {
 		left: -100%;
 	}
-	to{
+	to {
 		left: 50%;
 	}
 }
@@ -380,7 +398,7 @@ main {
 	from {
 		top: -730px;
 	}
-	to{
+	to {
 		left: 50%;
 	}
 }
@@ -388,7 +406,7 @@ main {
 	from {
 		bottom: -840px;
 	}
-	to{
+	to {
 		left: 50%;
 	}
 }
