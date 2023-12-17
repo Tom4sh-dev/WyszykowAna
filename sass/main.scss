@@ -330,12 +330,13 @@ main {
 
 		&__img {
 			margin: 0;
-			padding: 5% 0 5% 5%;
+			margin-bottom: 0;
+			padding: 5% 0 0 5%;
 			width: 50%;
 			height: 75%;
 			img {
 				width: auto;
-			    height: 110%;
+			    height: 95%;
 			}
 		}
 

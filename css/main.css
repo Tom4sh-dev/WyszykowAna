@@ -257,13 +257,14 @@ main {
   }
   .header__img {
     margin: 0;
-    padding: 5% 0 5% 5%;
+    margin-bottom: 0;
+    padding: 5% 0 0 5%;
     width: 50%;
     height: 75%;
   }
   .header__img img {
     width: auto;
-    height: 110%;
+    height: 95%;
   }
   .header__textbox {
     padding: 20vh 5% 0 0;
