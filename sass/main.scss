@@ -303,6 +303,7 @@ main {
 			}
 
 			&--text {
+				font-size: 2rem;
 				background-color: $main-bright;
 				border-radius: 8px;
 			}
@@ -311,9 +312,9 @@ main {
 		&__textbox::after {
 			content: '';
 			position: absolute;
-			bottom: 25vh;
-			left: 50vw;
-			height: 55vh;
+			bottom: 25%;
+			left: 50%;
+			height: 55%;
 			width: 1px;
 			background-color: $main-dark;
 			animation: lines-vertical-dark 1s;
@@ -322,15 +323,14 @@ main {
 			content: '';
 			position: absolute;
 			bottom: 0;
-			left: 50vw;
-			height: 25vh;
+			left: 50%;
+			height: 25%;
 			width: 1px;
 			background-color: $main-bright;
 			animation: lines-vertical-bright 1s;
 		}
 
 		&__social-media {
-			position: absolute;
 			top: 83%;
 			right: 5%;
 			flex-direction: row;

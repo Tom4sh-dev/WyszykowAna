@@ -259,15 +259,16 @@ main {
     background-color: #4f4f4f;
   }
   .header__textbox--text {
+    font-size: 2rem;
     background-color: #fafafa;
     border-radius: 8px;
   }
   .header__textbox::after {
     content: "";
     position: absolute;
-    bottom: 25vh;
-    left: 50vw;
-    height: 55vh;
+    bottom: 25%;
+    left: 50%;
+    height: 55%;
     width: 1px;
     background-color: #4f4f4f;
     animation: lines-vertical-dark 1s;
@@ -276,14 +277,13 @@ main {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 50vw;
-    height: 25vh;
+    left: 50%;
+    height: 25%;
     width: 1px;
     background-color: #fafafa;
     animation: lines-vertical-bright 1s;
   }
   .header__social-media {
-    position: absolute;
     top: 83%;
     right: 5%;
     flex-direction: row;
