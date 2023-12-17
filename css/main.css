@@ -84,7 +84,7 @@ body {
 }
 .header__img {
   text-align: center;
-  margin: 10% auto 5%;
+  margin-bottom: 5%;
 }
 .header__img img {
   width: 95%;
