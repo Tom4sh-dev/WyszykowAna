@@ -25,13 +25,7 @@ body {
 
 // NAV MOBILE
 
-// .hamburger {
-// 	position: fixed;
-// 	top: 30px;
-// 	right: 20px;
-// 	padding: 10px;
-// 	z-index: 100;
-// }
+
 
 .nav__mobile {
 	position: fixed;
@@ -40,8 +34,8 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	width: 100vw;
-	transform: translateX(200%);
+	width: 100%;
+	transform: translateX(100%);
 	background-image: $main-gradient;
 	list-style: none;
 	z-index: 10;
@@ -115,7 +109,7 @@ body {
 	}
 	&__img {
 		text-align: center;
-		margin-bottom:5%;
+		margin-bottom: 5%;
 		
 		img {
 			width: 85%;
@@ -288,24 +282,14 @@ main {
 				}
 			}
 		}
-		// &__desktop::after {
-		// 	content: '';
-		// 	position: absolute;
-		// 	top: 50px;
-		// 	left: 15%;
-		// 	right: 15%;
-		// 	height: 2px;
-		// 	background-color: $main-dark;
-		// }
 	}
 	.header {
 		height: 100vh;
 		flex-wrap: wrap;
 		&__heading {
-			margin: 18vh 0 0;
-			padding-left: 5%;
+			padding: 25vh 0 0 5%;
 			width: 50%;
-			height: 20%;
+			height: 25%;
 			&--logo {
 				position: fixed;
 				top: 15px;
@@ -332,7 +316,7 @@ main {
 				.company::after {
 					content: '';
 					display: block;
-					margin: 5vh 5vw;
+					margin: 2vh 5vw;
 					width: 80vw;
 					height: 1px;
 					background-color: $main-dark;
@@ -346,18 +330,19 @@ main {
 
 		&__img {
 			margin: 0;
-			padding-left: 5%;
+			padding: 5% 0 5% 5%;
 			width: 50%;
+			height: 75%;
 			img {
 				width: auto;
-				height: 60vh;
+			    height: 110%;
 			}
 		}
 
 		&__textbox {
-			margin-top: 20vh;
-			padding-right: 5%;
+			padding: 20vh 5% 0 0;
 			width: 50%;
+			height: 100%;
 			color: $main-dark;
 			background-image: none;
 
@@ -367,16 +352,18 @@ main {
 				font-weight: 400;
 			}
 			&--title {
-				margin-top: 15%;
+				display: none;
 			}
-			&--title::after {
-				background-color: $main-dark;
-			}
+			// &--title::after {
+			// 	background-color: $main-dark;
+			// }
 
 			&--text {
-				font-size: 2rem;
+				margin-top: 20%;
+				font-size: 1.8rem;
 				background-color: $main-bright;
 				border-radius: 8px;
+				z-index: 100;
 			}
 		}
 
