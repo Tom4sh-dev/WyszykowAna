@@ -112,20 +112,20 @@ body {
 .header__textbox--title::after {
   content: "";
   display: block;
-  margin: 10px;
+  margin: 10px auto 20px;
   width: 100px;
   height: 2px;
   background-color: #fafafa;
 }
 .header__textbox--text {
-  margin: 10px 5%;
+  width: 85%;
   font-size: 1.2rem;
   letter-spacing: 1px;
 }
 .header__social-media {
   position: absolute;
   top: 80px;
-  right: 27px;
+  right: 26px;
   display: flex;
   flex-direction: column;
   font-size: 2.5rem;
@@ -163,15 +163,7 @@ main {
   .header__textbox--text {
     font-size: 1.8rem;
   }
-}
-@media (min-width: 768px) {
-  .hamburger {
-    top: 30px;
-    right: 35px;
-  }
   .header__social-media {
-    top: 100px;
-    right: 40px;
     font-size: 3rem;
   }
 }
@@ -267,8 +259,6 @@ main {
     background-color: #4f4f4f;
   }
   .header__textbox--text {
-    max-width: 80%;
-    font-size: 1.8rem;
     background-color: #fafafa;
     border-radius: 8px;
   }
