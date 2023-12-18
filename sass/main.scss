@@ -318,14 +318,15 @@ main {
 			list-style: none;
 			line-height: 80px;
 			background-color: $main-bright;
-			z-index: 100;
 			border-bottom: 2px solid black;
+			transition: .3s;
+			z-index: 100;
+			font-size: 1.5rem;
 			li {
 				margin: 0 30px;
 
 				a {
 					padding: 10px 25px;
-					font-size: 1.5rem;
 					font-weight: bold;
 					text-transform: uppercase;
 					text-decoration: none;
@@ -352,6 +353,7 @@ main {
 				top: 15px;
 				left: 15px;
 				z-index: 100;
+				transition: .3s;
 				img {
 					width: 50px;
 					height: 50px;
@@ -421,7 +423,6 @@ main {
 				font-size: 1.8rem;
 				background-color: $main-bright;
 				border-radius: 8px;
-				z-index: 100;
 			}
 		}
 

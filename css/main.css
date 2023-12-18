@@ -273,15 +273,16 @@ main .aboutme__blocks .block5 {
     list-style: none;
     line-height: 80px;
     background-color: #fafafa;
-    z-index: 100;
     border-bottom: 2px solid black;
+    transition: 0.3s;
+    z-index: 100;
+    font-size: 1.5rem;
   }
   .nav__desktop li {
     margin: 0 30px;
   }
   .nav__desktop li a {
     padding: 10px 25px;
-    font-size: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
@@ -306,6 +307,7 @@ main .aboutme__blocks .block5 {
     top: 15px;
     left: 15px;
     z-index: 100;
+    transition: 0.3s;
   }
   .header__heading--logo img {
     width: 50px;
@@ -368,7 +370,6 @@ main .aboutme__blocks .block5 {
     font-size: 1.8rem;
     background-color: #fafafa;
     border-radius: 8px;
-    z-index: 100;
   }
   .header__textbox::after {
     content: "";
