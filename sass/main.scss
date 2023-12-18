@@ -76,6 +76,7 @@ body {
 	align-items: center;
 
 	&__heading {
+		// position: fixed;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -138,8 +139,6 @@ body {
 
 		&--text {
 			width: 85%;
-			// font-size: 1.2rem;
-			// letter-spacing: 1px;
 		}
 	}
 

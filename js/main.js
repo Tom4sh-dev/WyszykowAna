@@ -16,15 +16,13 @@ const handleNav = () => {
 }
 
 const hideNav = () => {
-    if (window.scrollY >=100) {
+    if (window.scrollY >=100 && navBtn.style.display !== 'none') {
         navDesktop.style.height = '60px'
         navDesktop.style.lineHeight = '60px'
         navDesktop.style.fontSize = '1.2rem'
         logo.style.scale = 0.8
         logo.style.top = '5px'
     } 
-    else if (window.scrollY >=200){
-    }
     else {
         navDesktop.style.height = '80px'
         navDesktop.style.lineHeight = '80px'

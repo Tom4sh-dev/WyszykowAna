@@ -110,7 +110,7 @@ body {
   align-items: center;
   text-align: center;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   letter-spacing: 1px;
   margin-bottom: 5%;
   color: #fafafa;
@@ -158,7 +158,7 @@ main .aboutme__textbox {
   align-items: center;
   text-align: center;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   letter-spacing: 1px;
 }
 main .aboutme__textbox--title::after {
