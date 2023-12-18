@@ -24,7 +24,6 @@ const hideNav = () => {
         logo.style.top = '5px'
     } 
     else if (window.scrollY >=200){
-navDesktop.style.display = 'none'
     }
     else {
         navDesktop.style.height = '80px'
@@ -32,7 +31,6 @@ navDesktop.style.display = 'none'
         navDesktop.style.fontSize = '1.5rem'
         logo.style.scale = 1
         logo.style.top = '15px'
-        navDesktop.style.display = 'flex'
     }
 }
 
