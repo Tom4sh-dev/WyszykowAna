@@ -40,7 +40,7 @@ body {
 	align-items: center;
 	height: 100vh;
 	width: 100%;
-	transform: translateX(100%);
+	transform: translateX(150%);
 	background-image: $main-gradient;
 	list-style: none;
 	z-index: 10;
@@ -166,10 +166,9 @@ main {
 		align-items: center;
 		justify-content: space-between;
 		text-align: center;
-		height: 100vh;
 		width: 100vw;
 		&__textbox {
-			padding-top: 30%;
+			padding-top: 10vh;
 			@include textbox;
 			&--title::after {
 				@include title-underline;
@@ -180,11 +179,11 @@ main {
 			}
 		}
 		&__img {
-			img{
+			img {
 				width: 100%;
-			};
+			}
 		}
-		&__blocks{
+		&__blocks {
 			position: absolute;
 			display: flex;
 			justify-content: space-evenly;
@@ -194,11 +193,26 @@ main {
 				width: 13%;
 				background-color: grey;
 			}
-			.block1 {background-color: #3E1F47; height: 15%;}
-			.block2 {background-color: #272640;height: 12%;}
-			.block3 {background-color: #1B3A4B;height: 8%;}
-			.block4 {background-color: #0B525B; height: 11%;}
-			.block5 {background-color: #006466;height: 6%;}
+			.block1 {
+				background-color: #3e1f47;
+				height: 15%;
+			}
+			.block2 {
+				background-color: #272640;
+				height: 12%;
+			}
+			.block3 {
+				background-color: #1b3a4b;
+				height: 8%;
+			}
+			.block4 {
+				background-color: #0b525b;
+				height: 11%;
+			}
+			.block5 {
+				background-color: #006466;
+				height: 6%;
+			}
 		}
 	}
 }
@@ -239,7 +253,19 @@ main {
 
 			&--text {
 				width: 85%;
-				font-size: 1.6rem;
+				font-size: 1.8rem;
+			}
+		}
+	}
+	.aboutme {
+		&__textbox {
+			&--title {
+				font-size: 2.2rem;
+			}
+
+			&--text {
+				width: 85%;
+				font-size: 1.8rem;
 			}
 		}
 	}
@@ -270,10 +296,12 @@ main {
 			&--title {
 				font-size: 2.5rem;
 			}
-
-			&--text {
-				width: 85%;
-				font-size: 1.8rem;
+		}
+	}
+	.aboutme {
+		&__textbox {
+			&--title {
+				font-size: 2.5rem;
 			}
 		}
 	}
@@ -439,6 +467,47 @@ main {
 			height: 25%;
 		}
 	}
+
+	main {
+		.aboutme {
+			height: 100vh;
+			flex-direction: row;
+			&__textbox {
+				padding:0;
+				width: 50%;
+				&--text {
+					width: 70%;
+				}
+			}
+			&__textbox::after {
+				content: '';
+				position: absolute;
+				top: 0%;
+				left: 50%;
+				height: 100%;
+				width: 1px;
+				background-color: $main-dark;
+			}
+			&__img {
+				align-self: end;
+				padding-bottom: 15%;
+				
+			}
+			&__img::after {
+				content: '';
+				position: absolute;
+				left: 5%;
+				right: 5%;
+				display: block;
+				height: 1px;
+				background-color: $main-dark;
+			}
+			&__blocks {
+				right: 0;
+				width: 50%;
+			}
+		}
+	}
 }
 
 // @media (min-width: 1200px) {
@@ -459,7 +528,7 @@ main {
 		left: -100%;
 	}
 	to {
-		left: 0;
+		left: 5%;
 	}
 }
 @keyframes lines-vertical-dark {
