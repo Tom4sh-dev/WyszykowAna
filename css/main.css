@@ -15,6 +15,18 @@ body {
   background-color: #fafafa;
 }
 
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .nav__mobile {
   position: fixed;
   display: flex;
@@ -51,6 +63,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .header__heading {
   display: flex;
@@ -92,21 +105,18 @@ body {
   border-radius: 50%;
 }
 .header__textbox {
-  margin-bottom: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: #fafafa;
   width: 100%;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 5%;
+  color: #fafafa;
 }
 .header__textbox--profile {
   display: none;
-}
-.header__textbox--title {
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
 }
 .header__textbox--title::after {
   content: "";
@@ -118,8 +128,6 @@ body {
 }
 .header__textbox--text {
   width: 85%;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
 }
 .header__social-media {
   display: none;
@@ -127,14 +135,77 @@ body {
 .header__gradient {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   height: 50%;
   background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
   z-index: -10;
 }
 
-main {
+main .aboutme {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
   height: 100vh;
+  width: 100vw;
+}
+main .aboutme__textbox {
+  padding-top: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+main .aboutme__textbox--title::after {
+  content: "";
+  display: block;
+  margin: 10px auto 20px;
+  width: 100px;
+  height: 2px;
+  background-color: #4f4f4f;
+}
+main .aboutme__textbox--text {
+  width: 85%;
+}
+main .aboutme__img img {
+  width: 100%;
+}
+main .aboutme__blocks {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+}
+main .aboutme__blocks--block {
+  width: 13%;
+  background-color: grey;
+}
+main .aboutme__blocks .block1 {
+  background-color: #3E1F47;
+  height: 15%;
+}
+main .aboutme__blocks .block2 {
+  background-color: #272640;
+  height: 12%;
+}
+main .aboutme__blocks .block3 {
+  background-color: #1B3A4B;
+  height: 8%;
+}
+main .aboutme__blocks .block4 {
+  background-color: #0B525B;
+  height: 11%;
+}
+main .aboutme__blocks .block5 {
+  background-color: #006466;
+  height: 6%;
 }
 
 @media (min-width: 576px) {
@@ -164,6 +235,9 @@ main {
   }
 }
 @media (min-width: 768px) {
+  .header {
+    min-height: 100vh;
+  }
   .header__heading--branding .name {
     font-size: 2.8rem;
   }
@@ -172,6 +246,9 @@ main {
   }
   .header__img {
     margin-top: 5%;
+  }
+  .header__img img {
+    width: 70%;
   }
   .header__textbox--title {
     font-size: 2.5rem;
@@ -215,7 +292,7 @@ main {
     flex-wrap: wrap;
   }
   .header__heading {
-    padding: 25vh 0 0 5%;
+    padding: 25vh 0 0;
     width: 50%;
     height: 25%;
   }
@@ -245,9 +322,10 @@ main {
   }
   .header__heading--branding .company::after {
     content: "";
+    position: absolute;
     display: block;
-    margin: 2vh 5vw;
-    width: 80vw;
+    margin: 10px 5%;
+    width: 90%;
     height: 1px;
     background-color: #4f4f4f;
     animation: lines-horizontal 1s;
@@ -257,21 +335,20 @@ main {
   }
   .header__img {
     margin: 0;
-    margin-bottom: 0;
-    padding: 5% 0 0 5%;
+    padding-top: 70px;
     width: 50%;
     height: 75%;
+    z-index: 10;
   }
   .header__img img {
     width: auto;
-    height: 95%;
+    height: 90%;
   }
   .header__textbox {
-    padding: 20vh 5% 0 0;
+    padding: 22vh 0 0 0;
     width: 50%;
-    height: 100%;
+    height: 75%;
     color: #4f4f4f;
-    background-image: none;
   }
   .header__textbox--profile {
     display: inline-block;
@@ -282,7 +359,7 @@ main {
     display: none;
   }
   .header__textbox--text {
-    margin-top: 20%;
+    margin-top: 18vh;
     font-size: 1.8rem;
     background-color: #fafafa;
     border-radius: 8px;
@@ -325,12 +402,7 @@ main {
     scale: 1.2;
   }
   .header__gradient {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     height: 25%;
-    background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
-    z-index: -10;
   }
 }
 @keyframes showup {
@@ -346,7 +418,7 @@ main {
     left: -100%;
   }
   to {
-    left: 50%;
+    left: 0;
   }
 }
 @keyframes lines-vertical-dark {

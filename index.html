@@ -28,7 +28,7 @@
 	</head>
 	<body>
 		<nav class="nav">
-				<ul class="nav__mobile">
+			<ul class="nav__mobile">
 				<li><a href="#home">home</a></li>
 				<li><a href="#aboutme">o mnie</a></li>
 				<li><a href="#offer">oferta</a></li>
@@ -37,16 +37,15 @@
 			</ul>
 
 			<ul class="nav__desktop">
-				<li><a href="#home">home</a></li>
+				<li><a href="#home">główna</a></li>
 				<li><a href="#aboutme">o mnie</a></li>
 				<li><a href="#offer">oferta</a></li>
 				<li><a href="#reviews">opinie</a></li>
-				<li><a href="#contact">contact</a></li>
+				<li><a href="#contact">kontakt</a></li>
 			</ul>
 		</nav>
-		<div class="wrapper">
-			<header class="header">
-					<div class="header__heading">
+		<header id="home" class="header">
+				<div class="header__heading">
 					<a href="#home" class="header__heading--logo"
 						><img src="./img/955dea03-5425-437d-b615-12151592cb72.png" alt="" />
 					</a>
@@ -63,15 +62,15 @@
 				</div>
 
 				<figure class="header__img">
-					<img 
+					<img
 						src="./img/header 640.png"
 						alt="Anastazja, zdjęcie profilowe z ramą kolorystyczną"
 					/>
 				</figure>
 
-				<div class="header__textbox">
+				<div class="header__textbox textbox">
 					<h2 class="header__textbox--profile">Analiza Kolorystyczna</h2>
-					<p class="header__textbox--title">Witaj!</p>
+					<p class="header__textbox--title title">witaj!</p>
 					<p class="header__textbox--text">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
 						aperiam porro labore nulla. Aut animi perferendis, tempora officia
@@ -88,11 +87,38 @@
 						><i class="fa-brands fa-instagram"></i
 					></a>
 				</div>
-
-				<div class="header__gradient"></div>
-			</header>
-		</div>
-		<main></main>
+			
+			<div class="header__gradient"></div>
+		</header>
+		<main>
+			<section id="aboutme" class="aboutme">
+				<div class="aboutme__textbox textbox">
+					<p class="aboutme__textbox--title title">o mnie</p>
+					<p class="aboutme__textbox--text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+						aperiam porro labore nulla. Aut animi perferendis, tempora officia
+						porro nisi ab, quaerat temporibus illum eligendi quo in fuga
+						consequuntur dolorem.
+					</p>
+					<p class="aboutme__textbox--text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+						aperiam porro labore nulla. Aut animi perferendis, tempora officia
+						porro nisi ab, quaerat temporibus illum eligendi quo in fuga
+						consequuntur dolorem.
+					</p>
+				</div>
+				<figure class="aboutme__img">
+					<img src="./img/about 640.png" alt="Zdjęcie portretowe z paletami kolorystycznymi">
+				</figure>
+				<div class="aboutme__blocks">
+					<div class="aboutme__blocks--block block1"></div>
+					<div class="aboutme__blocks--block block2"></div>
+					<div class="aboutme__blocks--block block3"></div>
+					<div class="aboutme__blocks--block block4"></div>
+					<div class="aboutme__blocks--block block5"></div>
+				</div>
+			</section>
+		</main>
 
 		<script src="./js/main.js"></script>
 	</body>
