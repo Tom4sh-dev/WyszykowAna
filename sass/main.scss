@@ -165,9 +165,9 @@ main {
 		align-items: center;
 		justify-content: space-between;
 		text-align: center;
-		width: 100vw;
+		width: 100%;
 		&__textbox {
-			padding-top: 10vh;
+			padding-top: 25%;
 			@include textbox;
 			&--title::after {
 				@include title-underline;
