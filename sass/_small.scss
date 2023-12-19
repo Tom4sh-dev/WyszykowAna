@@ -9,8 +9,26 @@
         }
     }
     .header {
+        flex-wrap: wrap;
+        height: 100vh;
         &__heading {
-            
+            padding-top: 3%;
+        }
+        &__img {
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 40%;        }
+        &__textbox {
+            position: absolute;
+            top: 45%;
+            bottom: 5%;
+            left: 35%;
+         
+            width: auto;  
+        }
+        &__gradient {
+            height: 65%;
         }
     }
 }

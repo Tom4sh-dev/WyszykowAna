@@ -250,6 +250,29 @@ main .aboutme__blocks .block5 {
   .nav__mobile li {
     height: 20%;
   }
+  .header {
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+  .header__heading {
+    padding-top: 3%;
+  }
+  .header__img {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 40%;
+  }
+  .header__textbox {
+    position: absolute;
+    top: 45%;
+    bottom: 5%;
+    left: 35%;
+    width: auto;
+  }
+  .header__gradient {
+    height: 65%;
+  }
 }
 @media (min-width: 576px) {
   .header__heading--logo img {
