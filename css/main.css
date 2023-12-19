@@ -244,7 +244,7 @@ main .aboutme__blocks .block5 {
 
 @media (orientation: landscape) {
   .nav__mobile li {
-    height: 15%;
+    padding: 10px;
   }
   .header {
     flex-wrap: wrap;
