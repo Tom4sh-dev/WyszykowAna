@@ -1,9 +1,15 @@
+
+
 const navBtn = document.querySelector('.hamburger')
 const navMobile = document.querySelector('.nav__mobile')
 const navItems = document.querySelectorAll('.nav__item')
 
 const navDesktop = document.querySelector('.nav__desktop')
 const logo = document.querySelector('.header__heading--logo')
+
+const analysisOpenBtn = document.querySelector('.offer__about-open-btn')
+const analysisCloseBtn = document.querySelector('.offer__about-close-btn')
+const analysisPopup = document.querySelector('.offer__about')
 
 const handleNav = () => {
     navMobile.classList.toggle('nav__mobile--active')
@@ -12,6 +18,7 @@ const handleNav = () => {
 		item.addEventListener('click', () => {
 			navMobile.classList.remove('nav__mobile--active')
             navBtn.classList.remove('is-active');
+            analysisPopup.classList.remove('offer__about--active')
 		})})
 }
 
@@ -32,15 +39,15 @@ const hideNav = () => {
     }
 }
 
-// function addShadow() {
-//     if (window.scrollY >= 100) {
-//         nav.classList.add('shadow-bg');
-//     } else {
-//         nav.classList.remove('shadow-bg');
-//     }
-// }
+const handleAnalysisShow = () => {
+    analysisPopup.classList.add('offer__about--active')
+}
+const handleAnalysisHide = () => {
+    analysisPopup.classList.remove('offer__about--active')
+}
 
 
 navBtn.addEventListener('click', handleNav)
-
+analysisOpenBtn.addEventListener('click', handleAnalysisShow)
+analysisCloseBtn.addEventListener('click', handleAnalysisHide)
 window.addEventListener('scroll', hideNav)
