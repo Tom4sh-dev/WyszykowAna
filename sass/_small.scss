@@ -1,0 +1,68 @@
+@media (orientation:landscape) {
+    .nav {
+        &__mobile {
+            flex-wrap: wrap;
+            height: 100vh;
+            li {
+                height: 20%;
+            }
+        }
+    }
+    .header {
+        &__heading {
+            
+        }
+    }
+}
+
+@media (min-width: 576px) {
+	.header {
+		&__heading {
+			&--logo {
+				img {
+                    width: 60px;
+                    height: 60px;
+				}
+			}
+			&--branding {
+				.name {
+					font-size: 2.5rem;
+					font-weight: 400;
+				}
+				.company {
+					font-size: 2.2rem;
+				}
+			}
+			.hamburger {
+				scale: 1.3;
+			}
+		}
+		&__img {
+			img {
+				width: 80%;
+			}
+		}
+		&__textbox {
+			&--title {
+				font-size: 2.2rem;
+			}
+
+			&--text {
+				width: 85%;
+				font-size: 1.8rem;
+			}
+		}
+	}
+	.aboutme {
+		&__textbox {
+			&--title {
+				font-size: 2.2rem;
+			}
+
+			&--text {
+				width: 85%;
+				font-size: 1.8rem;
+			}
+		}
+	}
+}

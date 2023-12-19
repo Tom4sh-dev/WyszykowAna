@@ -1,4 +1,38 @@
-* {
+@keyframes showup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes lines-horizontal {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 5%;
+  }
+}
+@keyframes lines-vertical-dark {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 20%;
+  }
+}
+@keyframes lines-vertical-bright {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0;
+  }
+}
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -29,14 +63,16 @@ body {
 
 .nav__mobile {
   position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100%;
-  transform: translateX(150%);
   background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
+  transform: translateX(100%);
   list-style: none;
   z-index: 10;
   transition: transform 0.3s;
@@ -54,7 +90,6 @@ body {
 .nav__mobile--active {
   transform: translateX(0);
 }
-
 .nav__desktop {
   display: none;
 }
@@ -64,6 +99,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 .header__heading {
   display: flex;
@@ -149,7 +185,6 @@ main .aboutme {
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  width: 100%;
 }
 main .aboutme__textbox {
   padding-top: 25%;
@@ -207,10 +242,19 @@ main .aboutme__blocks .block5 {
   height: 6%;
 }
 
+@media (orientation: landscape) {
+  .nav__mobile {
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+  .nav__mobile li {
+    height: 20%;
+  }
+}
 @media (min-width: 576px) {
   .header__heading--logo img {
-    height: 60px;
     width: 60px;
+    height: 60px;
   }
   .header__heading--branding .name {
     font-size: 2.5rem;
@@ -264,9 +308,13 @@ main .aboutme__blocks .block5 {
   }
 }
 @media (min-width: 992px) {
+  .nav__mobile {
+    display: none;
+  }
   .nav__desktop {
     position: fixed;
-    width: 100%;
+    left: 0;
+    right: 0;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -446,37 +494,5 @@ main .aboutme__blocks .block5 {
   main .aboutme__blocks {
     right: 0;
     width: 50%;
-  }
-}
-@keyframes showup {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes lines-horizontal {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 5%;
-  }
-}
-@keyframes lines-vertical-dark {
-  from {
-    top: -100%;
-  }
-  to {
-    top: 20%;
-  }
-}
-@keyframes lines-vertical-bright {
-  from {
-    bottom: -100%;
-  }
-  to {
-    bottom: 0;
   }
 }/*# sourceMappingURL=main.css.map */

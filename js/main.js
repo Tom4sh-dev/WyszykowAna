@@ -16,7 +16,7 @@ const handleNav = () => {
 }
 
 const hideNav = () => {
-    if (window.scrollY >=100 && navBtn.style.display !== 'none') {
+    if (window.scrollY >=100 && window.innerWidth>992) {
         navDesktop.style.height = '60px'
         navDesktop.style.lineHeight = '60px'
         navDesktop.style.fontSize = '1.2rem'

@@ -1,0 +1,34 @@
+@media (min-width: 768px) {
+	.header {
+		min-height: 100vh;
+		&__heading {
+			&--branding {
+				.name {
+					font-size: 2.8rem;
+				}
+
+				.company {
+					font-size: 2.5rem;
+				}
+			}
+		}
+		&__img {
+			margin-top: 5%;
+			img {
+				width: 70%;
+			}
+		}
+		&__textbox {
+			&--title {
+				font-size: 2.5rem;
+			}
+		}
+	}
+	.aboutme {
+		&__textbox {
+			&--title {
+				font-size: 2.5rem;
+			}
+		}
+	}
+}
