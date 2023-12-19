@@ -30,3 +30,28 @@
 		bottom: 0;
 	}
 }
+
+@keyframes active-button {
+	0% {
+		transform: translateX(0);
+	}
+	10% {
+		transform: translateX(-2%);
+	}
+	15% {
+		transform: translateX(2%);
+	}
+	20% {
+		transform: translateX(-2%);
+	}
+	25% {
+		transform: translateX(2%);
+	}
+	30% {
+		transform: translateX(0);
+	}
+	
+	100% {
+		transform: translateX(0);
+	}
+}
