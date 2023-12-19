@@ -243,31 +243,28 @@ main .aboutme__blocks .block5 {
 }
 
 @media (orientation: landscape) {
-  .nav__mobile {
-    flex-wrap: wrap;
-    height: 100vh;
-  }
   .nav__mobile li {
-    height: 20%;
+    height: 15%;
   }
   .header {
     flex-wrap: wrap;
     height: 100vh;
   }
   .header__heading {
-    padding-top: 3%;
+    padding-top: 5vh;
   }
   .header__img {
     position: absolute;
-    top: 30%;
+    top: 30vh;
     left: 0;
-    width: 40%;
+    width: 50%;
+    min-height: 10vh;
   }
   .header__textbox {
     position: absolute;
-    top: 45%;
-    bottom: 5%;
-    left: 35%;
+    top: 40%;
+    bottom: 0;
+    left: 45%;
     width: auto;
   }
   .header__gradient {
@@ -306,22 +303,19 @@ main .aboutme__blocks .block5 {
     width: 85%;
     font-size: 1.8rem;
   }
+  main .aboutme__textbox {
+    padding-top: 20%;
+  }
+  main .aboutme__blocks--block {
+    width: 10%;
+  }
 }
 @media (min-width: 768px) {
-  .header {
-    min-height: 100vh;
-  }
   .header__heading--branding .name {
     font-size: 2.8rem;
   }
   .header__heading--branding .company {
     font-size: 2.5rem;
-  }
-  .header__img {
-    margin-top: 5%;
-  }
-  .header__img img {
-    width: 70%;
   }
   .header__textbox--title {
     font-size: 2.5rem;

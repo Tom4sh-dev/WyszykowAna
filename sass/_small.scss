@@ -1,36 +1,38 @@
-@media (orientation:landscape) {
-    .nav {
-        &__mobile {
-            flex-wrap: wrap;
-            height: 100vh;
-            li {
-                height: 20%;
-            }
-        }
-    }
-    .header {
-        flex-wrap: wrap;
-        height: 100vh;
-        &__heading {
-            padding-top: 3%;
-        }
-        &__img {
-            position: absolute;
-            top: 30%;
-            left: 0;
-            width: 40%;        }
-        &__textbox {
-            position: absolute;
-            top: 45%;
-            bottom: 5%;
-            left: 35%;
+@media (orientation: landscape) {
+	// HEADER
+
+	.nav {
+		&__mobile {
          
-            width: auto;  
-        }
-        &__gradient {
-            height: 65%;
-        }
-    }
+			li {
+				height: 15%;
+			}
+		}
+	}
+	.header {
+		flex-wrap: wrap;
+		height: 100vh;
+		&__heading {
+			padding-top: 5vh;
+		}
+		&__img {
+			position: absolute;
+			top: 30vh;
+			left: 0;
+			width: 50%;
+			min-height: 10vh;
+		}
+		&__textbox {
+			position: absolute;
+			top: 40%;
+			bottom: 0;
+			left: 45%;
+			width: auto;
+		}
+		&__gradient {
+			height: 65%;
+		}
+	}
 }
 
 @media (min-width: 576px) {
@@ -38,8 +40,8 @@
 		&__heading {
 			&--logo {
 				img {
-                    width: 60px;
-                    height: 60px;
+					width: 60px;
+					height: 60px;
 				}
 			}
 			&--branding {
@@ -80,6 +82,21 @@
 			&--text {
 				width: 85%;
 				font-size: 1.8rem;
+			}
+		}
+	}
+
+	// MAIN
+
+	main {
+		.aboutme {
+			&__textbox {
+				padding-top: 20%;
+			}
+			&__blocks {
+				&--block {
+					width: 10%;
+				}
 			}
 		}
 	}
