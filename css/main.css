@@ -206,6 +206,7 @@ body {
 }
 .main .aboutme__textbox--text {
   width: 85%;
+  font-size: 1.4rem;
 }
 .main .aboutme__img img {
   width: 100%;
