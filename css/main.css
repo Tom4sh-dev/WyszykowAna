@@ -178,7 +178,7 @@ body {
   z-index: -10;
 }
 
-main .aboutme {
+.main .aboutme {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -186,7 +186,7 @@ main .aboutme {
   justify-content: space-between;
   text-align: center;
 }
-main .aboutme__textbox {
+.main .aboutme__textbox {
   padding-top: 25%;
   display: flex;
   flex-direction: column;
@@ -196,7 +196,7 @@ main .aboutme__textbox {
   font-size: 1.4rem;
   letter-spacing: 1px;
 }
-main .aboutme__textbox--title::after {
+.main .aboutme__textbox--title::after {
   content: "";
   display: block;
   margin: 10px auto 20px;
@@ -204,40 +204,40 @@ main .aboutme__textbox--title::after {
   height: 2px;
   background-color: #4f4f4f;
 }
-main .aboutme__textbox--text {
+.main .aboutme__textbox--text {
   width: 85%;
 }
-main .aboutme__img img {
+.main .aboutme__img img {
   width: 100%;
 }
-main .aboutme__blocks {
+.main .aboutme__blocks {
   position: absolute;
   display: flex;
   justify-content: space-evenly;
   height: 100%;
   width: 100%;
 }
-main .aboutme__blocks--block {
+.main .aboutme__blocks--block {
   width: 13%;
   background-color: grey;
 }
-main .aboutme__blocks .block1 {
+.main .aboutme__blocks .block1 {
   background-color: #3e1f47;
   height: 15%;
 }
-main .aboutme__blocks .block2 {
+.main .aboutme__blocks .block2 {
   background-color: #272640;
   height: 12%;
 }
-main .aboutme__blocks .block3 {
+.main .aboutme__blocks .block3 {
   background-color: #1b3a4b;
   height: 8%;
 }
-main .aboutme__blocks .block4 {
+.main .aboutme__blocks .block4 {
   background-color: #0b525b;
   height: 11%;
 }
-main .aboutme__blocks .block5 {
+.main .aboutme__blocks .block5 {
   background-color: #006466;
   height: 6%;
 }
@@ -246,17 +246,7 @@ main .aboutme__blocks .block5 {
   .nav__mobile li {
     padding: 10px;
   }
-  .header {
-    flex-wrap: wrap;
-    height: 100vh;
-  }
-  .header__heading {
-    padding-top: 3%;
-  }
   .header__img {
-    position: absolute;
-    top: 30%;
-    left: 0;
     width: 50%;
   }
   .header__textbox {
@@ -294,17 +284,17 @@ main .aboutme__blocks .block5 {
     width: 85%;
     font-size: 1.8rem;
   }
-  main .aboutme__textbox {
+  .main .aboutme__textbox {
     padding-top: 20%;
   }
-  main .aboutme__textbox--title {
+  .main .aboutme__textbox--title {
     font-size: 2.2rem;
   }
-  main .aboutme__textbox--text {
+  .main .aboutme__textbox--text {
     width: 85%;
     font-size: 1.8rem;
   }
-  main .aboutme__blocks--block {
+  .main .aboutme__blocks--block {
     width: 10%;
   }
 }
@@ -318,7 +308,7 @@ main .aboutme__blocks .block5 {
   .header__textbox--title {
     font-size: 2.5rem;
   }
-  .aboutme__textbox--title {
+  .main .aboutme__textbox--title {
     font-size: 2.5rem;
   }
 }
@@ -473,18 +463,18 @@ main .aboutme__blocks .block5 {
   .header__gradient {
     height: 25%;
   }
-  main .aboutme {
+  .main .aboutme {
     height: 100vh;
     flex-direction: row;
   }
-  main .aboutme__textbox {
+  .main .aboutme__textbox {
     padding: 0;
     width: 50%;
   }
-  main .aboutme__textbox--text {
+  .main .aboutme__textbox--text {
     width: 70%;
   }
-  main .aboutme__textbox::after {
+  .main .aboutme__textbox::after {
     content: "";
     position: absolute;
     top: 0%;
@@ -493,11 +483,11 @@ main .aboutme__blocks .block5 {
     width: 1px;
     background-color: #4f4f4f;
   }
-  main .aboutme__img {
+  .main .aboutme__img {
     align-self: end;
     padding-bottom: 15%;
   }
-  main .aboutme__img::after {
+  .main .aboutme__img::after {
     content: "";
     position: absolute;
     left: 5%;
@@ -506,7 +496,7 @@ main .aboutme__blocks .block5 {
     height: 1px;
     background-color: #4f4f4f;
   }
-  main .aboutme__blocks {
+  .main .aboutme__blocks {
     right: 0;
     width: 50%;
   }

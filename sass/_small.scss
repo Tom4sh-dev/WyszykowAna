@@ -10,15 +10,7 @@
 		}
 	}
 	.header {
-		flex-wrap: wrap;
-		height: 100vh;
-		&__heading {
-			padding-top: 3%;
-		}
 		&__img {
-			position: absolute;
-			top: 30%;
-			left: 0;
 			width: 50%;
 		}
 		&__textbox {
@@ -77,7 +69,7 @@
 
 // MAIN
 
-	main {
+	.main {
 		.aboutme {
 			&__textbox {
 				padding-top: 20%;

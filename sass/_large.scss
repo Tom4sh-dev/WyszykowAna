@@ -1,12 +1,14 @@
 @media (min-width: 992px) {
+	// NAV
+
 	.nav {
-        &__mobile {
-            display: none;
-        }
+		&__mobile {
+			display: none;
+		}
 		&__desktop {
 			position: fixed;
-            left: 0;
-            right: 0;
+			left: 0;
+			right: 0;
 			height: 80px;
 			display: flex;
 			justify-content: center;
@@ -14,7 +16,7 @@
 			line-height: 80px;
 			background-color: $main-bright;
 			border-bottom: 2px solid black;
-			transition: .3s;
+			transition: 0.3s;
 			z-index: 100;
 			font-size: 1.5rem;
 			li {
@@ -36,6 +38,9 @@
 			}
 		}
 	}
+
+	// HEADER
+
 	.header {
 		height: 100vh;
 		flex-wrap: wrap;
@@ -48,7 +53,7 @@
 				top: 15px;
 				left: 15px;
 				z-index: 100;
-				transition: .3s;
+				transition: 0.3s;
 				img {
 					width: 50px;
 					height: 50px;
@@ -164,12 +169,14 @@
 		}
 	}
 
-	main {
+	// MAIN
+
+	.main {
 		.aboutme {
 			height: 100vh;
 			flex-direction: row;
 			&__textbox {
-				padding:0;
+				padding: 0;
 				width: 50%;
 				&--text {
 					width: 70%;
@@ -187,7 +194,6 @@
 			&__img {
 				align-self: end;
 				padding-bottom: 15%;
-				
 			}
 			&__img::after {
 				content: '';
