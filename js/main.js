@@ -11,6 +11,8 @@ const analysisOpenBtn = document.querySelector('.offer__about-open-btn')
 const analysisCloseBtn = document.querySelector('.offer__about-close-btn')
 const analysisPopup = document.querySelector('.offer__about')
 
+const footerYear = document.querySelector('.footer__year')
+
 const handleNav = () => {
     navMobile.classList.toggle('nav__mobile--active')
     navBtn.classList.toggle('is-active');
@@ -57,6 +59,13 @@ const handleAnalysisShow = () => {
 const handleAnalysisHide = () => {
     analysisPopup.classList.remove('offer__about--active')
 }
+
+const handleCurrentYear = () => {
+	const year = (new Date).getFullYear();
+	footerYear.innerText = year;
+}
+
+handleCurrentYear()
 
 navBtn.addEventListener('click', handleNav)
 analysisOpenBtn.addEventListener('click', handleAnalysisShow)
