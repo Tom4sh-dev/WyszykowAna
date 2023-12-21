@@ -1,11 +1,11 @@
-
-
 const navBtn = document.querySelector('.hamburger')
 const navMobile = document.querySelector('.nav__mobile')
 const navItems = document.querySelectorAll('.nav__item')
 
 const navDesktop = document.querySelector('.nav__desktop')
 const logo = document.querySelector('.header__heading--logo')
+
+const allSections = document.querySelectorAll('.section')
 
 const analysisOpenBtn = document.querySelector('.offer__about-open-btn')
 const analysisCloseBtn = document.querySelector('.offer__about-close-btn')
@@ -39,6 +39,18 @@ const hideNav = () => {
     }
 }
 
+// const handleObserver = () => {
+// 	const currentSection = window.scrollY
+
+// 	allSections.forEach(section => {
+// 		if  (section.classList.contains('white-section') && section.offsetTop <= currentSection + 60) {
+// 			navBtnBars.classList.add('black-bars-color')
+// 			} else if (!section.classList.contains('white-section') && section.offsetTop <= currentSection + 60) {
+// 				navBtnBars.classList.remove('black-bars-color')
+// 			}
+// 	})
+// }
+
 const handleAnalysisShow = () => {
     analysisPopup.classList.add('offer__about--active')
 }
@@ -46,8 +58,9 @@ const handleAnalysisHide = () => {
     analysisPopup.classList.remove('offer__about--active')
 }
 
-
 navBtn.addEventListener('click', handleNav)
 analysisOpenBtn.addEventListener('click', handleAnalysisShow)
 analysisCloseBtn.addEventListener('click', handleAnalysisHide)
+
+// window.addEventListener('scroll', handleObserver)
 window.addEventListener('scroll', hideNav)

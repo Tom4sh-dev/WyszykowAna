@@ -78,6 +78,21 @@ body {
   max-width: 1200px;
 }
 
+.section-heading {
+  padding-top: 40px;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.section-heading::after {
+  content: "";
+  margin: 10px auto 30px;
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: #4f4f4f;
+}
+
 .title {
   font-size: 2rem;
   font-weight: bold;
@@ -169,25 +184,22 @@ body {
 }
 .header__img {
   text-align: center;
-  margin-bottom: 5%;
 }
 .header__img img {
   width: 85%;
   border-radius: 50%;
+}
+.header .section-heading {
+  color: #fafafa;
+}
+.header .section-heading::after {
+  background-color: #fafafa;
 }
 .header__textbox {
   color: #fafafa;
 }
 .header__textbox--profile {
   display: none;
-}
-.header__textbox--title::after {
-  content: "";
-  display: block;
-  margin: 10px auto 20px;
-  width: 100px;
-  height: 2px;
-  background-color: #fafafa;
 }
 .header__social-media {
   display: none;
@@ -210,8 +222,10 @@ body {
   justify-content: space-between;
   text-align: center;
 }
+.main .aboutme .section-heading {
+  padding-top: 20%;
+}
 .main .aboutme__textbox {
-  padding-top: 25%;
   margin-bottom: 0;
 }
 .main .aboutme__textbox--title::after {
@@ -268,21 +282,11 @@ body {
   background-image: linear-gradient(220deg, #065a60 0%, #312244 74%);
   overflow: hidden;
 }
-.main .offer__textbox {
-  margin-top: 10%;
-}
-.main .offer__textbox--title::after {
-  content: "";
-  display: block;
-  margin: 10px auto 20px;
-  width: 100px;
-  height: 2px;
+.main .offer .section-heading::after {
   background-color: #fafafa;
 }
-.main .offer__textbox--text:last-child {
-  order: 0;
-}
 .main .offer__img {
+  margin-bottom: 40px;
   width: 100%;
 }
 .main .offer__img img {
@@ -297,7 +301,8 @@ body {
   font-size: 1.8rem;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  font-weight: bold;
+  letter-spacing: 3px;
   border: none;
   rotate: 270deg;
   animation: active-button 3s infinite;
@@ -314,20 +319,17 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
+  background-image: linear-gradient(220deg, #065a60 0%, #312244 74%);
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   z-index: 10;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   transition: transform 0.3s;
 }
 .main .offer__about p {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   font-size: 1.4rem;
-  width: 85%;
 }
 .main .offer__about--active {
   transform: translateX(0);
@@ -340,25 +342,64 @@ body {
   font-size: 4rem;
   cursor: pointer;
 }
-.main .reviews__textbox {
-  margin-top: 10%;
-}
-.main .reviews__textbox--title::after {
-  content: "";
-  display: block;
-  margin: 10px auto 20px;
-  width: 100px;
-  height: 2px;
-  background-color: #4f4f4f;
+.main .reviews {
+  overflow: hidden;
 }
 .main .reviews__textbox--boxes {
-  margin: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 60vh;
 }
 .main .reviews__textbox--boxes .reviews__box {
-  padding: 10%;
+  width: 90%;
+  border-radius: 8px;
+  box-shadow: 3px 3px 3px #ccc;
+  transition: transform 0.3s;
 }
-.main .reviews__textbox--boxes .reviews__box .reviews__box-info {
+.main .reviews__textbox--boxes .reviews__box:hover {
+  transform: scale(0.95);
+}
+.main .reviews__textbox--boxes .reviews__box-title {
+  padding-bottom: 100px;
+}
+.main .reviews__textbox--boxes .reviews__box-info {
   display: flex;
+}
+.main .reviews__textbox--boxes::after {
+  content: "";
+  display: block;
+  margin: 10px 5%;
+  width: 100%;
+  height: 1px;
+  background-color: #4f4f4f;
+  animation: lines-horizontal 1s;
+}
+.main .reviews__textbox .reviews__more a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #4f4f4f;
+  transition: scale 0.3s;
+}
+.main .reviews__textbox .reviews__more a .fa-brands {
+  margin-right: 10px;
+  font-size: 2rem;
+}
+.main .reviews__textbox .reviews__more a:hover {
+  scale: 1.05;
+}
+.main .contact {
+  height: 100vh;
+  background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
+}
+.main .contact .section-heading {
+  color: #fafafa;
+}
+.main .contact .section-heading::after {
+  background-color: #fafafa;
 }
 
 @media (orientation: landscape) {

@@ -30,6 +30,21 @@ body {
 	max-width: 1200px;
 }
 
+.section-heading {
+	padding-top: 40px;
+	text-align: center;
+	font-size: 2rem;
+	text-transform: uppercase;
+	&::after {
+		content: '';
+		margin: 10px auto 30px;
+		display: block;
+		width: 100px;
+		height: 2px;
+		background-color: $main-dark;
+	}
+}
+
 .title {
 	font-size: 2rem;
 	font-weight: bold;
@@ -132,11 +147,17 @@ body {
 	}
 	&__img {
 		text-align: center;
-		margin-bottom: 5%;
+		// margin-bottom: 5%;
 
 		img {
 			width: 85%;
 			border-radius: 50%;
+		}
+	}
+	.section-heading {
+		color: $main-bright;
+		&::after {
+			background-color: $main-bright;
 		}
 	}
 
@@ -145,13 +166,6 @@ body {
 		&--profile {
 			display: none;
 		}
-
-		&--title::after {
-			@include title-underline;
-			background-color: $main-bright;
-		}
-
-	
 	}
 
 	&__social-media {
@@ -178,8 +192,11 @@ body {
 		align-items: center;
 		justify-content: space-between;
 		text-align: center;
+
+		.section-heading {
+			padding-top: 20%;
+		}
 		&__textbox {
-			padding-top: 25%;
 			margin-bottom: 0;
 			&--title::after {
 				@include title-underline;
@@ -235,18 +252,15 @@ body {
 		width: 100%;
 		background-image: $secondary-gradient;
 		overflow: hidden;
-		&__textbox {
-			margin-top: 10%;
-			&--title::after {
-				@include title-underline;
+
+		.section-heading {
+			&::after {
 				background-color: $main-bright;
-			}
-			&--text:last-child {
-				order: 0;
 			}
 		}
 
 		&__img {
+			margin-bottom: 40px;
 			width: 100%;
 			img {
 				width: 50%;
@@ -261,12 +275,13 @@ body {
 			font-size: 1.8rem;
 			font-family: 'Montserrat', sans-serif;
 			text-transform: uppercase;
-			letter-spacing: 2px;
+			font-weight: bold;
+			letter-spacing: 3px;
 			border: none;
 			rotate: 270deg;
 			animation: active-button 3s infinite;
 			cursor: pointer;
-			
+
 			.fa-solid {
 				position: absolute;
 				margin-left: 20px;
@@ -279,50 +294,94 @@ body {
 			left: 0;
 			bottom: 0;
 			right: 0;
-			background-image: $main-gradient;
+			background-image: $secondary-gradient;
 			display: flex;
 			flex-direction: column;
+			justify-content: space-around;
 			align-items: center;
 			z-index: 10;
-			transform: translateX(100%);
-			transition: transform .3s;
+			transform: translateX(-100%);
+			transition: transform 0.3s;
 
 			p {
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
 				font-size: 1.4rem;
-				width: 85%;
 			}
-			&--active{
+			&--active {
 				transform: translateX(0);
 			}
 		}
-		&__about-close-btn{
+		&__about-close-btn {
 			margin-top: 20%;
 			background-color: transparent;
 			border: none;
 			color: $main-bright;
 			font-size: 4rem;
 			cursor: pointer;
-		} 
+		}
 	}
 
 	.reviews {
+		overflow: hidden;
 		&__textbox {
-			margin-top: 10%;
-			&--title::after {
-				@include title-underline;
-				background-color: $main-dark;
-			}
 			&--boxes {
-				margin: 10%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+				height: 60vh;
 				.reviews__box {
-					padding: 10%;
-					.reviews__box-info {
+					width: 90%;
+					border-radius: 8px;
+					box-shadow: 3px 3px 3px #ccc;
+					transition: transform 0.3s;
+					&:hover {
+						transform: scale(0.95);
+					}
+					&-title {
+						padding-bottom: 100px;
+					}
+					&-info {
 						display: flex;
 					}
 				}
+				&::after {
+					content: '';
+					display: block;
+					margin: 10px 5%;
+					width: 100%;
+					height: 1px;
+					background-color: $main-dark;
+					animation: lines-horizontal 1s;
+				}
+			}
+			.reviews__more {
+				a {
+					display: inline-block;
+					margin-top: 20px;
+					text-decoration: none;
+					font-weight: bold;
+					color: $main-dark;
+					transition: scale .3s;
+					.fa-brands {
+						margin-right: 10px;
+						font-size: 2rem;
+					}
+					&:hover {
+						scale: 1.05;
+					}
+				}
+			}
+		}
+	}
+
+
+	.contact {
+		height: 100vh;
+		background-image: $main-gradient;
+		.section-heading {
+			color: $main-bright;
+			&::after {
+				background-color: $main-bright;
 			}
 		}
 	}
