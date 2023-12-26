@@ -99,7 +99,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 10%;
+  margin-bottom: 40px;
   width: 100%;
   font-size: 1.4rem;
   letter-spacing: 1px;
@@ -131,6 +131,13 @@
 .btn-special-animation:hover::before {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+.blocks {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
 
 @media (orientation: landscape) {
@@ -477,15 +484,22 @@ body {
 .main .banner__textbox .textbox__profile {
   display: none;
 }
-.main .banner__social-media {
-  display: none;
+.main .banner .social-media {
+  align-self: end;
+  margin: 0 20px 40px;
+}
+.main .banner .social-media__link {
+  margin: 10px;
+  padding: 10px;
+  font-size: 2.5rem;
+  color: #fafafa;
 }
 .main .banner__gradient {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 50%;
+  height: 60%;
   background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
   z-index: -10;
 }
@@ -502,11 +516,7 @@ body {
   width: 100%;
 }
 .main .about-me__blocks {
-  position: absolute;
-  display: flex;
   justify-content: space-evenly;
-  height: 100%;
-  width: 100%;
 }
 .main .about-me__block {
   width: 13%;
@@ -553,10 +563,8 @@ body {
 }
 .main .offer__about-offer {
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  height: 100%;
+  width: 100%;
   background-image: linear-gradient(220deg, #065a60 0%, #312244 74%);
   display: flex;
   flex-direction: column;
@@ -578,14 +586,12 @@ body {
   cursor: pointer;
 }
 .main .reviews__textbox {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  display: inline-block;
 }
 .main .reviews__textbox .reviews__box {
-  margin: 20px;
-  width: 90%;
+  position: relative;
+  margin: 40px 20px 20px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 3px 3px 3px #ccc;
   transition: transform 0.3s;
@@ -596,16 +602,16 @@ body {
 .main .reviews__textbox .reviews__box-info {
   display: flex;
 }
-.main .reviews__textbox .more-reviews::before {
+.main .reviews .more-reviews::before {
   content: "";
   display: block;
-  margin: 30px auto;
+  margin: 0 auto 30px;
   width: 90%;
   height: 1px;
   background-color: #4f4f4f;
   animation: lines-horizontal 1s;
 }
-.main .reviews__textbox .more-reviews__link {
+.main .reviews .more-reviews__link {
   display: inline-block;
   margin-top: 20px;
   text-decoration: none;
@@ -613,12 +619,38 @@ body {
   color: #4f4f4f;
   transition: scale 0.3s;
 }
-.main .reviews__textbox .more-reviews__link .fa-brands {
+.main .reviews .more-reviews__link .fa-brands {
   margin-right: 10px;
   font-size: 2rem;
 }
-.main .reviews__textbox .more-reviews__link:hover {
+.main .reviews .more-reviews__link:hover {
   scale: 1.05;
+}
+.main .reviews__blocks {
+  justify-content: space-around;
+  z-index: -100;
+}
+.main .reviews__block {
+  width: 7%;
+  background-color: grey;
+}
+.main .reviews__block--block1 {
+  background-color: #272640;
+  height: 18%;
+}
+.main .reviews__block--block2 {
+  margin-right: 80px;
+  background-color: #1b3a4b;
+  height: 14%;
+}
+.main .reviews__block--block3 {
+  margin-left: 80px;
+  background-color: #0b525b;
+  height: 17%;
+}
+.main .reviews__block--block4 {
+  background-color: #006466;
+  height: 12%;
 }
 .main .contact {
   padding-bottom: 40px;

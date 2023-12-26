@@ -118,15 +118,23 @@ body {
 			}
 		}
 	
-		&__social-media {
-			display: none;
+		.social-media {
+			align-self: end;
+			margin: 0 20px 40px;
+
+			&__link {
+				margin: 10px;
+				padding: 10px;
+				font-size: 2.5rem;
+				color: $main-bright;
+			}
 		}
 		&__gradient {
 			position: absolute;
 			bottom: 0;
 			left: 0;
 			right: 0;
-			height: 50%;
+			height: 60%;
 			background-image: $main-gradient;
 			z-index: -10;
 		}
@@ -147,11 +155,7 @@ body {
 			width: 100%;
 		}
 		&__blocks {
-			position: absolute;
-			display: flex;
 			justify-content: space-evenly;
-			height: 100%;
-			width: 100%;
 		}
 		&__block {
 			width: 13%;
@@ -203,10 +207,8 @@ body {
 		}
 		&__about-offer {
 			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
+			height: 100%;
+			width: 100%;
 			background-image: $secondary-gradient;
 			display: flex;
 			flex-direction: column;
@@ -234,13 +236,11 @@ body {
 
 	.reviews {
 		&__textbox {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-around;
-			align-items: center;
+		display: inline-block;
 			.reviews__box {
-				margin: 20px;
-				width: 90%;
+				position: relative;
+				margin: 40px 20px 20px;
+				padding: 10px;
 				border-radius: 8px;
 				box-shadow: 3px 3px 3px #ccc;
 				transition: transform 0.3s;
@@ -253,31 +253,58 @@ body {
 				}
 			}
 			
-			.more-reviews {
-				&::before {
-					content: '';
-					display: block;
-					margin: 30px auto;
-					width: 90%;
-					height: 1px;
-					background-color: $main-dark;
-					animation: lines-horizontal 1s;
+		}
+		.more-reviews {
+			&::before {
+				content: '';
+				display: block;
+				margin: 0 auto 30px;
+				width: 90%;
+				height: 1px;
+				background-color: $main-dark;
+				animation: lines-horizontal 1s;
+			}
+			&__link {
+				display: inline-block;
+				margin-top: 20px;
+				text-decoration: none;
+				font-weight: bold;
+				color: $main-dark;
+				transition: scale 0.3s;
+				.fa-brands {
+					margin-right: 10px;
+					font-size: 2rem;
 				}
-				&__link {
-					display: inline-block;
-					margin-top: 20px;
-					text-decoration: none;
-					font-weight: bold;
-					color: $main-dark;
-					transition: scale 0.3s;
-					.fa-brands {
-						margin-right: 10px;
-						font-size: 2rem;
-					}
-					&:hover {
-						scale: 1.05;
-					}
+				&:hover {
+					scale: 1.05;
 				}
+			}
+		}
+		&__blocks {
+			justify-content: space-around;
+			z-index: -100;
+		}
+		&__block {
+			width: 7%;
+			background-color: grey;
+			
+			&--block1 {
+				background-color: #272640;
+				height: 18%;
+			}
+			&--block2 {
+				margin-right: 80px;
+				background-color: #1b3a4b;
+				height: 14%;
+			}
+			&--block3 {
+				margin-left: 80px;
+				background-color: #0b525b;
+				height: 17%;
+			}
+			&--block4 {
+				background-color: #006466;
+				height: 12%;
 			}
 		}
 	}
@@ -315,6 +342,7 @@ body {
 			background-color: $main-bright;
 			cursor: pointer;
 		}
+		
 	}
 }
 
