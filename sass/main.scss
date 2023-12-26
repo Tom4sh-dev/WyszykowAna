@@ -208,13 +208,15 @@ body {
 			height: 100%;
 			width: 100%;
 			background-image: $secondary-gradient;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-around;
-			align-items: center;
 			z-index: 10;
 			transform: translateX(-100%);
 			transition: transform 0.3s;
+
+			.textbox__text {
+				position: absolute;
+				top: 30%;
+				padding: 5%;
+			}
 
 			&--active {
 				transform: translateX(0);
@@ -255,7 +257,6 @@ body {
 				&__text {
 					padding: 10px;
 				}
-				
 			}
 		}
 		.more-reviews {
@@ -312,6 +313,8 @@ body {
 			}
 		}
 	}
+
+	// REVIEWS
 
 	.contact {
 		padding-bottom: 40px;

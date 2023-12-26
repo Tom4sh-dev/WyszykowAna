@@ -566,13 +566,14 @@ body {
   height: 100%;
   width: 100%;
   background-image: linear-gradient(220deg, #065a60 0%, #312244 74%);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   z-index: 10;
   transform: translateX(-100%);
   transition: transform 0.3s;
+}
+.main .offer__about-offer .textbox__text {
+  position: absolute;
+  top: 30%;
+  padding: 5%;
 }
 .main .offer__about-offer--active {
   transform: translateX(0);
