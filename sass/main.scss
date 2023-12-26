@@ -103,21 +103,20 @@ body {
 // MAIN
 
 .main {
+	// BANNER
 
-// BANNER
-
-	.banner {	
+	.banner {
 		&__image {
 			width: 100%;
 			border-radius: 50%;
 		}
-	
+
 		&__textbox {
 			.textbox__profile {
 				display: none;
 			}
 		}
-	
+
 		.social-media {
 			align-self: end;
 			margin: 0 20px 40px;
@@ -140,7 +139,7 @@ body {
 		}
 	}
 
-// ABOUTME
+	// ABOUTME
 
 	.about-me {
 		justify-content: space-between;
@@ -183,7 +182,7 @@ body {
 		}
 	}
 
-// OFFER
+	// OFFER
 
 	.offer {
 		justify-content: center;
@@ -193,7 +192,6 @@ body {
 			margin-bottom: 10%;
 			width: 50%;
 			border-radius: 40%;
-			
 		}
 		&__about-offer-open-btn {
 			position: absolute;
@@ -232,12 +230,12 @@ body {
 		}
 	}
 
-// REVIEWS
+	// REVIEWS
 
 	.reviews {
 		&__textbox {
-		display: inline-block;
-			.reviews__box {
+			display: inline-block;
+			.review-box {
 				position: relative;
 				margin: 40px 20px 20px;
 				padding: 10px;
@@ -247,12 +245,18 @@ body {
 				&:hover {
 					transform: scale(0.95);
 				}
-				
-				&-info {
+				&__title {
+					display: flex;
+					justify-content: end;
+				}
+				&__info {
 					display: flex;
 				}
+				&__text {
+					padding: 10px;
+				}
+				
 			}
-			
 		}
 		.more-reviews {
 			&::before {
@@ -287,24 +291,24 @@ body {
 		&__block {
 			width: 7%;
 			background-color: grey;
-			
+
 			&--block1 {
 				background-color: #272640;
-				height: 18%;
+				height: 15%;
 			}
 			&--block2 {
 				margin-right: 80px;
 				background-color: #1b3a4b;
-				height: 14%;
+				height: 11%;
 			}
 			&--block3 {
 				margin-left: 80px;
 				background-color: #0b525b;
-				height: 17%;
+				height: 14%;
 			}
 			&--block4 {
 				background-color: #006466;
-				height: 12%;
+				height: 9%;
 			}
 		}
 	}
@@ -342,7 +346,6 @@ body {
 			background-color: $main-bright;
 			cursor: pointer;
 		}
-		
 	}
 }
 
@@ -359,6 +362,3 @@ body {
 		margin: auto 5px;
 	}
 }
-
-
-
