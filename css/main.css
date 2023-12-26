@@ -660,6 +660,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  text-align: left;
 }
 .main .contact__form-label {
   font-size: 1.4rem;
