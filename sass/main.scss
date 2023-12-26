@@ -3,9 +3,7 @@
 @use './mixins' as *;
 // @use './components' as *;
 @import './components';
-@import './small';
-@import './medium';
-@import './large';
+
 // @use './small' as *;
 // @use './medium' as *;
 // @use './large' as *;
@@ -37,7 +35,7 @@ body {
 			transform: translatex(-100%);
 			position: absolute;
 			width: 100%;
-			height: 100%;
+			height: 105%;
 			z-index: 100;
 			display: flex;
 			flex-direction: column;
@@ -70,7 +68,7 @@ body {
 		width: 100%;
 		text-align: center;
 
-		&__img {
+		&__logo-img {
 			height: 40px;
 			width: 40px;
 		}
@@ -103,6 +101,7 @@ body {
 // MAIN
 
 .main {
+	
 	// BANNER
 
 	.banner {
@@ -150,7 +149,7 @@ body {
 		&__textbox {
 			margin-bottom: 0;
 		}
-		&__img {
+		&__image {
 			width: 100%;
 		}
 		&__blocks {
@@ -306,7 +305,7 @@ body {
 		}
 	}
 
-	// REVIEWS
+	// CONTACT
 
 	.contact {
 		padding-bottom: 40px;
@@ -358,3 +357,8 @@ body {
 		margin: auto 5px;
 	}
 }
+
+
+@import './small';
+@import './medium';
+@import './large';

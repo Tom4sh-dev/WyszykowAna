@@ -1,49 +1,77 @@
 @media (orientation: landscape) {
 
-// HEADER
-
-	.nav {
-		&__mobile {
-			li {
-				padding: 10px;
+	// HEADER
+	.header {
+		.nav {
+			&__item {
+				padding: 15px;
 			}
 		}
 	}
-	.header {
-		&__img {
-			width: 50%;
-		}
-		&__textbox {
-			position: absolute;
-            top: 40%;
-			right: 0;
-			width: 50%;
-		}
-		&__gradient {
-			height: 65%;
-		}
-	}
 
-}
+	.main {
 
-@media (min-width: 576px) {
-
-// HEADER
-
-	.header {
-		&__heading {
-			&--logo {
-				img {
-					width: 60px;
-					height: 60px;
+		// BANNER
+		.banner {
+			height: 100vh;
+			flex-wrap: wrap;
+			overflow: hidden;
+			&__image {
+				width: 45%;
+			}
+			&__heading--landscape {
+				padding-top: 20px;
+				color: $main-dark;
+				&::after {
+					content: '';
+					background-color: $main-dark;
 				}
 			}
-			&--branding {
-				.name {
+			&__textbox {
+				width: 45%;
+				color: $main-dark;
+			}
+
+			.social-media {
+				position: absolute;
+				bottom: 5%;
+			}
+			&__gradient {
+				height: 40%;
+			}
+		}
+
+		// OFFER
+		.offer {
+			&__about-offer {
+				.textbox__text {
+					font-size: 1.8rem;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 576px) {
+
+	// HEADER
+	.section-heading {
+		font-size: 2.4rem;
+	}
+	.textbox {
+		font-size: 1.8rem;
+	}
+	.header {
+		.heading {
+			&__logo-img {
+				width: 60px;
+				height: 60px;
+			}
+			.branding {
+				&__name {
 					font-size: 2.5rem;
 					font-weight: 400;
 				}
-				.company {
+				&__company {
 					font-size: 2.2rem;
 				}
 			}
@@ -51,43 +79,29 @@
 				scale: 1.3;
 			}
 		}
-		&__img {
-			img {
-				width: 80%;
+	}
+
+	// CONTACT
+	.main {
+		.about-me {
+			.section-heading {
+				padding-top: 20%;
 			}
 		}
-		&__textbox {
-			&--title {
-				font-size: 2.2rem;
+		.contact {
+			&__form-label {
+				font-size: 1.8rem;
 			}
-
-			&--text {
-				width: 85%;
+			&__form-btn {
 				font-size: 1.8rem;
 			}
 		}
 	}
 
-// MAIN
-
-	.main {
-		.aboutme {
-			&__textbox {
-				padding-top: 20%;
-                &--title {
-                    font-size: 2.2rem;
-                }
-    
-                &--text {
-                    width: 85%;
-                    font-size: 1.8rem;
-                }
-			}
-			&__blocks {
-				&--block {
-					width: 10%;
-				}
-			}
+	// FOOTER
+	.footer {
+		&__text {
+			font-size: 1.8rem;
 		}
 	}
 }

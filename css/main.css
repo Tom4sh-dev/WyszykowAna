@@ -140,60 +140,381 @@
   width: 100%;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #4f4f4f;
+  background-color: #fafafa;
+}
+
+.header .nav__list {
+  transform: translatex(-100%);
+  position: absolute;
+  width: 100%;
+  height: 105%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
+  list-style: none;
+  transition: transform 0.3s;
+}
+.header .nav__list--active {
+  transform: translatex(0);
+}
+.header .nav__item {
+  padding: 25px;
+  text-align: center;
+}
+.header .nav__link {
+  padding: 20px;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+}
+.header .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+  width: 100%;
+  text-align: center;
+}
+.header .heading__logo-img {
+  height: 40px;
+  width: 40px;
+}
+.header .heading .branding__name {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.header .heading .branding__name::after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 80%;
+  background-color: #4f4f4f;
+}
+.header .heading .branding__company {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.header .heading .hamburger {
+  z-index: 100;
+}
+
+.main .banner__image {
+  width: 100%;
+  border-radius: 50%;
+}
+.main .banner__textbox .textbox__profile {
+  display: none;
+}
+.main .banner .social-media {
+  align-self: end;
+  margin: 0 20px 40px;
+}
+.main .banner .social-media__link {
+  margin: 10px;
+  padding: 10px;
+  font-size: 2.5rem;
+  color: #fafafa;
+}
+.main .banner__gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
+  z-index: -10;
+}
+.main .about-me {
+  justify-content: space-between;
+}
+.main .about-me .section-heading {
+  padding-top: 25%;
+}
+.main .about-me__textbox {
+  margin-bottom: 0;
+}
+.main .about-me__image {
+  width: 100%;
+}
+.main .about-me__blocks {
+  justify-content: space-evenly;
+}
+.main .about-me__block {
+  width: 13%;
+  background-color: grey;
+}
+.main .about-me__block--block1 {
+  background-color: #3e1f47;
+  height: 15%;
+}
+.main .about-me__block--block2 {
+  background-color: #272640;
+  height: 12%;
+}
+.main .about-me__block--block3 {
+  background-color: #1b3a4b;
+  height: 8%;
+}
+.main .about-me__block--block4 {
+  background-color: #0b525b;
+  height: 11%;
+}
+.main .about-me__block--block5 {
+  background-color: #006466;
+  height: 6%;
+}
+.main .offer {
+  justify-content: center;
+  background-image: linear-gradient(220deg, #065a60 0%, #312244 74%);
+}
+.main .offer__img {
+  margin-bottom: 10%;
+  width: 50%;
+  border-radius: 40%;
+}
+.main .offer__about-offer-open-btn {
+  position: absolute;
+  left: 10px;
+  color: #fafafa;
+  background-color: transparent;
+  font-size: 3rem;
+  border: none;
+  animation: active-button 3s infinite;
+  cursor: pointer;
+}
+.main .offer__about-offer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-image: linear-gradient(220deg, #065a60 0%, #312244 74%);
+  z-index: 10;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+.main .offer__about-offer .textbox__text {
+  position: absolute;
+  top: 30%;
+  padding: 5%;
+}
+.main .offer__about-offer--active {
+  transform: translateX(0);
+}
+.main .offer__about-offer-close-btn {
+  margin-top: 20%;
+  background-color: transparent;
+  border: none;
+  color: #fafafa;
+  font-size: 4rem;
+  cursor: pointer;
+}
+.main .reviews__textbox {
+  display: inline-block;
+}
+.main .reviews__textbox .review-box {
+  position: relative;
+  margin: 40px 20px 20px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 3px #ccc;
+}
+.main .reviews__textbox .review-box__title {
+  display: flex;
+  justify-content: end;
+}
+.main .reviews__textbox .review-box__info {
+  display: flex;
+}
+.main .reviews__textbox .review-box__text {
+  padding: 10px;
+}
+.main .reviews .more-reviews::before {
+  content: "";
+  display: block;
+  margin: 0 auto 30px;
+  width: 90%;
+  height: 1px;
+  background-color: #4f4f4f;
+  animation: lines-horizontal 1s;
+}
+.main .reviews .more-reviews__link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #4f4f4f;
+}
+.main .reviews .more-reviews__link .fa-brands {
+  margin-right: 10px;
+  font-size: 2rem;
+}
+.main .reviews__blocks {
+  justify-content: space-around;
+  z-index: -100;
+}
+.main .reviews__block {
+  width: 7%;
+  background-color: grey;
+}
+.main .reviews__block--block1 {
+  background-color: #272640;
+  height: 15%;
+}
+.main .reviews__block--block2 {
+  margin-right: 80px;
+  background-color: #1b3a4b;
+  height: 11%;
+}
+.main .reviews__block--block3 {
+  margin-left: 80px;
+  background-color: #0b525b;
+  height: 14%;
+}
+.main .reviews__block--block4 {
+  background-color: #006466;
+  height: 9%;
+}
+.main .contact {
+  padding-bottom: 40px;
+  background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
+}
+.main .contact__form, .main .contact__form-top {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+.main .contact__form-label {
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+.main .contact__form-input {
+  margin-bottom: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+}
+.main .contact__form-textarea {
+  margin-bottom: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  width: 100%;
+  min-height: 150px;
+}
+.main .contact__form-btn {
+  align-self: flex-end;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  border: none;
+  border-radius: 8px;
+  color: #4f4f4f;
+  background-color: #fafafa;
+  cursor: pointer;
+}
+
+.footer {
+  height: 40px;
+  text-align: center;
+}
+.footer__text {
+  line-height: 40px;
+  font-size: 1.4rem;
+}
+.footer__year {
+  margin: auto 5px;
+}
+
 @media (orientation: landscape) {
-  .nav__mobile li {
-    padding: 10px;
+  .header .nav__item {
+    padding: 15px;
   }
-  .header__img {
-    width: 50%;
+  .main .banner {
+    height: 100vh;
+    flex-wrap: wrap;
+    overflow: hidden;
   }
-  .header__textbox {
+  .main .banner__image {
+    width: 45%;
+  }
+  .main .banner__heading--landscape {
+    padding-top: 20px;
+    color: #4f4f4f;
+  }
+  .main .banner__heading--landscape::after {
+    content: "";
+    background-color: #4f4f4f;
+  }
+  .main .banner__textbox {
+    width: 45%;
+    color: #4f4f4f;
+  }
+  .main .banner .social-media {
     position: absolute;
-    top: 40%;
-    right: 0;
-    width: 50%;
+    bottom: 5%;
   }
-  .header__gradient {
-    height: 65%;
+  .main .banner__gradient {
+    height: 40%;
+  }
+  .main .offer__about-offer .textbox__text {
+    font-size: 1.8rem;
   }
 }
 @media (min-width: 576px) {
-  .header__heading--logo img {
+  .section-heading {
+    font-size: 2.4rem;
+  }
+  .textbox {
+    font-size: 1.8rem;
+  }
+  .header .heading__logo-img {
     width: 60px;
     height: 60px;
   }
-  .header__heading--branding .name {
+  .header .heading .branding__name {
     font-size: 2.5rem;
     font-weight: 400;
   }
-  .header__heading--branding .company {
+  .header .heading .branding__company {
     font-size: 2.2rem;
   }
-  .header__heading .hamburger {
+  .header .heading .hamburger {
     scale: 1.3;
   }
-  .header__img img {
-    width: 80%;
-  }
-  .header__textbox--title {
-    font-size: 2.2rem;
-  }
-  .header__textbox--text {
-    width: 85%;
-    font-size: 1.8rem;
-  }
-  .main .aboutme__textbox {
+  .main .about-me .section-heading {
     padding-top: 20%;
   }
-  .main .aboutme__textbox--title {
-    font-size: 2.2rem;
-  }
-  .main .aboutme__textbox--text {
-    width: 85%;
+  .main .contact__form-label {
     font-size: 1.8rem;
   }
-  .main .aboutme__blocks--block {
-    width: 10%;
+  .main .contact__form-btn {
+    font-size: 1.8rem;
+  }
+  .footer__text {
+    font-size: 1.8rem;
   }
 }
 @media (min-width: 768px) {
@@ -398,311 +719,4 @@
     right: 0;
     width: 50%;
   }
-}
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 10px;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  color: #4f4f4f;
-  background-color: #fafafa;
-}
-
-.header .nav__list {
-  transform: translatex(-100%);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
-  list-style: none;
-  transition: transform 0.3s;
-}
-.header .nav__list--active {
-  transform: translatex(0);
-}
-.header .nav__item {
-  padding: 25px;
-  text-align: center;
-}
-.header .nav__link {
-  padding: 20px;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-}
-.header .heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5%;
-  width: 100%;
-  text-align: center;
-}
-.header .heading__img {
-  height: 40px;
-  width: 40px;
-}
-.header .heading .branding__name {
-  font-size: 2rem;
-  font-weight: 400;
-}
-.header .heading .branding__name::after {
-  content: "";
-  display: block;
-  margin: auto;
-  height: 1px;
-  width: 80%;
-  background-color: #4f4f4f;
-}
-.header .heading .branding__company {
-  font-size: 1.8rem;
-  font-weight: 400;
-}
-.header .heading .hamburger {
-  z-index: 100;
-}
-
-.main .banner__image {
-  width: 100%;
-  border-radius: 50%;
-}
-.main .banner__textbox .textbox__profile {
-  display: none;
-}
-.main .banner .social-media {
-  align-self: end;
-  margin: 0 20px 40px;
-}
-.main .banner .social-media__link {
-  margin: 10px;
-  padding: 10px;
-  font-size: 2.5rem;
-  color: #fafafa;
-}
-.main .banner__gradient {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60%;
-  background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
-  z-index: -10;
-}
-.main .about-me {
-  justify-content: space-between;
-}
-.main .about-me .section-heading {
-  padding-top: 25%;
-}
-.main .about-me__textbox {
-  margin-bottom: 0;
-}
-.main .about-me__img {
-  width: 100%;
-}
-.main .about-me__blocks {
-  justify-content: space-evenly;
-}
-.main .about-me__block {
-  width: 13%;
-  background-color: grey;
-}
-.main .about-me__block--block1 {
-  background-color: #3e1f47;
-  height: 15%;
-}
-.main .about-me__block--block2 {
-  background-color: #272640;
-  height: 12%;
-}
-.main .about-me__block--block3 {
-  background-color: #1b3a4b;
-  height: 8%;
-}
-.main .about-me__block--block4 {
-  background-color: #0b525b;
-  height: 11%;
-}
-.main .about-me__block--block5 {
-  background-color: #006466;
-  height: 6%;
-}
-.main .offer {
-  justify-content: center;
-  background-image: linear-gradient(220deg, #065a60 0%, #312244 74%);
-}
-.main .offer__img {
-  margin-bottom: 10%;
-  width: 50%;
-  border-radius: 40%;
-}
-.main .offer__about-offer-open-btn {
-  position: absolute;
-  left: 10px;
-  color: #fafafa;
-  background-color: transparent;
-  font-size: 3rem;
-  border: none;
-  animation: active-button 3s infinite;
-  cursor: pointer;
-}
-.main .offer__about-offer {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  background-image: linear-gradient(220deg, #065a60 0%, #312244 74%);
-  z-index: 10;
-  transform: translateX(-100%);
-  transition: transform 0.3s;
-}
-.main .offer__about-offer .textbox__text {
-  position: absolute;
-  top: 30%;
-  padding: 5%;
-}
-.main .offer__about-offer--active {
-  transform: translateX(0);
-}
-.main .offer__about-offer-close-btn {
-  margin-top: 20%;
-  background-color: transparent;
-  border: none;
-  color: #fafafa;
-  font-size: 4rem;
-  cursor: pointer;
-}
-.main .reviews__textbox {
-  display: inline-block;
-}
-.main .reviews__textbox .review-box {
-  position: relative;
-  margin: 40px 20px 20px;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 3px 3px 3px #ccc;
-}
-.main .reviews__textbox .review-box__title {
-  display: flex;
-  justify-content: end;
-}
-.main .reviews__textbox .review-box__info {
-  display: flex;
-}
-.main .reviews__textbox .review-box__text {
-  padding: 10px;
-}
-.main .reviews .more-reviews::before {
-  content: "";
-  display: block;
-  margin: 0 auto 30px;
-  width: 90%;
-  height: 1px;
-  background-color: #4f4f4f;
-  animation: lines-horizontal 1s;
-}
-.main .reviews .more-reviews__link {
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #4f4f4f;
-}
-.main .reviews .more-reviews__link .fa-brands {
-  margin-right: 10px;
-  font-size: 2rem;
-}
-.main .reviews__blocks {
-  justify-content: space-around;
-  z-index: -100;
-}
-.main .reviews__block {
-  width: 7%;
-  background-color: grey;
-}
-.main .reviews__block--block1 {
-  background-color: #272640;
-  height: 15%;
-}
-.main .reviews__block--block2 {
-  margin-right: 80px;
-  background-color: #1b3a4b;
-  height: 11%;
-}
-.main .reviews__block--block3 {
-  margin-left: 80px;
-  background-color: #0b525b;
-  height: 14%;
-}
-.main .reviews__block--block4 {
-  background-color: #006466;
-  height: 9%;
-}
-.main .contact {
-  padding-bottom: 40px;
-  background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
-}
-.main .contact__form, .main .contact__form-top {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  text-align: left;
-}
-.main .contact__form-label {
-  font-size: 1.4rem;
-  margin-bottom: 18px;
-  text-transform: uppercase;
-}
-.main .contact__form-input {
-  margin-bottom: 18px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.6rem;
-}
-.main .contact__form-textarea {
-  margin-bottom: 18px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.6rem;
-  width: 100%;
-  min-height: 150px;
-}
-.main .contact__form-btn {
-  align-self: flex-end;
-  padding: 10px;
-  width: 100%;
-  max-width: 300px;
-  border: none;
-  border-radius: 8px;
-  color: #4f4f4f;
-  background-color: #fafafa;
-  cursor: pointer;
-}
-
-.footer {
-  height: 40px;
-  text-align: center;
-}
-.footer__text {
-  line-height: 40px;
-  font-size: 1.4rem;
-}
-.footer__year {
-  margin: auto 5px;
 }/*# sourceMappingURL=main.css.map */
