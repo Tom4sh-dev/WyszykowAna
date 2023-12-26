@@ -595,10 +595,6 @@ body {
   padding: 10px;
   border-radius: 8px;
   box-shadow: 3px 3px 3px #ccc;
-  transition: transform 0.3s;
-}
-.main .reviews__textbox .review-box:hover {
-  transform: scale(0.95);
 }
 .main .reviews__textbox .review-box__title {
   display: flex;
