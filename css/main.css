@@ -625,14 +625,10 @@ body {
   text-decoration: none;
   font-weight: bold;
   color: #4f4f4f;
-  transition: scale 0.3s;
 }
 .main .reviews .more-reviews__link .fa-brands {
   margin-right: 10px;
   font-size: 2rem;
-}
-.main .reviews .more-reviews__link:hover {
-  scale: 1.05;
 }
 .main .reviews__blocks {
   justify-content: space-around;

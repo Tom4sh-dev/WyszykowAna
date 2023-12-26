@@ -275,13 +275,9 @@ body {
 				text-decoration: none;
 				font-weight: bold;
 				color: $main-dark;
-				transition: scale 0.3s;
 				.fa-brands {
 					margin-right: 10px;
 					font-size: 2rem;
-				}
-				&:hover {
-					scale: 1.05;
 				}
 			}
 		}
