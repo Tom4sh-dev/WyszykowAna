@@ -13,6 +13,7 @@
 			content="analiza kolorystyczna, analiza stylistyczna, stylistka, kolorystka"
 		/>
 		<title>WyszykowAna - Analiza stylistyczna</title>
+		<link rel="shortcut icon" type="image/jpg" href="/img/favicon.ico" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -30,129 +31,135 @@
 	</head>
 	<body>
 		<header id="home" class="header">
-			<nav class="nav">
-				<ul class="nav__mobile">
-					<li><a href="#home" class="nav__item">strona główna</a></li>
-					<li><a href="#aboutme" class="nav__item">o mnie</a></li>
-					<li><a href="#offer" class="nav__item">oferta</a></li>
-					<li><a href="#reviews" class="nav__item">opinie</a></li>
-					<li><a href="#contact" class="nav__item">kontakt</a></li>
-				</ul>
-
-				<ul class="nav__desktop">
-					<li><a href="#home">strona główna</a></li>
-					<li><a href="#aboutme">o mnie</a></li>
-					<li><a href="#offer">oferta</a></li>
-					<li><a href="#reviews">opinie</a></li>
-					<li><a href="#contact">kontakt</a></li>
+			<nav class="nav header__nav">
+				<ul class="nav__list nav__list--horizontal">
+					<li class="nav__item">
+						<a href="#home" class="nav__link">strona główna</a>
+					</li>
+					<li class="nav__item">
+						<a href="#about-me" class="nav__link">o mnie</a>
+					</li>
+					<li class="nav__item">
+						<a href="#offer" class="nav__link">oferta</a>
+					</li>
+					<li class="nav__item">
+						<a href="#reviews" class="nav__link">opinie</a>
+					</li>
+					<li class="nav__item">
+						<a href="#contact" class="nav__link">kontakt</a>
+					</li>
 				</ul>
 			</nav>
-			<div class="wrapper">
-				<div class="header__heading">
-					<a href="#home" class="header__heading--logo"
-						><img src="./img/955dea03-5425-437d-b615-12151592cb72.png" alt="" />
-					</a>
-					<div class="header__heading--branding">
-						<h1 class="name">Anastazja Zdanowicz</h1>
-						<h2 class="company">WyszykowAna</h2>
-					</div>
 
-					<button class="hamburger hamburger--elastic" type="button">
-						<span class="hamburger-box">
-							<span class="hamburger-inner"></span>
-						</span>
-					</button>
+			<div class="heading header__heading">
+				<a href="#home" class="heading__logo"
+					><img class="heading__img" src="./img/logo.png" alt="" />
+				</a>
+				<div class="branding heading__branding">
+					<h1 class="branding__name">Anastazja Zdanowicz</h1>
+					<h2 class="branding__company">WyszykowAna</h2>
 				</div>
 
-				<div class="header__img">
-					<img
-						src="./img/header 640.png"
-						alt="Anastazja, zdjęcie profilowe z ramą kolorystyczną"
-					/>
-				</div>
-				<h2 class="section-heading">witaj!</h2>
-				<div class="header__textbox textbox">
-					<h2 class="header__textbox--profile">Analiza Kolorystyczna</h2>
-					<p class="header__textbox--text">
-						Chciałabym cię zaprosić do mojego świata kolorów i stylu. Pomogę ci
-						zbudować twój własny, niepowtarzalny wizerunek, dzięki któremu
-						poczujesz się piękna i wyjątkowa.
-					</p>
-				</div>
-
-				<div class="header__social-media">
-					<a href="https://www.facebook.com/WyszykowAna" target="_blank"
-						><i class="fa-brands fa-facebook"></i
-					></a>
-					<a href="https://www.instagram.com/wyszykow_ana/" target="_blank"
-						><i class="fa-brands fa-instagram"></i
-					></a>
-				</div>
-				<div class="header__gradient"></div>
+				<button class="hamburger hamburger--elastic" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
 			</div>
 		</header>
 		<main class="main">
 			<div class="wrapper">
-				<section id="aboutme" class="aboutme section">
+				<section class="banner section">
+					<img
+						class="banner__image"
+						src="./img/header 640.png"
+						alt="Anastazja, zdjęcie profilowe z ramą kolorystyczną"
+					/>
+
+					<h2 class="section-heading section-heading--bright">witaj!</h2>
+					<div class="banner__textbox textbox textbox--bright">
+						<h2 class="textbox__profile">Analiza Kolorystyczna</h2>
+						<p class="textbox__text">
+							Chciałabym cię zaprosić do mojego świata kolorów i stylu. Pomogę
+							ci zbudować twój własny, niepowtarzalny wizerunek, dzięki któremu
+							poczujesz się piękna i wyjątkowa.
+						</p>
+					</div>
+
+					<div class="banner__social-media">
+						<a href="https://www.facebook.com/WyszykowAna" target="_blank"
+							><i class="fa-brands fa-facebook"></i
+						></a>
+						<a href="https://www.instagram.com/wyszykow_ana/" target="_blank"
+							><i class="fa-brands fa-instagram"></i
+						></a>
+					</div>
+					<div class="banner__gradient"></div>
+				</section>
+				<section id="about-me" class="about-me section">
 					<h2 class="section-heading">o mnie</h2>
-					<div class="aboutme__textbox textbox">
+					<div class="about-me__textbox textbox">
 						<!-- <p class="aboutme__textbox--title title">o mnie</p> -->
-						<p class="aboutme__textbox--text">
+						<p class="textbox__text">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
 							aperiam porro labore nulla. Aut animi perferendis, tempora officia
 							porro nisi ab, quaerat temporibus illum eligendi quo in fuga
 							consequuntur dolorem.
 						</p>
-						<p class="aboutme__textbox--text">
+						<p class="textbox__text">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
 							aperiam porro labore nulla. Aut animi perferendis, tempora officia
 							porro nisi ab, quaerat temporibus illum eligendi quo in fuga
 							consequuntur dolorem.
 						</p>
 					</div>
-					<div class="aboutme__img">
-						<img
-							src="./img/about 640.png"
-							alt="Zdjęcie portretowe z paletami kolorystycznymi"
-						/>
-					</div>
-					<div class="aboutme__blocks">
-						<div class="aboutme__blocks--block block1"></div>
-						<div class="aboutme__blocks--block block2"></div>
-						<div class="aboutme__blocks--block block3"></div>
-						<div class="aboutme__blocks--block block4"></div>
-						<div class="aboutme__blocks--block block5"></div>
+
+					<img
+						class="about-me__img"
+						src="./img/about 640.png"
+						alt="Zdjęcie portretowe z paletami kolorystycznymi"
+					/>
+
+					<div class="about-me__blocks">
+						<div class="about-me__block about-me__block--block1"></div>
+						<div class="about-me__block about-me__block--block2"></div>
+						<div class="about-me__block about-me__block--block3"></div>
+						<div class="about-me__block about-me__block--block4"></div>
+						<div class="about-me__block about-me__block--block5"></div>
 					</div>
 				</section>
 				<section id="offer" class="offer section">
-					<h2 class="section-heading">oferta</h2>
-					<div class="offer__textbox textbox">
-						<p class="offer__textbox--text">
+					<h2 class="section-heading section-heading--bright">oferta</h2>
+					<div class="offer__textbox textbox textbox--bright">
+						<p class="textbox__text">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
 							aperiam porro labore nulla. Aut animi perferendis, tempora officia
 							porro nisi ab, quaerat temporibus illum eligendi quo in fuga
 							consequuntur dolorem.
 						</p>
 					</div>
-					<div class="offer__img">
-						<img
-							src="./img/offer 640png.png"
-							alt="Zdjęcie portretowe kobiety"
-						/>
-					</div>
-					<div class="offer__textbox textbox">
-						<p class="offer__textbox--text">
+					<img
+						class="offer__img"
+						src="./img/offer 640png.png"
+						alt="Zdjęcie portretowe"
+					/>
+
+					<div class="offer__textbox textbox textbox--bright">
+						<p class="textbox__text">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
 							aperiam porro labore nulla. Aut animi perferendis, tempora officia
 							porro nisi ab, quaerat temporibus illum eligendi quo in fuga
 							consequuntur dolorem.
 						</p>
 					</div>
-					<div class="offer__about textbox">
-						<button class="offer__about-close-btn">
+					<button class="offer__about-offer-open-btn">
+						<i class="fa-solid fa-circle-arrow-right"></i>
+					</button>
+					<div class="offer__about-offer textbox textbox--bright">
+						<button class="offer__about-offer-close-btn">
 							<i class="fa-solid fa-circle-arrow-left"></i>
 						</button>
-						<p class="offer__textbox textbox">
+						<p class="textbox__text">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
 							aperiam porro labore nulla. Aut animi perferendis, tempora officia
 							porro nisi ab, quaerat temporibus illum eligendi quo in fuga
@@ -168,95 +175,105 @@
 							illum eligendi quo in fuga consequuntur dolorem.
 						</p>
 					</div>
-					<button class="offer__about-open-btn">
-						o analizie...<i class="fa-solid fa-circle-arrow-down"></i>
-					</button>
 				</section>
 				<section id="reviews" class="reviews section">
 					<h2 class="section-heading">opinie</h2>
 					<div class="reviews__textbox textbox">
-						<div class="reviews__textbox--boxes">
-							<div class="reviews__box">
-								<strong class="review__box-title">Magda Gessler</strong>
-								<div class="reviews__box-info">
-									<div class="reviews__box-quote">
-										<i class="fas fa-quote-right"></i>
-									</div>
-									<p class="reviews__box-text">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Ullam quasi eaque adipisci, asperiores et iure nobis vel?
-										Vero, obcaecati ullam.
-									</p>
+						<div class="reviews__box">
+							<strong class="review__box-title">Magda Gessler</strong>
+							<div class="reviews__box-info">
+								<div class="reviews__box-quote">
+									<i class="fas fa-quote-right"></i>
 								</div>
+								<p class="reviews__box-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+									quasi eaque adipisci, asperiores et iure nobis vel? Vero,
+									obcaecati ullam.
+								</p>
 							</div>
-							<div class="reviews__box">
-								<strong class="review__box-title">Hakuna Kundebe</strong>
-								<div class="reviews__box-info">
-									<div class="reviews__box-quote">
-										<i class="fas fa-quote-right"></i>
-									</div>
-									<p class="reviews__box-text">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Ullam quasi eaque adipisci, asperiores et iure nobis vel?
-										Vero, obcaecati ullam.
-									</p>
+						</div>
+						<div class="reviews__box">
+							<strong class="review__box-title">Hakuna Kundebe</strong>
+							<div class="reviews__box-info">
+								<div class="reviews__box-quote">
+									<i class="fas fa-quote-right"></i>
 								</div>
+								<p class="reviews__box-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+									quasi eaque adipisci, asperiores et iure nobis vel? Vero,
+									obcaecati ullam.
+								</p>
 							</div>
-							<div class="reviews__box">
-								<strong class="review__box-title">Adolf Hilary</strong>
-								<div class="reviews__box-info">
-									<div class="reviews__box-quote">
-										<i class="fas fa-quote-right"></i>
-									</div>
-									<p class="reviews__box-text">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Ullam quasi eaque adipisci, asperiores et iure nobis vel?
-										Vero, obcaecati ullam.
-									</p>
+						</div>
+						<div class="reviews__box">
+							<strong class="review__box-title">Adolf Hilary</strong>
+							<div class="reviews__box-info">
+								<div class="reviews__box-quote">
+									<i class="fas fa-quote-right"></i>
 								</div>
+								<p class="reviews__box-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+									quasi eaque adipisci, asperiores et iure nobis vel? Vero,
+									obcaecati ullam.
+								</p>
 							</div>
 						</div>
 
-						<div class="reviews__more">
-							<p>Po więcej opinii zapraszam na mój profil na facebooku:</p>
-							<a href="https://www.facebook.com/WyszykowAna" target="_blank"
-								><i class="fa-brands fa-facebook"></i>WyszykowAna - Anastazja Zdanowicz
+						<div class="reviews__more more-reviews">
+							<p class="more-reviews__text">
+								Po więcej opinii zapraszam na mój profil na facebooku:
+							</p>
+							<a
+								class="more-reviews__link"
+								href="https://www.facebook.com/WyszykowAna"
+								target="_blank"
+								><i class="fa-brands fa-facebook"></i>WyszykowAna - Anastazja
+								Zdanowicz
 							</a>
 						</div>
 					</div>
-					<div class="reviews__blocks">
+					<!-- <div class="reviews__blocks">
 						<div class="reviews__blocks--block block1"></div>
 						<div class="reviews__blocks--block block2"></div>
 						<div class="reviews__blocks--block block3"></div>
 						<div class="reviews__blocks--block block4"></div>
-					</div>
+					</div> -->
 				</section>
-			</div>
-			<section id="contact" class="contact section">
-				<h2 class="section-heading">kontakt</h2>
-				<div class="wrapper">
-					<form class="contact__form">
-	
+
+				<section id="contact" class="contact section">
+					<h2 class="section-heading section-heading--bright">kontakt</h2>
+
+					<form class="contact__form textbox--bright">
 						<div class="contact__form-top">
-							<label for="Name" class="contact__form-label">Imię i nazwisko:</label>
-							<input type="text" id="name" class="contact__form-input">
-	
-							<label for="email" class="contact__form-label">Adres e-mail:</label>
-							<input type="text" id="email" class="contact__form-input">
+							<label for="Name" class="contact__form-label"
+								>Imię i nazwisko:</label
+							>
+							<input type="text" id="name" class="contact__form-input" />
+
+							<label for="email" class="contact__form-label"
+								>Adres e-mail:</label
+							>
+							<input type="text" id="email" class="contact__form-input" />
 						</div>
-	
+
 						<label for="msg" class="contact__form-label">Wiadomość:</label>
 						<textarea id="msg" class="contact__form-textarea"></textarea>
-	
-						<button type="submit" class="contact__form-btn btn-special-animation">Wyślij</button>
-					</form>
-				</div>
-			</section>
 
+						<button
+							type="submit"
+							class="contact__form-btn btn-special-animation"
+						>
+							Wyślij
+						</button>
+					</form>
+				</section>
+			</div>
 		</main>
-		
+
 		<footer class="footer">
-			<p class="footer__text">&copy; <span class="footer__year"></span>WyszykowAna</p>
+			<p class="footer__text">
+				&copy; <span class="footer__year"></span>WyszykowAna
+			</p>
 		</footer>
 		<!-- <script
 			type="text/javascript"
