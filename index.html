@@ -292,23 +292,19 @@
 				<section id="contact" class="contact section">
 					<h2 class="section-heading section-heading--bright">kontakt</h2>
 
-					<form class="contact__form textbox--bright" action="https://formsubmit.io/send/tom.zdan@protonmail.com" method="POST">
+					<form class="contact__form textbox--bright" action="https://formsubmit.io/send/4bb76b7c-7db2-42b5-937a-39afb7a8fa84" method="POST">
 						<div class="contact__form-top">
-							<input name="_redirect" type="hidden" id="name" value="https://your website url">
+							<input name="_formsubmit_id" type="text" style="display:none">
 
-							<label for="Name" class="contact__form-label"
-								>Imię i nazwisko:</label
-							>
-							<input type="text" id="name" class="contact__form-input" />
+							<label for="name" class="contact__form-label">Imię i nazwisko:</label>
+							<input type="text" id="name" class="contact__form-input" name="name"/>
 
-							<label for="email" class="contact__form-label"
-								>Adres e-mail:</label
-							>
-							<input type="text" id="email" class="contact__form-input" />
+							<label for="email" class="contact__form-label">Adres e-mail:</label>
+							<input type="text" id="email" class="contact__form-input" name="email"/>
 						</div>
 
 						<label for="msg" class="contact__form-label">Wiadomość:</label>
-						<textarea id="msg" class="contact__form-textarea"></textarea>
+						<textarea id="msg" class="contact__form-textarea" name="message"></textarea>
 
 						<button
 							type="submit"
