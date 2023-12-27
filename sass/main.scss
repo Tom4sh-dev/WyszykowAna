@@ -133,6 +133,7 @@ body {
 			left: 0;
 			right: 0;
 			height: 60%;
+			width: 100vw; 
 			background-image: $main-gradient;
 			z-index: -10;
 		}
@@ -157,7 +158,6 @@ body {
 		}
 		&__block {
 			width: 13%;
-			background-color: grey;
 			&--block1 {
 				background-color: #3e1f47;
 				height: 15%;
@@ -187,8 +187,8 @@ body {
 		justify-content: center;
 		background-image: $secondary-gradient;
 
-		&__img {
-			margin-bottom: 10%;
+		&__image {
+			margin-bottom: 30px;
 			width: 50%;
 			border-radius: 40%;
 		}
@@ -205,11 +205,12 @@ body {
 		&__about-offer {
 			position: absolute;
 			top: 0;
-			bottom: 0;
+			height: 100%;
+			width: 100%;
 			background-image: $secondary-gradient;
-			z-index: 10;
-			transform: translateX(-100%);
-			transition: transform 0.3s;
+			z-index: 100;
+			transform: translateX(-120%);
+			transition: transform 0.3s ease-out;
 
 			.textbox__text {
 				position: absolute;
@@ -315,6 +316,7 @@ body {
 			display: flex;
 			flex-direction: column;
 			width: 100%;
+			max-width: 500px;
 			text-align: left;
 		}
 		&__form-label {

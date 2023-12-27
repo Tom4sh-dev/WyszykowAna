@@ -1,8 +1,4 @@
-@media (min-width: 576px) {
-	.textbox {
-		width: 90%;
-	}
-
+@media (orientation: landscape) {
 	// HEADER
 	.header {
 		.nav {
@@ -10,6 +6,56 @@
 				padding: 15px;
 			}
 		}
+	}
+
+	.main {
+		// BANNER
+		.banner {
+			height: 100vh;
+			flex-wrap: wrap;
+			overflow: hidden;
+			&__image {
+				width: 45%;
+			}
+			&__heading--landscape {
+				padding-top: 20px;
+				color: $main-dark;
+				&::after {
+					content: '';
+					background-color: $main-dark;
+				}
+			}
+			&__textbox {
+				width: 45%;
+				color: $main-dark;
+			}
+
+			.social-media {
+				position: absolute;
+				bottom: 5%;
+			}
+			&__gradient {
+				height: 40%;
+			}
+		}
+
+		// OFFER
+		.offer {
+			&__about-offer {
+				.textbox__text {
+					font-size: 1.8rem;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 576px) {
+	.textbox {
+		width: 90%;
+	}
+
+	// HEADER
+	.header {
 		.heading {
 			&__logo-img {
 				width: 60px;
@@ -18,6 +64,7 @@
 			.branding {
 				&__name {
 					font-size: 2.5rem;
+					font-weight: 400;
 				}
 				&__company {
 					font-size: 2.2rem;
@@ -31,45 +78,6 @@
 
 	// MAIN
 	.main {
-
-		// BANNER
-		.banner {
-			flex-direction: row;
-			justify-content: space-around;
-			flex-wrap: wrap;
-			overflow: hidden;
-			&__image {
-				align-self: start;
-				width: 50%;
-			}
-			&__heading--landscape {
-				padding-top: 0;
-				color: $main-dark;
-				&::after {
-					content: '';
-					background-color: $main-dark;
-				}
-			}
-			&__textbox {
-				margin-bottom: 30%;
-				width: 45%;
-				color: $main-dark;
-			}
-
-			.social-media {
-				width: 45%;
-				position: absolute;
-				bottom: 5%;
-				right: 0;
-				&__link {
-					font-size: 3rem;
-				}
-			}
-			&__gradient {
-				height: 40%;
-			}
-		}
-
 		// ABOUTME
 		.about-me {
 			.section-heading {
@@ -84,11 +92,6 @@
 		.offer {
 			&__image {
 				width: 30%;
-			}
-			&__about-offer {
-				.textbox__text {
-					font-size: 1.8rem;
-				}
 			}
 		}
 

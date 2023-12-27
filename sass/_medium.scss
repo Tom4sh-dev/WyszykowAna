@@ -1,33 +1,57 @@
 @media (min-width: 768px) {
 
-// HEADER
+	.section-heading {
+		font-size: 2.4rem;
+	}
+	.textbox {
+		font-size: 1.8rem;	}
 
+	// HEADER
 	.header {
-		&__heading {
-			&--branding {
-				.name {
+		.heading {
+			&__logo-img {
+				width: 70px;
+				height: 70px;
+			}
+			.branding {
+				&__name {
 					font-size: 2.8rem;
+				
 				}
-
-				.company {
-					font-size: 2.5rem;
+				&__company {
+					font-size: 2.4rem;
 				}
 			}
 		}
-		&__textbox {
-			&--title {
-				font-size: 2.5rem;
+		
+	}
+
+	// MAIN
+	.main {
+
+		// BANNER
+		.banner {
+			&__gradient {
+				height: 35%;
+			
+			}
+		}
+
+		// CONTACT
+		.contact {
+			&__form-label {
+				font-size: 1.8rem;
+			}
+			&__form-btn {
+				font-size: 1.8rem;
 			}
 		}
 	}
 
-// MAIN
-.main{
-	.aboutme {
-		&__textbox {
-			&--title {
-				font-size: 2.5rem;
-			}
+	// FOOTER
+	.footer {
+		&__text {
+			font-size: 1.8rem;
 		}
-	}}
+	}
 }
