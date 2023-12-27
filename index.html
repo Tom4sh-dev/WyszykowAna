@@ -296,19 +296,23 @@
 						<div class="contact__form-top">
 							<input name="_formsubmit_id" type="text" style="display:none">
 
-							<label for="name" class="contact__form-label">Imię i nazwisko:</label>
+							<label for="name" class="contact__form-label">Imię:</label>
 							<input type="text" id="name" class="contact__form-input" name="name"/>
+							<p class="error error-name">Podaj imię...</p>
 
 							<label for="email" class="contact__form-label">Adres e-mail:</label>
 							<input type="text" id="email" class="contact__form-input" name="email"/>
+							<p class="error error-email">E-mail niepoprawny...</p>
 						</div>
 
 						<label for="msg" class="contact__form-label">Wiadomość:</label>
 						<textarea id="msg" class="contact__form-textarea" name="message"></textarea>
+						<p class="error error-msg">Napisz wiadomość...</p>
+					
 
 						<button
-							type="submit"
-							class="contact__form-btn btn-special-animation"
+							
+							class="send-btn contact__form-btn btn-special-animation"
 						>
 							Wyślij
 						</button>
