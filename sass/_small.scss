@@ -31,7 +31,6 @@
 
 	// MAIN
 	.main {
-
 		// BANNER
 		.banner {
 			flex-direction: row;
@@ -82,8 +81,20 @@
 
 		// OFFER
 		.offer {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			padding-left: 50px;
+			.section-heading {
+				width: 100%;
+				order: -2;
+			}
 			&__image {
-				width: 30%;
+				width: 40%;
+				order: -1;
+			}
+			.textbox--half-width {
+				width: 40%;
 			}
 			&__about-offer {
 				.textbox__text {

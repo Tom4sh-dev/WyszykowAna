@@ -13,7 +13,7 @@ const analysisPopup = document.querySelector('.offer__about-offer')
 
 const footerYear = document.querySelector('.footer__year')
 
-const nameInput = document.querySelector('#name')
+const nameInput = document.querySelector('#sender-name')
 const emailInput = document.querySelector('#email')
 const msgInput = document.querySelector('#msg')
 const sendBtn = document.querySelector('.send-btn')
@@ -26,6 +26,8 @@ const handleNav = () => {
     navMobile.classList.toggle('nav__list--active')
     navBtn.classList.toggle('is-active');
     document.body.classList.toggle("stop-scrolling");
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
     
     navItems.forEach(item => {
 		item.addEventListener('click', () => {
@@ -49,44 +51,43 @@ const handleCurrentYear = () => {
 	footerYear.innerText = year;
 }
 
-const checkName = () => {
-    if(nameInput.value){
-        errorName.style.visibility = 'hidden'
-    } else {
-        errorName.style.visibility = 'visible'
-    }
-}
+// const checkName = () => {
+//     if(nameInput.value){
+//         errorName.style.visibility = 'hidden'
+//     } else {
+//         errorName.style.visibility = 'visible'
+//     }
+// }
 
-const checkMail = () => {
-	const re =
-		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	if (re.test(emailInput.value)) {
-        errorEmail.style.visibility = 'hidden'
-	} else if (!emailInput.value){
-        errorEmail.textContent = 'Podaj e-mail...'
-		errorEmail.style.visibility = 'visible'
-	} else {
-        errorEmail.textContent = 'E-mail niepoprawny...'
-        errorEmail.style.visibility = 'visible'
-    }
-};
+// const checkMail = () => {
+// 	const re =
+// 		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+// 	if (re.test(emailInput.value)) {
+//         errorEmail.style.visibility = 'hidden'
+// 	} else if (!emailInput.value){
+//         errorEmail.textContent = 'Podaj e-mail...'
+// 		errorEmail.style.visibility = 'visible'
+// 	} else {
+//         errorEmail.textContent = 'E-mail niepoprawny...'
+//         errorEmail.style.visibility = 'visible'
+//     }
+// };
 
-const checkMsg = () => {
-    if(msgInput.value){
-        errorMsg.style.visibility = 'hidden'
-    } else {
-        errorMsg.style.visibility = 'visible'
-    }
-}
+// const checkMsg = () => {
+//     if(msgInput.value){
+//         errorMsg.style.visibility = 'hidden'
+//     } else {
+//         errorMsg.style.visibility = 'visible'
+//     }
+// }
 
-const sendMsg = () => {
-    if(nameInput.value && emailInput.value && msgInput.value){
-        sendBtn.setAttribute('type', 'submit')
-        nameInput.value = ''
-        emailInput.value = ''
-        msgInput.value = ''
-    }
-}
+// const sendMsg = () => {
+//     if(nameInput.value && emailInput.value && msgInput.value){
+//         nameInput.value = ''
+//         emailInput.value = ''
+//         msgInput.value = ''
+//     }
+// }
 
 
 handleCurrentYear()
@@ -94,10 +95,14 @@ handleCurrentYear()
 navBtn.addEventListener('click', handleNav)
 analysisOpenBtn.addEventListener('click', handleAnalysisShow)
 analysisCloseBtn.addEventListener('click', handleAnalysisHide)
-sendBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    checkName();
-    checkMail();
-    checkMsg();
-    sendMsg()
+// sendBtn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     checkName();
+//     checkMail();
+//     checkMsg();
+//     sendMsg()
+// })
+
+window.addEventListener('scroll', ()=> {
+    navMobile.classList.remove('nav__list--active')
 })
