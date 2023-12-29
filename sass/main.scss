@@ -103,7 +103,6 @@ body {
 
 .main {
 	
-	
 	// BANNER
 	
 	.banner {
@@ -111,13 +110,11 @@ body {
 			width: 100%;
 			border-radius: 50%;
 		}
-
 		&__textbox {
 			.textbox__profile {
 				display: none;
 			}
 		}
-
 		.social-media {
 			align-self: end;
 			margin: 0 20px 40px;
@@ -342,6 +339,7 @@ body {
 			max-width: 300px;
 			border: none;
 			border-radius: 8px;
+			text-transform: uppercase;
 			color: $main-dark;
 			background-color: $main-bright;
 			cursor: pointer;

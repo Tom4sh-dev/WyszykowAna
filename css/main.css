@@ -443,6 +443,7 @@ body {
   max-width: 300px;
   border: none;
   border-radius: 8px;
+  text-transform: uppercase;
   color: #4f4f4f;
   background-color: #fafafa;
   cursor: pointer;
@@ -537,9 +538,6 @@ body {
   }
   .main .offer .textbox--half-width {
     width: 40%;
-  }
-  .main .offer__about-offer .textbox__text {
-    font-size: 1.8rem;
   }
   .main .contact__form-label {
     font-size: 1.8rem;

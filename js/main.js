@@ -10,6 +10,8 @@ const allSections = document.querySelectorAll('.section')
 const analysisOpenBtn = document.querySelector('.offer__about-offer-open-btn')
 const analysisCloseBtn = document.querySelector('.offer__about-offer-close-btn')
 const analysisPopup = document.querySelector('.offer__about-offer')
+let windowHeight
+
 
 const footerYear = document.querySelector('.footer__year')
 
@@ -25,7 +27,6 @@ const errorMsg = document.querySelector('.error-msg');
 const handleNav = () => {
     navMobile.classList.toggle('nav__list--active')
     navBtn.classList.toggle('is-active');
-    document.body.classList.toggle("stop-scrolling");
     window.scrollTo({ top: 0, behavior: 'smooth' });
     
     
@@ -33,7 +34,6 @@ const handleNav = () => {
 		item.addEventListener('click', () => {
 			navMobile.classList.remove('nav__list--active')
             navBtn.classList.remove('is-active');
-            document.body.classList.remove("stop-scrolling");
             analysisPopup.classList.remove('offer__about-offer--active')
 
 		})})
@@ -41,6 +41,10 @@ const handleNav = () => {
 
 const handleAnalysisShow = () => {
     analysisPopup.classList.add('offer__about-offer--active')
+    windowHeight = window.innerHeight
+    if (window.innerHeight > windowHeight+100 || window.innerHeight < windowHeight-100){
+        analysisPopup.classList.remove('offer__about-offer--active')
+    }
 }
 const handleAnalysisHide = () => {
     analysisPopup.classList.remove('offer__about-offer--active')
@@ -105,4 +109,5 @@ analysisCloseBtn.addEventListener('click', handleAnalysisHide)
 
 window.addEventListener('scroll', ()=> {
     navMobile.classList.remove('nav__list--active')
+    navBtn.classList.remove('is-active');
 })
