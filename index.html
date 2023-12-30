@@ -114,16 +114,24 @@
 					<h2 class="section-heading">o mnie</h2>
 					<div class="about-me__textbox textbox">
 						<p class="textbox__text">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-							aperiam porro labore nulla. Aut animi perferendis, tempora officia
-							porro nisi ab, quaerat temporibus illum eligendi quo in fuga
-							consequuntur dolorem.
+							Cześć, mam na imię Anastazja. Zawsze interesowałam się modą,
+							stylami i doborem barw. Dość szybko zauważyłam, że wiele kobiet
+							noszących aktualnie najmodniejszy kolor, nie wygląda w nim zbyt
+							korzystnie. Ja sama kiedyś często popełniałam takie błędy. Zagadką
+							było dlaczego? „Bo jej nie pasuje” nie stanowiło wystarczającego
+							tłumaczenia. W ten sposób wkroczyłam na ścieżkę analizy
+							kolorystycznej, którą pilnie zgłębiałam. Teraz chętnie podzielę się z Tobą
+							moją wiedzą.
 						</p>
+						<br>
 						<p class="textbox__text">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-							aperiam porro labore nulla. Aut animi perferendis, tempora officia
-							porro nisi ab, quaerat temporibus illum eligendi quo in fuga
-							consequuntur dolorem.
+							Podstawowe ubogie koło Czterech pór roku rozwinęło
+							się w pełen wachlarz 12 typów urody, z których każdy ma swój walor
+							i temperaturę, a także swoją paletę kolorów, które pięknie
+							harmonizują z odcieniem skóry, włosów i oczu. Zapraszam do
+							Wyszykowanej, oprowadzę Cię po tym świecie i sprawię, że
+							odnajdziesz właściwe barwy i styl, a w lustrze ujrzysz swoje
+							zupełnie nowe odbicie.
 						</p>
 					</div>
 
@@ -332,8 +340,12 @@
 					method="POST"
 					action="https://formsubmit.io/send/4bb76b7c-7db2-42b5-937a-39afb7a8fa84"
 				>
-
-				<input name="_redirect" type="hidden" id="name" value="http://127.0.0.1:5500/email-sent.html">
+					<input
+						name="_redirect"
+						type="hidden"
+						id="name"
+						value="http://127.0.0.1:5500/email-sent.html"
+					/>
 
 					<label for="name" class="contact__form-label">Imię:</label>
 					<input
@@ -343,7 +355,6 @@
 						name="name"
 						required
 					/>
-					<p class="error error-name">Podaj imię...</p>
 
 					<label for="email" class="contact__form-label">Adres e-mail:</label>
 					<input
@@ -353,7 +364,6 @@
 						name="email"
 						required
 					/>
-					<p class="error error-email">E-mail niepoprawny...</p>
 
 					<label for="msg" class="contact__form-label">Wiadomość:</label>
 					<textarea
@@ -362,10 +372,13 @@
 						name="message"
 						required
 					></textarea>
-					<p class="error error-msg">Napisz wiadomość...</p>
 
-					<input name="_formsubmit_id" type="text" style="display:none">
-					<button type="submit" value="submit" class="send-btn contact__form-btn btn-special-animation">
+					<input name="_formsubmit_id" type="text" style="display: none" />
+					<button
+						type="submit"
+						value="submit"
+						class="send-btn contact__form-btn btn-special-animation"
+					>
 						Wyślij
 					</button>
 				</form>

@@ -141,14 +141,6 @@
   width: 100%;
 }
 
-.error {
-  margin-bottom: 10px;
-  align-self: end;
-  font-size: 1.4rem;
-  color: #fafafa;
-  visibility: hidden;
-}
-
 *,
 *::after,
 *::before {
@@ -433,7 +425,7 @@ html {
 }
 .main .contact__form-label {
   font-size: 1.4rem;
-  margin-bottom: 18px;
+  margin: 18px 0;
   text-transform: uppercase;
 }
 .main .contact__form-input {

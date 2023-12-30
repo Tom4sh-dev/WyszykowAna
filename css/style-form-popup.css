@@ -141,14 +141,6 @@
   width: 100%;
 }
 
-.error {
-  margin-bottom: 10px;
-  align-self: end;
-  font-size: 1.4rem;
-  color: #fafafa;
-  visibility: hidden;
-}
-
 *,
 *::after,
 *::before {
