@@ -41,7 +41,7 @@ const handleNav = () => {
 			navMobile.classList.remove('nav__list--active')
             navBtn.classList.remove('is-active');
             bannerNavActive.classList.remove('banner--nav-active')
-            aboutMeNavActiveNavActive.classList.remove('about-me--nav-active')
+            aboutMeNavActive.classList.remove('about-me--nav-active')
             analysisPopup.classList.remove('offer__about-offer--active')
             document.body.classList.remove('stop-scrolling');
 		})})
