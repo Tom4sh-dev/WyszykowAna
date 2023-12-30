@@ -22,9 +22,10 @@ const nameInput = document.querySelector('#sender-name')
 const emailInput = document.querySelector('#email')
 const msgInput = document.querySelector('#msg')
 const sendBtn = document.querySelector('.send-btn')
-const errorEmail = document.querySelector('.error-email');
-const errorName = document.querySelector('.error-name');
-const errorMsg = document.querySelector('.error-msg');
+
+document.querySelector('.inputs__input-name').textContent = nameInput.value
+const emailInputConfirmation = document.querySelector('.inputs__input-email')
+const messageInputConfirmation = document.querySelector('.inputs__input-message')
 
 
 const handleNav = () => {
