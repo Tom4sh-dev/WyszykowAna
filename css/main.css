@@ -178,7 +178,7 @@ html {
   align-items: center;
   background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
   list-style: none;
-  transition: transform 0.3s;
+  transition: transform 0.5s;
 }
 .header .nav__list--active {
   transform: translatex(0);
@@ -226,7 +226,7 @@ html {
 }
 
 .main .banner {
-  transition: transform 0.3s;
+  transition: transform 0.5s;
 }
 .main .banner__image {
   width: 100%;
@@ -279,23 +279,23 @@ html {
 }
 .main .about-me__block--block1 {
   background-color: #3e1f47;
-  height: 15%;
+  height: 13%;
 }
 .main .about-me__block--block2 {
   background-color: #272640;
-  height: 12%;
+  height: 10%;
 }
 .main .about-me__block--block3 {
   background-color: #1b3a4b;
-  height: 8%;
+  height: 6%;
 }
 .main .about-me__block--block4 {
   background-color: #0b525b;
-  height: 11%;
+  height: 9%;
 }
 .main .about-me__block--block5 {
   background-color: #006466;
-  height: 6%;
+  height: 4%;
 }
 .main .about-me--nav-active {
   transform: translateX(-100%);
