@@ -29,8 +29,6 @@
 			type="text/css"
 			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
 		/>
-
-		<link rel="stylesheet" href="./css/hamburger.css" />
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 	<body class="page">
@@ -124,7 +122,7 @@
 							kolorystycznej, którą pilnie zgłębiałam. Teraz chętnie podzielę się z Tobą
 							moją wiedzą.
 						</p>
-						<br>
+						<button class="about-me__scroll-to-offer-btn">Zapoznaj się z moją ofertą...</button>
 						<p class="textbox__text">
 							Podstawowe ubogie koło Czterech pór roku rozwinęło
 							się w pełen wachlarz 12 typów urody, z których każdy ma swój walor
@@ -336,9 +334,8 @@
 					<label for="name" class="contact__form-label">Imię:</label>
 					<input
 						type="text"
-						id="sender-name"
+						id="name"
 						class="contact__form-input"
-						name="name"
 						required
 					/>
 
@@ -347,7 +344,6 @@
 						type="text"
 						id="email"
 						class="contact__form-input"
-						name="email"
 						required
 					/>
 
@@ -355,14 +351,12 @@
 					<textarea
 						id="msg"
 						class="contact__form-textarea"
-						name="message"
 						required
 					></textarea>
 
 					<input name="_formsubmit_id" type="text" style="display: none" />
 					<button
 						type="submit"
-						value="submit"
 						class="send-btn contact__form-btn btn-special-animation"
 					>
 						Wyślij

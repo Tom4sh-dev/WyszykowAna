@@ -145,7 +145,7 @@ html {
 
 	.about-me {
 		justify-content: space-between;
-		transition: transform .3s;
+		transition: transform .5s;
 
 		.section-heading {
 			padding-top: 25%;
@@ -158,33 +158,48 @@ html {
 		}
 		&__blocks {
 			justify-content: space-evenly;
+			z-index: -100;
 		}
 		&__block {
 			width: 13%;
 			&--block1 {
 				background-color: #3e1f47;
-				height: 13%;
+				height: 11%;
 			}
 			&--block2 {
 				background-color: #272640;
-				height: 8%;
+				height: 7%;
 			}
 			&--block3 {
 				background-color: #1b3a4b;
-				height: 6%;
+				height: 5%;
 			}
 			&--block4 {
 				background-color: #0b525b;
-				height: 7%;
+				height: 6%;
 			}
 			&--block5 {
 				background-color: #006466;
 				height: 4%;
 			}
 		}
+		&__scroll-to-offer-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 40px ;
+			height: 40px;
+			width: 100%;
+			background-image: $secondary-gradient;
+			border: none;
+			border-radius: 8px;
+			text-transform: uppercase;
+			color: $main-bright;
+		}		
 		&--nav-active {
 			transform: translateX(-100%);
 		}
+
 	}
 
 	// OFFER
@@ -270,7 +285,6 @@ html {
 				width: 90%;
 				height: 1px;
 				background-color: $main-dark;
-				animation: lines-horizontal 1s;
 			}
 			&__link {
 				display: inline-block;
