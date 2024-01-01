@@ -5,21 +5,15 @@ const navItems = document.querySelectorAll('.nav__link')
 const bannerNavActive = document.querySelector('.banner')
 const aboutMeNavActive = document.querySelector('.about-me')
 
-const navDesktop = document.querySelector('.nav__desktop')
-const logo = document.querySelector('.heading__logo')
-
-const allSections = document.querySelectorAll('.section')
-
 const analysisOpenBtn = document.querySelector('.offer__about-offer-open-btn')
 const analysisCloseBtn = document.querySelector('.offer__about-offer-close-btn')
 const analysisPopup = document.querySelector('.offer__about-offer')
 
 const footerYear = document.querySelector('.footer__year')
 
-const nameInput = document.querySelector('#sender-name')
+const nameInput = document.querySelector('#name')
 const emailInput = document.querySelector('#email')
 const msgInput = document.querySelector('#msg')
-const sendBtn = document.querySelector('.send-btn')
 
 
 const handleNav = () => {
