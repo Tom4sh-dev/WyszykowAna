@@ -302,10 +302,11 @@ html {
 }
 
 .main .banner {
+  margin-top: 20px;
   transition: transform 0.5s;
 }
 .main .banner__image {
-  width: 100%;
+  width: 95%;
   border-radius: 50%;
 }
 .main .banner__textbox .textbox__profile {

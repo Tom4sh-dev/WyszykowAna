@@ -104,10 +104,12 @@ html {
 	// BANNER
 
 	.banner {
+		margin-top: 20px;
 		transition: transform .5s;
 	
 		&__image {
-			width: 100%;
+			// margin-top: 20px;
+			width: 95%;
 			border-radius: 50%;
 		}
 		&__textbox {
