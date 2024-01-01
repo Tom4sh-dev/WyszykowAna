@@ -385,6 +385,7 @@ html {
   border: none;
   border-radius: 8px;
   text-transform: uppercase;
+  letter-spacing: 1px;
   color: #fafafa;
 }
 .main .about-me--nav-active {
