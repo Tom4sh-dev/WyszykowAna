@@ -185,20 +185,18 @@ html {
 				height: 4%;
 			}
 		}
-		&__scroll-to-offer-btn {
-			display: flex;
-			align-items: center;
-			justify-content: center;
+		&__scroll-to-offer{
 			margin: 40px ;
 			height: 40px;
+			line-height: 40px;
 			width: 100%;
-			background-image: $secondary-gradient;
-			border: none;
-			border-radius: 8px;
+			text-decoration: none;
 			text-transform: uppercase;
-			letter-spacing: 1px;
 			color: $main-bright;
-		}		
+			background-image: $secondary-gradient;
+			border-radius: 8px;
+			
+		}	
 		&--nav-active {
 			transform: translateX(-100%);
 		}

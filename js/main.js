@@ -5,10 +5,11 @@ const navItems = document.querySelectorAll('.nav__link')
 const bannerNavActive = document.querySelector('.banner')
 const aboutMeNavActive = document.querySelector('.about-me')
 
+const aboutMeBtn = document.querySelector('.about-me__scroll-to-offer-btn')
+
 const navDesktop = document.querySelector('.nav__desktop')
 const logo = document.querySelector('.heading__logo')
 
-const allSections = document.querySelectorAll('.section')
 
 const analysisOpenBtn = document.querySelector('.offer__about-offer-open-btn')
 const analysisCloseBtn = document.querySelector('.offer__about-offer-close-btn')
@@ -57,5 +58,6 @@ const handleCurrentYear = () => {
 handleCurrentYear()
 
 navBtn.addEventListener('click', handleNav)
+aboutMeBtn.addEventListener('click', moveToOffers)
 analysisOpenBtn.addEventListener('click', handleAnalysisShow)
 analysisCloseBtn.addEventListener('click', handleAnalysisHide)

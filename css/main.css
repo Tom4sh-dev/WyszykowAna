@@ -375,19 +375,16 @@ html {
   background-color: #006466;
   height: 4%;
 }
-.main .about-me__scroll-to-offer-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.main .about-me__scroll-to-offer {
   margin: 40px;
   height: 40px;
+  line-height: 40px;
   width: 100%;
-  background-image: linear-gradient(220deg, #065a60 0%, #312244 74%);
-  border: none;
-  border-radius: 8px;
+  text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 1px;
   color: #fafafa;
+  background-image: linear-gradient(220deg, #065a60 0%, #312244 74%);
+  border-radius: 8px;
 }
 .main .about-me--nav-active {
   transform: translateX(-100%);
