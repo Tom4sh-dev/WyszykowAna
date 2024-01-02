@@ -5,9 +5,9 @@ const navItems = document.querySelectorAll('.nav__link')
 const bannerNavActive = document.querySelector('.banner')
 const aboutMeNavActive = document.querySelector('.about-me')
 
-const analysisOpenBtn = document.querySelector('.offer__about-offer-open-btn')
-const analysisCloseBtn = document.querySelector('.offer__about-offer-close-btn')
-const analysisPopup = document.querySelector('.offer__about-offer')
+// const analysisOpenBtn = document.querySelector('.offer__about-offer-open-btn')
+// const analysisCloseBtn = document.querySelector('.offer__about-offer-close-btn')
+// const analysisPopup = document.querySelector('.offer__about-offer')
 
 const footerYear = document.querySelector('.footer__year')
 
@@ -36,12 +36,12 @@ const handleNav = () => {
 		})})
 }
 
-const handleAnalysisShow = () => {
-    analysisPopup.classList.add('offer__about-offer--active')
-}
-const handleAnalysisHide = () => {
-    analysisPopup.classList.remove('offer__about-offer--active')
-}
+// const handleAnalysisShow = () => {
+//     analysisPopup.classList.add('offer__about-offer--active')
+// }
+// const handleAnalysisHide = () => {
+//     analysisPopup.classList.remove('offer__about-offer--active')
+// }
 
 const handleCurrentYear = () => {
 	const year = (new Date).getFullYear();
@@ -51,5 +51,5 @@ const handleCurrentYear = () => {
 handleCurrentYear()
 
 navBtn.addEventListener('click', handleNav)
-analysisOpenBtn.addEventListener('click', handleAnalysisShow)
-analysisCloseBtn.addEventListener('click', handleAnalysisHide)
+// analysisOpenBtn.addEventListener('click', handleAnalysisShow)
+// analysisCloseBtn.addEventListener('click', handleAnalysisHide)
