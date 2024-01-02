@@ -429,6 +429,26 @@ html {
 .main .offer__about-offer--active {
   transform: translateX(0);
 }
+.main .offer__description-list {
+  margin: 20px 20px 0;
+  text-align: left;
+}
+.main .offer__description-item {
+  padding: 10px;
+  margin: 20px;
+}
+.main .offer .textbox__text--offer-subtitle {
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+.main .offer__description-list--styling {
+  text-align: center;
+  list-style: none;
+}
+.main .offer__description-item--styling {
+  box-shadow: 1px 1px 5px #fafafa;
+  border-radius: 8px;
+}
 .main .offer__about-offer-close-btn {
   margin-top: 20%;
   background-color: transparent;

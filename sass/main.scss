@@ -247,6 +247,27 @@ html {
 				transform: translateX(0);
 			}
 		}
+		&__description-list {
+			margin: 20px 20px 0;
+			text-align: left;
+		}
+		&__description-item {
+			padding: 10px;
+			margin: 20px;
+			
+		}
+		.textbox__text--offer-subtitle {
+			margin-top: 20px;
+			text-transform: uppercase;
+		}
+		&__description-list--styling {
+			text-align: center;
+			list-style: none;
+		}
+		&__description-item--styling {
+			box-shadow: 1px 1px 5px $main-bright;
+			border-radius: 8px;
+		}
 		&__about-offer-close-btn {
 			margin-top: 20%;
 			background-color: transparent;
