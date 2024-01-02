@@ -11,9 +11,15 @@ const aboutMeNavActive = document.querySelector('.about-me')
 
 const footerYear = document.querySelector('.footer__year')
 
-const nameInput = document.querySelector('#name')
-const emailInput = document.querySelector('#email')
-const msgInput = document.querySelector('#msg')
+let nameInput = document.querySelector('#name').value
+let emailInput = document.querySelector('#email').value
+let msgInput = document.querySelector('#msg').value
+
+const testuje = 'Tomek'
+
+// export {nameInput, emailInput, msgInput}
+export {testuje}
+
 
 
 const handleNav = () => {
