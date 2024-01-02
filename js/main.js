@@ -5,20 +5,19 @@ const navItems = document.querySelectorAll('.nav__link')
 const bannerNavActive = document.querySelector('.banner')
 const aboutMeNavActive = document.querySelector('.about-me')
 
+const aboutMeBlocks = document.querySelector('.about-me__blocks')
+
+const offerScroll = document.querySelector('.about-me__scroll-to-offer')
+
 // const analysisOpenBtn = document.querySelector('.offer__about-offer-open-btn')
 // const analysisCloseBtn = document.querySelector('.offer__about-offer-close-btn')
 // const analysisPopup = document.querySelector('.offer__about-offer')
 
 const footerYear = document.querySelector('.footer__year')
 
-let nameInput = document.querySelector('#name').value
-let emailInput = document.querySelector('#email').value
-let msgInput = document.querySelector('#msg').value
-
-const testuje = 'Tomek'
-
-// export {nameInput, emailInput, msgInput}
-export {testuje}
+// let nameInput = document.querySelector('#name').value
+// let emailInput = document.querySelector('#email').value
+// let msgInput = document.querySelector('#msg').value
 
 
 
@@ -42,6 +41,21 @@ const handleNav = () => {
 		})})
 }
 
+const blocksExpand = () => {
+    if(window.scrollY >=300) {
+        aboutMeBlocks.classList.add('about-me__blocks--active')
+
+    }
+}
+
+const offerShakeAdd = () => {
+    offerScroll.classList.add('about-me__scroll-to-offer--active')
+    setTimeout(offerShakeRemove,1000)
+}
+const offerShakeRemove = () => {
+    offerScroll.classList.remove('about-me__scroll-to-offer--active')
+}
+
 // const handleAnalysisShow = () => {
 //     analysisPopup.classList.add('offer__about-offer--active')
 // }
@@ -59,3 +73,5 @@ handleCurrentYear()
 navBtn.addEventListener('click', handleNav)
 // analysisOpenBtn.addEventListener('click', handleAnalysisShow)
 // analysisCloseBtn.addEventListener('click', handleAnalysisHide)
+window.addEventListener('scroll', blocksExpand)
+offerScroll.addEventListener('click', offerShakeAdd)

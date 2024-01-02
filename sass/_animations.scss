@@ -18,3 +18,31 @@
 		transform: translateX(10px);
 	}
 }
+
+@keyframes expand {
+	0% {
+		height: 0%;
+	}
+}
+
+@keyframes shake {
+	0% {
+		rotate: 0;
+	}
+	20% {
+		rotate: 5deg;
+	}
+	40% {
+		rotate: -5deg;
+	}
+	60% {
+		rotate: 5deg;
+	}
+	80% {
+		rotate: -5deg;
+	}
+	100% {
+		rotate: 0;
+	}
+
+}
