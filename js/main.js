@@ -24,14 +24,12 @@ const handleNav = () => {
     document.body.classList.toggle('stop-scrolling');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     
-    
     navItems.forEach(item => {
 		item.addEventListener('click', () => {
 			navMobile.classList.remove('nav__list--active')
             navBtn.classList.remove('is-active');
             bannerSection.classList.remove('banner--nav-active')
             aboutMeSection.classList.remove('about-me--nav-active')
-            // analysisPopup.classList.remove('offer__about-offer--active')
             document.body.classList.remove('stop-scrolling');
 		})})
 }
