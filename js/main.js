@@ -2,30 +2,25 @@ const navBtn = document.querySelector('.hamburger')
 const navMobile = document.querySelector('.nav__list')
 const navItems = document.querySelectorAll('.nav__link')
 
-const bannerNavActive = document.querySelector('.banner')
-const aboutMeNavActive = document.querySelector('.about-me')
+const bannerSection = document.querySelector('.banner')
+const aboutMeSection = document.querySelector('.about-me')
+const offerSection = document.querySelector('.offer')
+
+const heightToReviews = bannerSection.offsetHeight + aboutMeSection.offsetHeight/2 + offerSection.offsetHeight
 
 const aboutMeBlocks = document.querySelector('.about-me__blocks')
+const reviewsBlocks = document.querySelector('.reviews__blocks')
 
 const offerScroll = document.querySelector('.about-me__scroll-to-offer')
 
-// const analysisOpenBtn = document.querySelector('.offer__about-offer-open-btn')
-// const analysisCloseBtn = document.querySelector('.offer__about-offer-close-btn')
-// const analysisPopup = document.querySelector('.offer__about-offer')
-
 const footerYear = document.querySelector('.footer__year')
-
-// let nameInput = document.querySelector('#name').value
-// let emailInput = document.querySelector('#email').value
-// let msgInput = document.querySelector('#msg').value
-
 
 
 const handleNav = () => {
     navMobile.classList.toggle('nav__list--active')
     navBtn.classList.toggle('is-active');
-    bannerNavActive.classList.toggle('banner--nav-active')
-    aboutMeNavActive.classList.toggle('about-me--nav-active')
+    bannerSection.classList.toggle('banner--nav-active')
+    aboutMeSection.classList.toggle('about-me--nav-active')
     document.body.classList.toggle('stop-scrolling');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     
@@ -34,17 +29,21 @@ const handleNav = () => {
 		item.addEventListener('click', () => {
 			navMobile.classList.remove('nav__list--active')
             navBtn.classList.remove('is-active');
-            bannerNavActive.classList.remove('banner--nav-active')
-            aboutMeNavActive.classList.remove('about-me--nav-active')
-            analysisPopup.classList.remove('offer__about-offer--active')
+            bannerSection.classList.remove('banner--nav-active')
+            aboutMeSection.classList.remove('about-me--nav-active')
+            // analysisPopup.classList.remove('offer__about-offer--active')
             document.body.classList.remove('stop-scrolling');
 		})})
 }
 
-const blocksExpand = () => {
-    if(window.scrollY >=300) {
+const blocksExpandAboutMe = () => {
+    if(window.scrollY >= bannerSection.offsetHeight/2) {
         aboutMeBlocks.classList.add('about-me__blocks--active')
-
+    } 
+}
+const blocksExpandReviews = () => {
+    if (window.scrollY >= heightToReviews) {
+        reviewsBlocks.classList.add('reviews__blocks--active') 
     }
 }
 
@@ -56,22 +55,14 @@ const offerShakeRemove = () => {
     offerScroll.classList.remove('about-me__scroll-to-offer--active')
 }
 
-// const handleAnalysisShow = () => {
-//     analysisPopup.classList.add('offer__about-offer--active')
-// }
-// const handleAnalysisHide = () => {
-//     analysisPopup.classList.remove('offer__about-offer--active')
-// }
 
 const handleCurrentYear = () => {
 	const year = (new Date).getFullYear();
 	footerYear.innerText = year;
 }
-
 handleCurrentYear()
 
 navBtn.addEventListener('click', handleNav)
-// analysisOpenBtn.addEventListener('click', handleAnalysisShow)
-// analysisCloseBtn.addEventListener('click', handleAnalysisHide)
-window.addEventListener('scroll', blocksExpand)
+window.addEventListener('scroll', blocksExpandAboutMe)
+window.addEventListener('scroll', blocksExpandReviews)
 offerScroll.addEventListener('click', offerShakeAdd)

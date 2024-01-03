@@ -18,11 +18,6 @@
     transform: translateX(10px);
   }
 }
-@keyframes expand {
-  0% {
-    height: 0%;
-  }
-}
 @keyframes shake {
   0% {
     rotate: 0;
