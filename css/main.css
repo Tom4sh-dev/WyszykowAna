@@ -455,11 +455,46 @@ html {
 }
 .main .offer__description-list {
   margin: 20px 20px 0;
-  text-align: left;
 }
 .main .offer__description-item {
   padding: 10px;
-  margin: 20px;
+  margin: 20px auto;
+  width: 80%;
+}
+.main .offer .item-1 {
+  transform: translateX(-100vw);
+  transition: 1s;
+}
+.main .offer .item-1--active {
+  transform: translateX(0);
+}
+.main .offer .item-2 {
+  transform: translateX(100vw);
+  transition: 1s;
+}
+.main .offer .item-2--active {
+  transform: translateX(0);
+}
+.main .offer .item-3 {
+  transform: translateX(-100vw);
+  transition: 1s;
+}
+.main .offer .item-3--active {
+  transform: translateX(0);
+}
+.main .offer .item-4 {
+  transform: translateX(100vw);
+  transition: 1s;
+}
+.main .offer .item-4--active {
+  transform: translateX(0);
+}
+.main .offer .item-5 {
+  transform: translateX(-100vw);
+  transition: 1s;
+}
+.main .offer .item-5--active {
+  transform: translateX(0);
 }
 .main .offer .textbox__text-title {
   margin-top: 20px;
