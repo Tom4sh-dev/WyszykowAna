@@ -153,8 +153,11 @@ html {
 		justify-content: space-between;
 		transition: transform .5s;
 
-		.section-heading {
-			padding-top: 25%;
+		&__heading {
+			transition: 1s;
+			&--active {
+				padding-top: 25%;
+			}
 		}
 		&__textbox {
 			margin-bottom: 0;

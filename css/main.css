@@ -380,7 +380,10 @@ html {
   justify-content: space-between;
   transition: transform 0.5s;
 }
-.main .about-me .section-heading {
+.main .about-me__heading {
+  transition: 1s;
+}
+.main .about-me__heading--active {
   padding-top: 25%;
 }
 .main .about-me__textbox {

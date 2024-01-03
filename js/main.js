@@ -9,6 +9,7 @@ const reviewsSection = document.querySelector('.reviews')
 
 const heightToReviews = bannerSection.offsetHeight + aboutMeSection.offsetHeight/2 + offerSection.offsetHeight
 
+const aboutMeHeading = document.querySelector('.about-me__heading')
 const aboutMeBlocks = document.querySelector('.about-me__blocks')
 const reviewsBlocks = document.querySelector('.reviews__blocks')
 
@@ -37,6 +38,7 @@ const handleNav = () => {
 
 const blocksExpandAboutMe = () => {
     if(window.scrollY >= aboutMeSection.offsetTop-500) {
+        aboutMeHeading.classList.add('about-me__heading--active')
         aboutMeBlocks.classList.add('about-me__blocks--active')
     } 
 }
