@@ -227,37 +227,7 @@ html {
 			margin-bottom: 30px;
 			width: 50%;
 			border-radius: 40%;
-		}
-		&__about-offer-open-btn {
-			position: absolute;
-			left: 10px;
-			color: $main-bright;
-			background-color: transparent;
-			font-size: 3rem;
-			border: none;
-			animation: active-button 3s infinite;
-			cursor: pointer;
-		}
-		&__about-offer {
-			position: absolute;
-			top: 0;
-			height: 100%;
-			width: 100%;
-			background-image: $secondary-gradient;
-			z-index: 100;
-			transform: translateX(-120%);
-			transition: transform 0.3s ease-out;
-
-			.textbox__text {
-				position: absolute;
-				top: 30%;
-				padding: 5%;
-			}
-
-			&--active {
-				transform: translateX(0);
-			}
-		}
+		}	
 		&__description-list {
 			margin: 20px 20px 0;
 			text-align: left;
@@ -265,9 +235,8 @@ html {
 		&__description-item {
 			padding: 10px;
 			margin: 20px;
-			
 		}
-		.textbox__text--offer-subtitle {
+		.textbox__text-title {
 			margin-top: 20px;
 			text-transform: uppercase;
 		}
@@ -278,14 +247,6 @@ html {
 		&__description-item--styling {
 			box-shadow: 1px 1px 5px $main-bright;
 			border-radius: 8px;
-		}
-		&__about-offer-close-btn {
-			margin-top: 20%;
-			background-color: transparent;
-			border: none;
-			color: $main-bright;
-			font-size: 4rem;
-			cursor: pointer;
 		}
 	}
 

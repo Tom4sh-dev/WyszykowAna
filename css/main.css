@@ -450,34 +450,6 @@ html {
   width: 50%;
   border-radius: 40%;
 }
-.main .offer__about-offer-open-btn {
-  position: absolute;
-  left: 10px;
-  color: #fafafa;
-  background-color: transparent;
-  font-size: 3rem;
-  border: none;
-  animation: active-button 3s infinite;
-  cursor: pointer;
-}
-.main .offer__about-offer {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(220deg, #065a60 0%, #312244 74%);
-  z-index: 100;
-  transform: translateX(-120%);
-  transition: transform 0.3s ease-out;
-}
-.main .offer__about-offer .textbox__text {
-  position: absolute;
-  top: 30%;
-  padding: 5%;
-}
-.main .offer__about-offer--active {
-  transform: translateX(0);
-}
 .main .offer__description-list {
   margin: 20px 20px 0;
   text-align: left;
@@ -486,7 +458,7 @@ html {
   padding: 10px;
   margin: 20px;
 }
-.main .offer .textbox__text--offer-subtitle {
+.main .offer .textbox__text-title {
   margin-top: 20px;
   text-transform: uppercase;
 }
@@ -497,14 +469,6 @@ html {
 .main .offer__description-item--styling {
   box-shadow: 1px 1px 5px #fafafa;
   border-radius: 8px;
-}
-.main .offer__about-offer-close-btn {
-  margin-top: 20%;
-  background-color: transparent;
-  border: none;
-  color: #fafafa;
-  font-size: 4rem;
-  cursor: pointer;
 }
 .main .reviews__textbox {
   display: inline-block;

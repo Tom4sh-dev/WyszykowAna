@@ -5,6 +5,7 @@ const navItems = document.querySelectorAll('.nav__link')
 const bannerSection = document.querySelector('.banner')
 const aboutMeSection = document.querySelector('.about-me')
 const offerSection = document.querySelector('.offer')
+const reviewsSection = document.querySelector('.reviews')
 
 const heightToReviews = bannerSection.offsetHeight + aboutMeSection.offsetHeight/2 + offerSection.offsetHeight
 
@@ -35,12 +36,12 @@ const handleNav = () => {
 }
 
 const blocksExpandAboutMe = () => {
-    if(window.scrollY >= bannerSection.offsetHeight/2) {
+    if(window.scrollY >= aboutMeSection.offsetTop-500) {
         aboutMeBlocks.classList.add('about-me__blocks--active')
     } 
 }
 const blocksExpandReviews = () => {
-    if (window.scrollY >= heightToReviews) {
+    if (window.scrollY >= reviewsSection.offsetTop-500) {
         reviewsBlocks.classList.add('reviews__blocks--active') 
     }
 }
