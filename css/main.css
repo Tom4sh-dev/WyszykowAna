@@ -356,6 +356,11 @@ html {
 .main .banner .social-media {
   align-self: end;
   margin: 0 20px 40px;
+  transform: translateX(-300%);
+  transition: 1s;
+}
+.main .banner .social-media--active {
+  transform: translateX(0);
 }
 .main .banner .social-media__link {
   margin: 10px;
@@ -461,6 +466,18 @@ html {
   margin: 20px auto;
   width: 80%;
 }
+.main .offer .textbox__text-title {
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+.main .offer__description-list--styling {
+  text-align: center;
+  list-style: none;
+}
+.main .offer__description-item--styling {
+  box-shadow: 1px 1px 5px #fafafa;
+  border-radius: 8px;
+}
 .main .offer .item-1 {
   transform: translateX(-100vw);
   transition: 1s;
@@ -483,18 +500,6 @@ html {
 }
 .main .offer .item--active {
   transform: translateX(0);
-}
-.main .offer .textbox__text-title {
-  margin-top: 20px;
-  text-transform: uppercase;
-}
-.main .offer__description-list--styling {
-  text-align: center;
-  list-style: none;
-}
-.main .offer__description-item--styling {
-  box-shadow: 1px 1px 5px #fafafa;
-  border-radius: 8px;
 }
 .main .reviews__textbox {
   display: inline-block;

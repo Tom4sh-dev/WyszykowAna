@@ -17,6 +17,8 @@ const aboutMeHeading = document.querySelector('.about-me__heading')
 const aboutMeBlocks = document.querySelector('.about-me__blocks')
 const reviewsBlocks = document.querySelector('.reviews__blocks')
 
+const socialMedia = document.querySelector('.social-media')
+
 const offerItemsMove = document.querySelectorAll('.offer__description-item')
 
 const offerScroll = document.querySelector('.about-me__scroll-to-offer')
@@ -44,6 +46,9 @@ const handleNav = () => {
 
 
 const scrollAnimations = () => {
+    if(window.scrollY >= bannerSection.offsetTop-100) {
+        socialMedia.classList.add('social-media--active')
+    } 
     if(window.scrollY >= aboutMeSection.offsetTop-500) {
         aboutMeHeading.classList.add('about-me__heading--active')
         aboutMeBlocks.classList.add('about-me__blocks--active')

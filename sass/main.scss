@@ -124,7 +124,11 @@ html {
 		.social-media {
 			align-self: end;
 			margin: 0 20px 40px;
-
+			transform: translateX(-300%);
+			transition: 1s;
+			&--active {
+				transform: translateX(0);
+			}
 			&__link {
 				margin: 10px;
 				padding: 10px;
@@ -238,12 +242,24 @@ html {
 			padding: 10px;
 			margin: 20px auto;
 			width: 80%;
+		}		
+		.textbox__text-title {
+			margin-top: 20px;
+			text-transform: uppercase;
 		}
+		&__description-list--styling {
+			text-align: center;
+			list-style: none;
+		}
+		&__description-item--styling {
+			box-shadow: 1px 1px 5px $main-bright;
+			border-radius: 8px;
+		}
+
 		.item-1 {
 			transform: translateX(-100vw);
 			transition: 1s;
 		}
-		
 		.item-2 {
 			transform: translateX(100vw);
 			transition: 1s;
@@ -262,19 +278,6 @@ html {
 		}
 		.item--active {
 			transform: translateX(0);
-		}
-		
-		.textbox__text-title {
-			margin-top: 20px;
-			text-transform: uppercase;
-		}
-		&__description-list--styling {
-			text-align: center;
-			list-style: none;
-		}
-		&__description-item--styling {
-			box-shadow: 1px 1px 5px $main-bright;
-			border-radius: 8px;
 		}
 	}
 
