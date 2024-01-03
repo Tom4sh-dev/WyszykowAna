@@ -38,6 +38,22 @@
     rotate: 0;
   }
 }
+@keyframes headerShowUp {
+  0% {
+    margin-top: -100%;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+@keyframes logoShowUp {
+  0% {
+    margin-left: -400%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -300,10 +316,12 @@ html {
 .header .heading__logo-img {
   height: 40px;
   width: 40px;
+  animation: logoShowUp 1.5s;
 }
 .header .heading .branding__name {
   font-size: 2rem;
   font-weight: 400;
+  animation: headerShowUp 1.5s;
 }
 .header .heading .branding__name::after {
   content: "";
@@ -312,13 +330,16 @@ html {
   height: 1px;
   width: 80%;
   background-color: #4f4f4f;
+  animation: headerShowUp 1.5s;
 }
 .header .heading .branding__company {
   font-size: 1.8rem;
   font-weight: 400;
+  animation: headerShowUp 1.5s;
 }
 .header .heading .hamburger {
   z-index: 100;
+  animation: hamburgerShowUp 1.5s;
 }
 
 .main .banner {

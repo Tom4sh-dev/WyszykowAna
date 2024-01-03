@@ -40,3 +40,20 @@
 	}
 
 }
+
+@keyframes headerShowUp {
+	0% {
+		margin-top: -100%;
+	}
+	100% {
+		margin-top: 0;
+	}
+}
+@keyframes logoShowUp {
+	0% {
+		margin-left: -400%;
+	}
+	100% {
+		margin-left: 0;
+	}
+}
