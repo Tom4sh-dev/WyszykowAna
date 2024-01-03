@@ -50,11 +50,14 @@ const blocksExpandReviews = () => {
 const offerShakeAdd = () => {
     offerScroll.classList.add('about-me__scroll-to-offer--active')
     setTimeout(offerShakeRemove,1000)
+    setTimeout(offerScrollTo, 500)
 }
 const offerShakeRemove = () => {
     offerScroll.classList.remove('about-me__scroll-to-offer--active')
 }
-
+const offerScrollTo = () => {
+    offerSection.scrollIntoView()
+}
 
 const handleCurrentYear = () => {
 	const year = (new Date).getFullYear();

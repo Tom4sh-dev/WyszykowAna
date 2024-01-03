@@ -199,12 +199,12 @@ html {
 			height: 40px;
 			line-height: 40px;
 			width: 100%;
-			text-decoration: none;
 			text-transform: uppercase;
 			letter-spacing: 2px;
 			font-size: 1.1rem;
 			color: $main-bright;
 			background-image: $secondary-gradient;
+			border: none;
 			border-radius: 8px;
 			&--active {
 				animation: shake .5s;
