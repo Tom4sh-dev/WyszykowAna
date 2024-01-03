@@ -242,37 +242,26 @@ html {
 		.item-1 {
 			transform: translateX(-100vw);
 			transition: 1s;
-			&--active {
-				transform: translateX(0);
-			}
 		}
+		
 		.item-2 {
 			transform: translateX(100vw);
 			transition: 1s;
-			&--active {
-				transform: translateX(0);
-			}
 		}
 		.item-3 {
 			transform: translateX(-100vw);
 			transition: 1s;
-			&--active {
-				transform: translateX(0);
-			}
 		}
 		.item-4 {
 			transform: translateX(100vw);
 			transition: 1s;
-			&--active {
-				transform: translateX(0);
-			}
 		}
 		.item-5 {
 			transform: translateX(-100vw);
 			transition: 1s;
-			&--active {
-				transform: translateX(0);
-			}
+		}
+		.item--active {
+			transform: translateX(0);
 		}
 		
 		.textbox__text-title {

@@ -52,19 +52,19 @@ const scrollAnimations = () => {
         reviewsBlocks.classList.add('reviews__blocks--active') 
     }
     if (window.scrollY >= item1.offsetTop+1100) {
-        item1.classList.add('item-1--active') 
+        item1.classList.add('item--active') 
     }
     if (window.scrollY >= item2.offsetTop+1100) {
-        item2.classList.add('item-2--active') 
+        item2.classList.add('item--active') 
     }
     if (window.scrollY >= item3.offsetTop+1100) {
-        item3.classList.add('item-3--active') 
+        item3.classList.add('item--active') 
     }
     if (window.scrollY >= item4.offsetTop+1100) {
-        item4.classList.add('item-4--active') 
+        item4.classList.add('item--active') 
     }
     if (window.scrollY >= item5.offsetTop+1100) {
-        item5.classList.add('item-5--active') 
+        item5.classList.add('item--active') 
     }
     
     

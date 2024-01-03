@@ -465,35 +465,23 @@ html {
   transform: translateX(-100vw);
   transition: 1s;
 }
-.main .offer .item-1--active {
-  transform: translateX(0);
-}
 .main .offer .item-2 {
   transform: translateX(100vw);
   transition: 1s;
-}
-.main .offer .item-2--active {
-  transform: translateX(0);
 }
 .main .offer .item-3 {
   transform: translateX(-100vw);
   transition: 1s;
 }
-.main .offer .item-3--active {
-  transform: translateX(0);
-}
 .main .offer .item-4 {
   transform: translateX(100vw);
   transition: 1s;
-}
-.main .offer .item-4--active {
-  transform: translateX(0);
 }
 .main .offer .item-5 {
   transform: translateX(-100vw);
   transition: 1s;
 }
-.main .offer .item-5--active {
+.main .offer .item--active {
   transform: translateX(0);
 }
 .main .offer .textbox__text-title {
