@@ -1,3 +1,12 @@
+@media (orientation:landscape) {
+	.header {
+		.nav {
+			&__item {
+				padding: 15px;
+			}
+		}
+}
+}
 @media (min-width: 576px) {
 	.textbox {
 		width: 90%;
@@ -7,7 +16,10 @@
 	.header {
 		.nav {
 			&__item {
-				padding: 15px;
+				padding: 50px;
+			}
+			&__link {
+				font-size: 3rem;
 			}
 		}
 		.heading {
@@ -79,24 +91,16 @@
 			}
 		}
 
-		// OFFER
-		.offer {
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-evenly;
-			padding-left: 50px;
-			.section-heading {
-				width: 100%;
-				order: -2;
+		// REVIEWS
+		.reviews {
+			.more-reviews {
+				&__link {
+					.fa-brands {
+						font-size: 2.5rem;
+					}
+				}
 			}
-			&__image {
-				width: 40%;
-				order: -1;
-			}
-			.textbox--half-width {
-				width: 40%;
-			}
-		}
+		}	
 
 		// CONTACT
 		.contact {
