@@ -646,7 +646,7 @@ html {
     padding: 15px;
   }
 }
-@media (min-width: 576px) {
+@media (min-width: 576px) and (orientation: portrait) {
   .textbox {
     width: 90%;
   }
