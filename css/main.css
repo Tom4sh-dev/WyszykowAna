@@ -374,7 +374,6 @@ html {
   left: 0;
   right: 0;
   height: 60%;
-  width: 100vw;
   background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
   z-index: -10;
 }
@@ -451,7 +450,6 @@ html {
 .main .offer {
   justify-content: center;
   background-image: linear-gradient(220deg, #065a60 0%, #312244 74%);
-  overflow: hidden;
 }
 .main .offer__image {
   margin-bottom: 30px;
@@ -459,7 +457,8 @@ html {
   border-radius: 40%;
 }
 .main .offer__description-list {
-  margin: 20px 20px 0;
+  padding: 20px 20px 0;
+  overflow: hidden;
 }
 .main .offer__description-item {
   padding: 10px;
@@ -699,7 +698,7 @@ html {
   .main .banner__gradient {
     height: 40%;
   }
-  .main .about-me .section-heading {
+  .main .about-me__heading {
     padding-top: 15%;
   }
   .main .about-me__image {
@@ -755,70 +754,208 @@ html {
   }
 }
 @media (min-width: 992px) {
+  html {
+    scroll-padding-top: 150px;
+  }
+  .section {
+    padding: 0;
+  }
+  .section-heading {
+    font-size: 3rem;
+  }
+  .textbox {
+    font-size: 2rem;
+  }
   .header .nav {
     position: fixed;
     width: 100%;
-    height: 80px;
+    height: 150px;
     background-color: #fafafa;
-    border-bottom: 1px solid #4f4f4f;
     z-index: 100;
   }
   .header .nav__list {
     position: relative;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
-    padding-left: 200px;
+    margin: 0 auto;
+    max-width: 1200px;
     background-image: none;
     transform: translateX(0);
   }
   .header .nav__item {
-    padding: 25px;
+    position: relative;
+    margin: 0 20px;
     text-align: center;
+    overflow: hidden;
   }
   .header .nav__item:nth-child(1) {
     display: none;
   }
   .header .nav__link {
-    font-size: 2rem;
-    font-weight: bold;
+    padding: 10px;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: #4f4f4f;
+    transition: 0.3s;
   }
-  .header .heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    margin-right: 50px;
+  .header .nav__link:hover {
+    color: #fafafa;
+    background-color: #4f4f4f;
+  }
+  .header .nav__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    height: 1px;
+    width: 100%;
+    background-color: #4f4f4f;
+    transition: transform 0.3s;
+  }
+  .header .nav__link::after .nav__link::after:hover .nav__link {
+    left: 0;
   }
   .header .heading__logo-img {
     position: fixed;
-    top: 10px;
-    left: 50px;
+    top: 45px;
+    left: 100px;
     height: 60px;
     width: 60px;
     z-index: 1000;
     animation: none;
   }
   .header .heading .branding {
-    margin: 100px 100px 0;
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .header .heading .branding__name {
-    animation: none;
+    font-size: 4.5rem;
   }
   .header .heading .branding__name::after {
-    content: "";
-    display: block;
-    margin: auto;
-    height: 1px;
+    height: 2px;
     width: 80%;
-    background-color: #4f4f4f;
-    animation: none;
   }
   .header .heading .branding__company {
-    animation: none;
+    font-size: 4rem;
   }
   .header .heading .hamburger {
     display: none;
+  }
+  .main .banner {
+    max-width: 1200px;
+    margin: 0 auto;
+    max-height: calc(100vh - 50px);
+  }
+  .main .banner__image {
+    width: 40%;
+    margin-top: 40vh;
+  }
+  .main .banner__textbox {
+    margin-top: 40vh;
+  }
+  .main .banner__textbox .textbox__text {
+    margin-top: 20px;
+  }
+  .main .banner .social-media {
+    margin-bottom: 50px;
+    transform: translateX(0);
+  }
+  .main .banner .social-media__link {
+    margin: 0 50px;
+    font-size: 5rem;
+  }
+  .main .banner .social-media__link .fa-brands {
+    transition: scale 0.3s;
+  }
+  .main .banner .social-media__link .fa-brands:hover {
+    scale: 1.3;
+  }
+  .main .banner__gradient {
+    height: 25%;
+  }
+  .main .about-me {
+    flex-wrap: wrap;
+    max-height: 100vh;
+  }
+  .main .about-me__heading {
+    padding-top: 200px;
+    padding-right: 5%;
+    width: 50%;
+  }
+  .main .about-me__heading--active {
+    padding-top: 200px;
+  }
+  .main .about-me__textbox {
+    order: 1;
+    width: 50%;
+    margin: 100px 0 100px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .main .about-me__image {
+    width: 50%;
+  }
+  .main .about-me__blocks {
+    position: absolute;
+    left: 0;
+    width: 50%;
+  }
+  .main .about-me__scroll-to-offer {
+    margin: 60px;
+    height: 50px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .main .about-me__scroll-to-offer:hover {
+    letter-spacing: 2.5px;
+  }
+  .main .offer {
+    flex-wrap: wrap;
+  }
+  .main .offer__heading {
+    width: 50%;
+  }
+  .main .offer__textbox {
+    width: 50%;
+    margin: 100px 0;
+  }
+  .main .offer__image {
+    width: 20%;
+  }
+  .main .offer__description-item--styling {
+    padding: 20px;
+    margin: 50px auto;
+  }
+  .main .reviews .review-box {
+    margin: 100px 200px 100px;
+    cursor: pointer;
+    transition: scale 0.3s;
+  }
+  .main .reviews .review-box:hover {
+    scale: 1.1;
+  }
+  .main .reviews .more-reviews__link {
+    transition: color 0.3s, background-color 0.3s;
+  }
+  .main .reviews .more-reviews__link .fa-brands {
+    margin-right: 15px;
+  }
+  .main .reviews .more-reviews__link:hover {
+    color: #fafafa;
+    background-color: #4f4f4f;
+  }
+  .main .reviews .more-reviews__link:nth-child(4) {
+    margin-bottom: 40px;
+  }
+  .main .reviews__block {
+    width: 5%;
+  }
+  .footer__text {
+    line-height: 80px;
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=main.css.map */

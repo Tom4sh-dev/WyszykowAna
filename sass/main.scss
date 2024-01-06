@@ -142,7 +142,6 @@ html {
 			left: 0;
 			right: 0;
 			height: 60%;
-			width: 100vw;
 			background-image: $main-gradient;
 			z-index: -10;
 		}
@@ -227,7 +226,6 @@ html {
 	.offer {
 		justify-content: center;
 		background-image: $secondary-gradient;
-		overflow: hidden;
 
 		&__image {
 			margin-bottom: 30px;
@@ -235,7 +233,8 @@ html {
 			border-radius: 40%;
 		}
 		&__description-list {
-			margin: 20px 20px 0;
+			padding: 20px 20px 0;
+			overflow: hidden;
 		}
 		&__description-item {
 			padding: 10px;
@@ -323,14 +322,13 @@ html {
 				color: $main-dark;
 				border: 2px solid $main-dark;
 				border-radius: 8px;
-				
+
 				.fa-brands {
 					margin-right: 10px;
 					font-size: 2rem;
 				}
 				&:nth-child(2) {
 					margin-bottom: 40px;
-					
 				}
 				&:nth-child(4) {
 					margin-bottom: 0;
