@@ -299,6 +299,9 @@ html {
   padding: 25px;
   text-align: center;
 }
+.header .nav__item-logo {
+  display: none;
+}
 .header .nav__link {
   padding: 20px;
   font-size: 2.5rem;
@@ -755,7 +758,7 @@ html {
 }
 @media (min-width: 992px) {
   html {
-    scroll-padding-top: 150px;
+    scroll-padding-top: 100px;
   }
   .section {
     padding: 0;
@@ -769,7 +772,7 @@ html {
   .header .nav {
     position: fixed;
     width: 100%;
-    height: 150px;
+    height: 100px;
     background-color: #fafafa;
     z-index: 100;
   }
@@ -788,12 +791,21 @@ html {
     text-align: center;
     overflow: hidden;
   }
-  .header .nav__item:nth-child(1) {
+  .header .nav__item:nth-child(2) {
     display: none;
+  }
+  .header .nav .item-logo {
+    display: block;
+  }
+  .header .nav .item-logo__img {
+    height: 60px;
+    width: 60px;
+    z-index: 1000;
+    animation: none;
   }
   .header .nav__link {
     padding: 10px;
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #4f4f4f;
@@ -803,64 +815,43 @@ html {
     color: #fafafa;
     background-color: #4f4f4f;
   }
-  .header .nav__link::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: -100%;
-    height: 1px;
-    width: 100%;
-    background-color: #4f4f4f;
-    transition: transform 0.3s;
-  }
-  .header .nav__link::after .nav__link::after:hover .nav__link {
-    left: 0;
-  }
   .header .heading__logo-img {
-    position: fixed;
-    top: 45px;
-    left: 100px;
-    height: 60px;
-    width: 60px;
-    z-index: 1000;
-    animation: none;
+    display: none;
   }
   .header .heading .branding {
     position: absolute;
-    top: 250px;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%);
   }
   .header .heading .branding__name {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
   .header .heading .branding__name::after {
     height: 2px;
     width: 80%;
   }
   .header .heading .branding__company {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .header .heading .hamburger {
     display: none;
   }
   .main .banner {
+    flex-direction: row;
     max-width: 1200px;
-    margin: 0 auto;
-    max-height: calc(100vh - 50px);
+    margin: 300px auto 0;
   }
   .main .banner__image {
-    width: 40%;
-    margin-top: 40vh;
+    width: 35%;
   }
   .main .banner__textbox {
-    margin-top: 40vh;
+    margin-bottom: 300px;
   }
   .main .banner__textbox .textbox__text {
     margin-top: 20px;
   }
   .main .banner .social-media {
-    margin-bottom: 50px;
     transform: translateX(0);
   }
   .main .banner .social-media__link {
@@ -874,28 +865,30 @@ html {
     scale: 1.3;
   }
   .main .banner__gradient {
-    height: 25%;
+    height: 200px;
   }
   .main .about-me {
+    flex-direction: row;
     flex-wrap: wrap;
-    max-height: 100vh;
   }
   .main .about-me__heading {
-    padding-top: 200px;
-    padding-right: 5%;
+    flex-basis: 60%;
+    padding-top: 150px;
+    padding-right: 10%;
     width: 50%;
   }
   .main .about-me__heading--active {
-    padding-top: 200px;
+    padding-top: 150px;
   }
   .main .about-me__textbox {
     order: 1;
     width: 50%;
-    margin: 100px 0 100px;
+    margin-bottom: 100px;
     padding: 10px;
     border-radius: 8px;
   }
   .main .about-me__image {
+    padding-bottom: 200px;
     width: 50%;
   }
   .main .about-me__blocks {
@@ -914,21 +907,30 @@ html {
     letter-spacing: 2.5px;
   }
   .main .offer {
+    flex-direction: row;
     flex-wrap: wrap;
   }
   .main .offer__heading {
-    width: 50%;
+    width: 100%;
   }
   .main .offer__textbox {
-    width: 50%;
+    width: 40%;
     margin: 100px 0;
   }
   .main .offer__image {
-    width: 20%;
+    width: 30%;
+    max-width: 400px;
+  }
+  .main .offer .textbox__text-title {
+    margin-top: -100px;
+  }
+  .main .offer__description-list--styling {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
   }
   .main .offer__description-item--styling {
-    padding: 20px;
-    margin: 50px auto;
+    width: 40%;
   }
   .main .reviews .review-box {
     margin: 100px 200px 100px;
@@ -946,7 +948,7 @@ html {
   }
   .main .reviews .more-reviews__link:hover {
     color: #fafafa;
-    background-color: #4f4f4f;
+    background-color: #272640;
   }
   .main .reviews .more-reviews__link:nth-child(4) {
     margin-bottom: 40px;
