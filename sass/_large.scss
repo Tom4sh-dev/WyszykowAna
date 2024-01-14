@@ -20,7 +20,6 @@
 			height: 100px;
 			background-color: $main-bright;
 			z-index: 100;
-			// border-bottom: 1px solid $main-dark;
 			box-shadow: 0px 1px 5px $main-dark;
 			&__list {
 				position: relative;
@@ -112,11 +111,11 @@
 				transform: translateX(0);
 				&__link {
 					margin: 0 50px;
-					font-size: 5rem;
+					font-size: 4rem;
 					.fa-brands {
 						transition: scale 0.3s;
 						&:hover {
-							scale: 1.3;
+							scale: 1.1;
 						}
 					}
 				}

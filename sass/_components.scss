@@ -87,3 +87,15 @@
 			height: 100%;
 			width: 100%;
 }
+
+.error-text {
+	display: flex;
+	align-self: end;
+	margin: 5px 0 auto 10px;
+	font-size: 14px;
+	visibility: hidden;
+}
+
+// .error .error-text {
+// 	visibility: visible;
+// }

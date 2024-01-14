@@ -408,7 +408,6 @@ html {
 			min-height: 150px;
 		}
 		&__form-btn {
-			align-self: flex-end;
 			padding: 10px;
 			width: 100%;
 			max-width: 300px;
@@ -418,6 +417,10 @@ html {
 			color: $main-dark;
 			background-color: $main-bright;
 			cursor: pointer;
+			transition: background-color .3s;
+			&:hover{
+				background-color: #e1e1e1;
+			}
 		}
 		&__popup {
 			position: absolute;
@@ -444,12 +447,10 @@ html {
 			}
 			&__title {
 				font-size: 1.8rem;
-				margin-bottom: 40px;
-				
+				font-weight: normal;
+				letter-spacing: 2px;
 			}
-			&__text {
-				font-size: 1.4rem;
-			}
+		
 			&__close-btn {
 				position: absolute;
 				bottom: 40px;right: 40px;
@@ -473,11 +474,21 @@ html {
 // FOOTER
 
 .footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin: auto;
+	padding: auto 10px;
 	height: 40px;
+	max-width: 1000px;
 	text-align: center;
 	&__text {
 		line-height: 40px;
 		font-size: 1.4rem;
+	}
+	&__mail {
+		color: $main-dark;
+		text-decoration: none;
 	}
 	&__year {
 		margin: auto 5px;

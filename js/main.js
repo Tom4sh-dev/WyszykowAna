@@ -93,11 +93,9 @@ const offerScrollTo = () => {
 
 
 const sendForm = () => {
-
     if(contactInputs[0].value !== '' && contactInputs[1].value !=='' && contactTextArea.value !== ''){
         contactPopup.classList.add('popup--active')
     }
-
 }
 const closePopup = () => {
     contactPopup.classList.remove('popup--active')
@@ -106,6 +104,62 @@ const closePopup = () => {
     })
     contactTextArea.value = ''
 }
+
+
+const error = document.querySelectorAll('.error-text');
+let email
+let name
+let msg
+
+
+const checkMail = () => {
+	const re =
+		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	if(re.test(contactInputs[1].value)) {
+        email = true
+        error[1].style.visibility = 'hidden'
+        // sendForm()
+    } else if (contactInputs[1].value === ''){
+        error[1].textContent = 'Podaj email...'
+        error[1].style.visibility = 'visible'
+
+    } else {
+		error[1].style.visibility = 'visible'
+        error[1].textContent = 'Podaj prawidłowy email...'
+        console.log('nie ok');
+	}
+};
+
+const checkName = () => {
+    if(contactInputs[0].value===''){
+        error[0].textContent = 'Podaj imię...'
+        error[0].style.visibility = 'visible'
+    } else {
+        name = true
+        error[0].style.visibility = 'hidden'
+    }
+}
+
+const checkMsg = () => {
+    if(contactTextArea.value===''){
+        error[2].textContent = 'Podaj wiadomość...'
+        error[2].style.visibility = 'visible'
+    } else {
+        msg = true
+        error[2].style.visibility = 'hidden'
+    }
+}
+
+const checkErrors = () => {
+    checkName()
+    checkMail()
+    checkMsg()
+    if(email===true && name ===true && msg === true) {
+        sendForm()
+    }
+}
+
+
 
 
 
@@ -118,6 +172,15 @@ handleCurrentYear()
 navBtn.addEventListener('click', handleNav)
 window.addEventListener('scroll', scrollAnimations)
 offerScroll.addEventListener('click', offerShakeAdd)
-
-sendFormBtn.addEventListener('click', sendForm)
+sendFormBtn.addEventListener('click', checkErrors)
 closePopupBtn.addEventListener('click', closePopup)
+
+
+document.addEventListener('invalid', (function () {
+    return function (e) {
+      e.preventDefault();
+      document.getElementById("name").focus();
+      document.getElementById("msg").focus();
+      document.getElementById("email").focus();
+    };
+  })(), true);

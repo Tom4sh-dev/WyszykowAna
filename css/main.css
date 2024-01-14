@@ -253,6 +253,14 @@
   width: 100%;
 }
 
+.error-text {
+  display: flex;
+  align-self: end;
+  margin: 5px 0 auto 10px;
+  font-size: 14px;
+  visibility: hidden;
+}
+
 *,
 *::after,
 *::before {
@@ -627,7 +635,6 @@ html {
   min-height: 150px;
 }
 .main .contact__form-btn {
-  align-self: flex-end;
   padding: 10px;
   width: 100%;
   max-width: 300px;
@@ -637,6 +644,10 @@ html {
   color: #4f4f4f;
   background-color: #fafafa;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+.main .contact__form-btn:hover {
+  background-color: #e1e1e1;
 }
 .main .contact__popup {
   position: absolute;
@@ -664,10 +675,8 @@ html {
 }
 .main .contact .popup__title {
   font-size: 1.8rem;
-  margin-bottom: 40px;
-}
-.main .contact .popup__text {
-  font-size: 1.4rem;
+  font-weight: normal;
+  letter-spacing: 2px;
 }
 .main .contact .popup__close-btn {
   position: absolute;
@@ -688,12 +697,22 @@ html {
 }
 
 .footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: auto;
+  padding: auto 10px;
   height: 40px;
+  max-width: 1000px;
   text-align: center;
 }
 .footer__text {
   line-height: 40px;
   font-size: 1.4rem;
+}
+.footer__mail {
+  color: #4f4f4f;
+  text-decoration: none;
 }
 .footer__year {
   margin: auto 5px;
@@ -778,11 +797,6 @@ html {
   }
   .main .contact .popup__title {
     font-size: 2rem;
-    margin-bottom: 60px;
-  }
-  .main .contact .popup__text {
-    font-size: 1.8rem;
-    margin-bottom: 80px;
   }
   .main .contact .popup__icon {
     font-size: 4rem;
@@ -932,13 +946,13 @@ html {
   }
   .main .banner .social-media__link {
     margin: 0 50px;
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .main .banner .social-media__link .fa-brands {
     transition: scale 0.3s;
   }
   .main .banner .social-media__link .fa-brands:hover {
-    scale: 1.3;
+    scale: 1.1;
   }
   .main .banner__gradient {
     height: 200px;
