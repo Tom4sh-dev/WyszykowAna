@@ -375,6 +375,7 @@ html {
 	// CONTACT
 
 	.contact {
+		position: relative;
 		padding-bottom: 40px;
 		background-image: $main-gradient;
 		&__form,
@@ -410,6 +411,52 @@ html {
 			background-color: $main-bright;
 			cursor: pointer;
 		}
+		&__popup {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			height: 400px;
+			width: 90%;
+			max-width: 800px;
+		}
+		.popup {
+			display: none;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 5%;
+			color: $main-bright;
+			background-image: $main-gradient;
+			border-radius: 10px;
+			box-shadow: 2px 2px 30px 10px #000;
+			&--active {
+				display: flex;
+			}
+			&__title {
+				font-size: 1.8rem;
+				margin-bottom: 40px;
+				
+			}
+			&__text {
+				font-size: 1.4rem;
+			}
+			&__close-btn {
+				position: absolute;
+				bottom: 40px;right: 40px;
+				padding: 10px;
+				border: none;
+				background: transparent;
+				transition: scale .3s;
+				&:hover {
+					scale: 1.2;
+				}
+			}
+			&__icon {
+				font-size: 3rem;
+				color: $main-bright;
+			}
+		}
 	}
 }
 
@@ -425,6 +472,7 @@ html {
 	&__year {
 		margin: auto 5px;
 	}
+	
 }
 
 @import './small';

@@ -20,6 +20,7 @@
 			height: 100px;
 			background-color: $main-bright;
 			z-index: 100;
+			border-bottom: 1px solid $main-dark;
 			&__list {
 				position: relative;
 				flex-direction: row;
@@ -68,7 +69,7 @@
 
 			.branding {
 				position: absolute;
-				top: 25%;
+				top: 150px;
 				left: 50%;
 				transform: translateX(-50%);
 				&__name {

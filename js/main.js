@@ -23,6 +23,13 @@ const offerItemsMove = document.querySelectorAll('.offer__description-item')
 
 const offerScroll = document.querySelector('.about-me__scroll-to-offer')
 
+const contactForm = document.querySelector('.contact__form')
+const contactInputs = document.querySelectorAll('.contact__form-input')
+const contactTextArea = document.querySelector('.contact__form-textarea')
+const sendFormBtn = document.querySelector('.send-btn')
+const contactPopup = document.querySelector('.popup')
+const closePopupBtn = document.querySelector('.popup__close-btn')
+
 const footerYear = document.querySelector('.footer__year')
 
 
@@ -43,7 +50,6 @@ const handleNav = () => {
             document.body.classList.remove('stop-scrolling');
 		})})
 }
-
 
 const scrollAnimations = () => {
     if(window.scrollY >= bannerSection.offsetTop-100) {
@@ -71,11 +77,6 @@ const scrollAnimations = () => {
     if (window.scrollY >= item5.offsetTop+1100) {
         item5.classList.add('item--active') 
     }
-    
-    
-
-   
-
 }
 
 const offerShakeAdd = () => {
@@ -90,6 +91,25 @@ const offerScrollTo = () => {
     offerSection.scrollIntoView()
 }
 
+
+const sendForm = () => {
+    if(contactInputs[0].value !== '' && contactInputs[1].value !=='' && contactTextArea.value !== ''){
+        contactPopup.classList.add('popup--active')
+        contactInputs.forEach(input => {
+            input.value = ''
+            input.setAttribute('autocomplete','off')
+        })
+        contactTextArea.value = ''
+        contactForm.setAttribute('autocomplete','off')
+    }
+}
+const closePopup = () => {
+    contactPopup.classList.remove('popup--active')
+    contactForm.removeAttribute('autocomplete','on')
+}
+
+
+
 const handleCurrentYear = () => {
 	const year = (new Date).getFullYear();
 	footerYear.innerText = year;
@@ -99,3 +119,6 @@ handleCurrentYear()
 navBtn.addEventListener('click', handleNav)
 window.addEventListener('scroll', scrollAnimations)
 offerScroll.addEventListener('click', offerShakeAdd)
+
+sendFormBtn.addEventListener('click', sendForm)
+closePopupBtn.addEventListener('click', closePopup)

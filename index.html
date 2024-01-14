@@ -366,29 +366,31 @@
 			</div>
 			<section id="contact" class="contact section">
 				<h2 class="section-heading section-heading--bright">kontakt</h2>
-
+				<div name="popup" id="popup" class="contact__popup popup">
+					<h3 class="popup__title">Dziękuję, Twoja wiadomość zostala wysłana.</h3>
+					<p class="popup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet deleniti ex perferendis temporibus a ea natus aliquam repudiandae quae vel.</p>
+					<button class="popup__close-btn"><i class="fa-solid fa-xmark popup__icon"></i></button>
+				</div>
+				<iframe name="dummyframe" id="dummyframe" style="display: none"></iframe>
 				<form
-					class="contact__form textbox--bright"
+					id="contactform"
 					method="POST"
-					action="https://formsubmit.io/send/4bb76b7c-7db2-42b5-937a-39afb7a8fa84"
-				>
-					<input
-						name="_redirect"
-						type="hidden"
-						id="name"
-						value="http://127.0.0.1:5500/email-sent.html"
-					/>
-
+					class="contact__form textbox--bright"
+					target="dummyframe"
+					>
+					<!-- action="https://formsubmit.io/send/4bb76b7c-7db2-42b5-937a-39afb7a8fa84" -->
+					
 					<label for="name" class="contact__form-label">Imię:</label>
-					<input type="text" id="name" class="contact__form-input" required />
+					<input name="name" type="text" id="name" class="contact__form-input" required />
 
 					<label for="email" class="contact__form-label">Adres e-mail:</label>
-					<input type="text" id="email" class="contact__form-input" required />
+					<input name="email" type="text" id="email" class="contact__form-input " required/>
 
 					<label for="msg" class="contact__form-label">Wiadomość:</label>
-					<textarea id="msg" class="contact__form-textarea" required></textarea>
+					<textarea name="comment" id="msg"  class="contact__form-textarea" required></textarea>
 
 					<input name="_formsubmit_id" type="text" style="display: none" />
+
 					<button
 						type="submit"
 						class="send-btn contact__form-btn btn-special-animation"
