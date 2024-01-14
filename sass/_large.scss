@@ -20,7 +20,8 @@
 			height: 100px;
 			background-color: $main-bright;
 			z-index: 100;
-			border-bottom: 1px solid $main-dark;
+			// border-bottom: 1px solid $main-dark;
+			box-shadow: 0px 1px 5px $main-dark;
 			&__list {
 				position: relative;
 				flex-direction: row;
@@ -153,6 +154,7 @@
 			}
 			&__blocks {
 				position: absolute;
+				top: 0;
 				left: 0;
 				width: 50%;
 			}

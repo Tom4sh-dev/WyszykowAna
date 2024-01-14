@@ -93,19 +93,18 @@ const offerScrollTo = () => {
 
 
 const sendForm = () => {
+
     if(contactInputs[0].value !== '' && contactInputs[1].value !=='' && contactTextArea.value !== ''){
         contactPopup.classList.add('popup--active')
-        contactInputs.forEach(input => {
-            input.value = ''
-            input.setAttribute('autocomplete','off')
-        })
-        contactTextArea.value = ''
-        contactForm.setAttribute('autocomplete','off')
     }
+
 }
 const closePopup = () => {
     contactPopup.classList.remove('popup--active')
-    contactForm.removeAttribute('autocomplete','on')
+    contactInputs.forEach(input => {
+        input.value = ''
+    })
+    contactTextArea.value = ''
 }
 
 

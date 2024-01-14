@@ -32,6 +32,9 @@
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 	<body class="page">
+
+		<!-- HEADER -->
+
 		<header id="home" class="header">
 			<nav class="nav header__nav">
 				<ul class="nav__list nav__list--horizontal">
@@ -75,7 +78,13 @@
 				</button>
 			</div>
 		</header>
+
+		<!-- MAIN -->
+
 		<main class="main">
+
+			<!-- BANNER -->
+
 			<section class="banner section">
 				<img
 					class="banner__image"
@@ -111,8 +120,11 @@
 						><i class="fa-brands fa-instagram"></i
 					></a>
 				</div>
-				<div class="banner__gradient"></div>
 			</section>
+			<div class="gradient"></div>
+
+			<!-- ABOUT ME -->
+
 			<div class="wrapper">
 				<section id="about-me" class="about-me section">
 					<h2 class="section-heading about-me__heading">o mnie</h2>
@@ -156,6 +168,9 @@
 					</div>
 				</section>
 			</div>
+
+			<!-- OFFER -->
+
 			<section id="offer" class="offer section">
 				<h2 class="section-heading section-heading--bright offer__heading">
 					oferta
@@ -231,6 +246,9 @@
 					</ul>
 				</div>
 			</section>
+
+			<!-- REVIEWS -->
+
 			<div class="wrapper">
 				<section id="reviews" class="reviews section">
 					<h2 class="section-heading">opinie</h2>
@@ -364,30 +382,62 @@
 					</div>
 				</section>
 			</div>
+
+			<!-- CONTACT -->
+
 			<section id="contact" class="contact section">
 				<h2 class="section-heading section-heading--bright">kontakt</h2>
 				<div name="popup" id="popup" class="contact__popup popup">
-					<h3 class="popup__title">Dziękuję, Twoja wiadomość zostala wysłana.</h3>
-					<p class="popup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet deleniti ex perferendis temporibus a ea natus aliquam repudiandae quae vel.</p>
-					<button class="popup__close-btn"><i class="fa-solid fa-xmark popup__icon"></i></button>
+					<h3 class="popup__title">
+						Dziękuję, Twoja wiadomość zostala wysłana.
+					</h3>
+					<p class="popup__text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+						deleniti ex perferendis temporibus a ea natus aliquam repudiandae
+						quae vel.
+					</p>
+					<button class="popup__close-btn">
+						<i class="fa-solid fa-xmark popup__icon"></i>
+					</button>
 				</div>
-				<iframe name="dummyframe" id="dummyframe" style="display: none"></iframe>
+				<iframe
+					name="dummyframe"
+					id="dummyframe"
+					style="display: none"
+				></iframe>
 				<form
 					id="contactform"
 					method="POST"
 					class="contact__form textbox--bright"
 					target="dummyframe"
-					>
+				>
 					<!-- action="https://formsubmit.io/send/4bb76b7c-7db2-42b5-937a-39afb7a8fa84" -->
-					
+
 					<label for="name" class="contact__form-label">Imię:</label>
-					<input name="name" type="text" id="name" class="contact__form-input" required />
+					<input
+						name="name"
+						type="text"
+						id="name"
+						class="contact__form-input"
+						required
+					/>
 
 					<label for="email" class="contact__form-label">Adres e-mail:</label>
-					<input name="email" type="text" id="email" class="contact__form-input " required/>
+					<input
+						name="email"
+						type="text"
+						id="email"
+						class="contact__form-input"
+						required
+					/>
 
 					<label for="msg" class="contact__form-label">Wiadomość:</label>
-					<textarea name="comment" id="msg"  class="contact__form-textarea" required></textarea>
+					<textarea
+						name="comment"
+						id="msg"
+						class="contact__form-textarea"
+						required
+					></textarea>
 
 					<input name="_formsubmit_id" type="text" style="display: none" />
 
@@ -401,11 +451,14 @@
 			</section>
 		</main>
 
+		<!-- FOOTER -->
+
 		<footer class="footer">
 			<p class="footer__text">
 				&copy; <span class="footer__year"></span>WyszykowAna
 			</p>
 		</footer>
+
 		<script
 			type="text/javascript"
 			src="//code.jquery.com/jquery-1.11.0.min.js"

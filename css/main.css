@@ -270,6 +270,7 @@ html {
   font-family: "Montserrat", sans-serif;
   color: #4f4f4f;
   background-color: #fafafa;
+  background-image: linear-gradient(220deg, #eeeeee 0%, #fafafa 74%);
 }
 
 .header .nav {
@@ -382,6 +383,13 @@ html {
 }
 .main .banner--nav-active {
   transform: translateX(-100%);
+}
+.main .gradient {
+  margin-top: -400px;
+  width: 100%;
+  height: 400px;
+  background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
+  z-index: -10;
 }
 .main .about-me {
   justify-content: space-between;
@@ -650,6 +658,7 @@ html {
   background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
   border-radius: 10px;
   box-shadow: 2px 2px 30px 10px #000;
+  z-index: 1000;
 }
 .main .contact .popup--active {
   display: flex;
@@ -668,6 +677,7 @@ html {
   padding: 10px;
   border: none;
   background: transparent;
+  cursor: pointer;
   transition: scale 0.3s;
 }
 .main .contact .popup__close-btn:hover {
@@ -748,6 +758,10 @@ html {
   .main .banner__gradient {
     height: 40%;
   }
+  .main .gradient {
+    margin-top: -150px;
+    height: 150px;
+  }
   .main .about-me__heading {
     padding-top: 15%;
   }
@@ -798,6 +812,10 @@ html {
   .main .banner__gradient {
     height: 35%;
   }
+  .main .gradient {
+    margin-top: -200px;
+    height: 200px;
+  }
   .main .about-me__scroll-to-offer {
     font-size: 1.4rem;
   }
@@ -833,7 +851,7 @@ html {
     height: 100px;
     background-color: #fafafa;
     z-index: 100;
-    border-bottom: 1px solid #4f4f4f;
+    box-shadow: 0px 1px 5px #4f4f4f;
   }
   .header .nav__list {
     position: relative;
@@ -952,6 +970,7 @@ html {
   }
   .main .about-me__blocks {
     position: absolute;
+    top: 0;
     left: 0;
     width: 50%;
   }
