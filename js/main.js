@@ -111,6 +111,15 @@ let email
 let name
 let msg
 
+const checkName = () => {
+    if(contactInputs[0].value===''){
+        error[0].textContent = 'Podaj imię...'
+        error[0].style.visibility = 'visible'
+    } else {
+        name = true
+        error[0].style.visibility = 'hidden'
+    }
+}
 
 const checkMail = () => {
 	const re =
@@ -129,16 +138,6 @@ const checkMail = () => {
         console.log('nie ok');
 	}
 };
-
-const checkName = () => {
-    if(contactInputs[0].value===''){
-        error[0].textContent = 'Podaj imię...'
-        error[0].style.visibility = 'visible'
-    } else {
-        name = true
-        error[0].style.visibility = 'hidden'
-    }
-}
 
 const checkMsg = () => {
     if(contactTextArea.value===''){
