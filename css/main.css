@@ -862,7 +862,7 @@ html {
   .header .nav {
     position: fixed;
     width: 100%;
-    height: 100px;
+    height: 80px;
     background-color: #fafafa;
     z-index: 100;
     box-shadow: 0px 1px 5px #4f4f4f;
@@ -889,8 +889,8 @@ html {
     display: block;
   }
   .header .nav .item-logo__img {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     z-index: 1000;
     animation: none;
   }
@@ -911,7 +911,7 @@ html {
   }
   .header .heading .branding {
     position: absolute;
-    top: 150px;
+    top: 130px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -931,7 +931,7 @@ html {
   .main .banner {
     flex-direction: row;
     max-width: 1200px;
-    margin: 300px auto 0;
+    margin: 180px auto 0;
   }
   .main .banner__image {
     width: 35%;

@@ -17,7 +17,7 @@
 		.nav {
 			position: fixed;
 			width: 100%;
-			height: 100px;
+			height: 80px;
 			background-color: $main-bright;
 			z-index: 100;
 			box-shadow: 0px 1px 5px $main-dark;
@@ -42,8 +42,8 @@
 			.item-logo  {
 				display: block;
 				&__img{
-					height: 60px;
-				width: 60px;
+					height: 50px;
+				width: 50px;
 				z-index: 1000;
 				animation: none;
 				}
@@ -69,7 +69,7 @@
 
 			.branding {
 				position: absolute;
-				top: 150px;
+				top: 130px;
 				left: 50%;
 				transform: translateX(-50%);
 				&__name {
@@ -96,7 +96,7 @@
 		.banner {
 			flex-direction: row;
 			max-width: 1200px;
-			margin: 300px auto 0;
+			margin: 180px auto 0;
 			&__image {
 				width: 35%;
 			}
