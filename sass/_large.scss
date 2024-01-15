@@ -13,7 +13,7 @@
 		font-size: 2rem;
 	}
 
-// HEADER
+	// HEADER
 
 	.header {
 		.nav {
@@ -93,7 +93,6 @@
 	// MAIN
 
 	.main {
-
 		// BANNER
 
 		.banner {
@@ -179,7 +178,6 @@
 		// OFFER
 
 		.offer {
-			
 			&__textbox {
 				width: 60%;
 				margin: 60px 0;
@@ -188,7 +186,7 @@
 				width: 30%;
 				max-width: 400px;
 			}
-			
+
 			&__description-list--first {
 				display: flex;
 				flex-wrap: wrap;
@@ -197,18 +195,18 @@
 
 			&__description-item--first {
 				flex-basis: 45%;
-				transition: transform .3s;
+				transition: transform 0.3s;
 				&:hover {
-					transform: translate(10px, 10px) ;
+					transform: translate(10px, 10px);
 				}
 			}
-		
+
 			&__description-list--second {
 				display: flex;
 				flex-wrap: wrap;
 				width: 1000px;
 			}
-			
+
 			&__description-item--second {
 				padding: 30px;
 				flex-basis: 40%;
