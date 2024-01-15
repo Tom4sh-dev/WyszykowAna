@@ -1058,7 +1058,7 @@ html {
     transition: scale 0.3s;
   }
   .main .reviews .review-box:hover {
-    scale: 1.1;
+    scale: 1.02;
   }
   .main .reviews .more-reviews__link {
     transition: color 0.3s, background-color 0.3s;
