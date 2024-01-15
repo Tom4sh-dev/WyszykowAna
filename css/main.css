@@ -487,11 +487,28 @@ html {
   margin-top: 20px;
   text-transform: uppercase;
 }
-.main .offer__description-list--styling {
+.main .offer__description-list--first {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.main .offer__description-item--first {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  height: 100px;
+  flex-basis: 100%;
+  color: #4f4f4f;
+  background-color: rgba(255, 255, 255, 0.8470588235);
+  border-radius: 20px;
+  font-family: "Oswald", sans-serif;
+}
+.main .offer__description-list--second {
   text-align: center;
   list-style: none;
 }
-.main .offer__description-item--styling {
+.main .offer__description-item--second {
   box-shadow: 0px 0px 4px #fafafa;
   border-radius: 8px;
 }
@@ -774,9 +791,6 @@ html {
   .main .banner .social-media__link {
     font-size: 3rem;
   }
-  .main .banner__gradient {
-    height: 40%;
-  }
   .main .gradient {
     margin-top: -150px;
     height: 150px;
@@ -833,6 +847,15 @@ html {
   .main .about-me__scroll-to-offer {
     font-size: 1.4rem;
   }
+  .main .offer__description-item--first {
+    padding: 20px;
+    height: 180px;
+    flex-basis: 40%;
+    transition: transform 0.3s;
+  }
+  .main .offer__description-item--first:hover {
+    transform: translate(10px, 10px);
+  }
   .main .reviews .more-reviews__link {
     font-size: 1.8rem;
   }
@@ -848,7 +871,7 @@ html {
 }
 @media (min-width: 992px) {
   html {
-    scroll-padding-top: 100px;
+    scroll-padding-top: 80px;
   }
   .section {
     padding: 0;
@@ -911,7 +934,7 @@ html {
   }
   .header .heading .branding {
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -934,7 +957,7 @@ html {
     margin: 0 auto;
     padding-top: 160px;
     max-width: 1200px;
-    min-height: calc(100vh - 40px);
+    min-height: 80vh;
   }
   .main .banner__image {
     width: 35%;
@@ -1001,31 +1024,34 @@ html {
   .main .about-me__scroll-to-offer:hover {
     letter-spacing: 2.5px;
   }
-  .main .offer {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .main .offer__heading {
-    width: 100%;
-  }
   .main .offer__textbox {
-    width: 40%;
-    margin: 100px 0;
+    width: 60%;
+    margin: 60px 0;
   }
   .main .offer__image {
     width: 30%;
     max-width: 400px;
   }
-  .main .offer .textbox__text-title {
-    margin-top: -100px;
+  .main .offer__description-list--first {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
   }
-  .main .offer__description-list--styling {
+  .main .offer__description-item--first {
+    flex-basis: 45%;
+    transition: transform 0.3s;
+  }
+  .main .offer__description-item--first:hover {
+    transform: translate(10px, 10px);
+  }
+  .main .offer__description-list--second {
     display: flex;
     flex-wrap: wrap;
     width: 1000px;
   }
-  .main .offer__description-item--styling {
-    width: 40%;
+  .main .offer__description-item--second {
+    padding: 30px;
+    flex-basis: 40%;
   }
   .main .reviews .review-box {
     margin: 100px 200px 100px;

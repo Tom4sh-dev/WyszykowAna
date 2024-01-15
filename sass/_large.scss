@@ -1,6 +1,6 @@
 @media (min-width: 992px) {
 	html {
-		scroll-padding-top: 100px;
+		scroll-padding-top: 80px;
 	}
 	.section {
 		padding: 0;
@@ -12,6 +12,8 @@
 	.textbox {
 		font-size: 2rem;
 	}
+
+// HEADER
 
 	.header {
 		.nav {
@@ -68,7 +70,7 @@
 
 			.branding {
 				position: absolute;
-				top: 20%;
+				top: 15%;
 				left: 50%;
 				transform: translateX(-50%);
 				&__name {
@@ -87,9 +89,11 @@
 			}
 		}
 	}
+
 	// MAIN
 
 	.main {
+
 		// BANNER
 
 		.banner {
@@ -98,7 +102,7 @@
 			margin: 0 auto;
 			padding-top: 160px;
 			max-width: 1200px;
-			min-height: calc(100vh - 40px);
+			min-height: 80vh;
 			&__image {
 				width: 35%;
 			}
@@ -175,29 +179,39 @@
 		// OFFER
 
 		.offer {
-			flex-direction: row;
-			flex-wrap: wrap;
-			&__heading {
-				width: 100%;
-			}
+			
 			&__textbox {
-				width: 40%;
-				margin: 100px 0;
+				width: 60%;
+				margin: 60px 0;
 			}
 			&__image {
 				width: 30%;
 				max-width: 400px;
 			}
-			.textbox__text-title {
-				margin-top: -100px;
+			
+			&__description-list--first {
+				display: flex;
+				flex-wrap: wrap;
+				list-style: none;
 			}
-			&__description-list--styling {
+
+			&__description-item--first {
+				flex-basis: 45%;
+				transition: transform .3s;
+				&:hover {
+					transform: translate(10px, 10px) ;
+				}
+			}
+		
+			&__description-list--second {
 				display: flex;
 				flex-wrap: wrap;
 				width: 1000px;
 			}
-			&__description-item--styling {
-				width: 40%;
+			
+			&__description-item--second {
+				padding: 30px;
+				flex-basis: 40%;
 			}
 		}
 

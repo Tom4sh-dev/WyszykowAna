@@ -256,11 +256,31 @@ html {
 			margin-top: 20px;
 			text-transform: uppercase;
 		}
-		&__description-list--styling {
+
+		&__description-list--first {
+			display: flex;
+			flex-wrap: wrap;
+			list-style: none;
+			
+		}
+		&__description-item--first {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 10px 20px;
+			height: 100px;
+			flex-basis: 100%;
+			color: $main-dark;
+			background-color: #ffffffd8;
+			border-radius: 20px;
+			font-family: 'Oswald', sans-serif;
+		}
+
+		&__description-list--second {
 			text-align: center;
 			list-style: none;
 		}
-		&__description-item--styling {
+		&__description-item--second {
 			box-shadow: 0px 0px 4px $main-bright;
 			border-radius: 8px;
 		}

@@ -29,6 +29,10 @@ const contactTextArea = document.querySelector('.contact__form-textarea')
 const sendFormBtn = document.querySelector('.send-btn')
 const contactPopup = document.querySelector('.popup')
 const closePopupBtn = document.querySelector('.popup__close-btn')
+const error = document.querySelectorAll('.error-text');
+let email
+let name
+let msg
 
 const footerYear = document.querySelector('.footer__year')
 
@@ -92,25 +96,6 @@ const offerScrollTo = () => {
 }
 
 
-const sendForm = () => {
-    if(contactInputs[0].value !== '' && contactInputs[1].value !=='' && contactTextArea.value !== ''){
-        contactPopup.classList.add('popup--active')
-    }
-}
-const closePopup = () => {
-    contactPopup.classList.remove('popup--active')
-    contactInputs.forEach(input => {
-        input.value = ''
-    })
-    contactTextArea.value = ''
-}
-
-
-const error = document.querySelectorAll('.error-text');
-let email
-let name
-let msg
-
 const checkName = () => {
     if(contactInputs[0].value===''){
         error[0].textContent = 'Podaj imię...'
@@ -120,7 +105,6 @@ const checkName = () => {
         error[0].style.visibility = 'hidden'
     }
 }
-
 const checkMail = () => {
 	const re =
 		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -138,7 +122,6 @@ const checkMail = () => {
         console.log('nie ok');
 	}
 };
-
 const checkMsg = () => {
     if(contactTextArea.value===''){
         error[2].textContent = 'Podaj wiadomość...'
@@ -148,7 +131,6 @@ const checkMsg = () => {
         error[2].style.visibility = 'hidden'
     }
 }
-
 const checkErrors = () => {
     checkName()
     checkMail()
@@ -157,9 +139,18 @@ const checkErrors = () => {
         sendForm()
     }
 }
-
-
-
+const sendForm = () => {
+    if(contactInputs[0].value !== '' && contactInputs[1].value !=='' && contactTextArea.value !== ''){
+        contactPopup.classList.add('popup--active')
+    }
+}
+const closePopup = () => {
+    contactPopup.classList.remove('popup--active')
+    contactInputs.forEach(input => {
+        input.value = ''
+    })
+    contactTextArea.value = ''
+}
 
 
 const handleCurrentYear = () => {
@@ -173,8 +164,6 @@ window.addEventListener('scroll', scrollAnimations)
 offerScroll.addEventListener('click', offerShakeAdd)
 sendFormBtn.addEventListener('click', checkErrors)
 closePopupBtn.addEventListener('click', closePopup)
-
-
 document.addEventListener('invalid', (function () {
     return function (e) {
       e.preventDefault();
