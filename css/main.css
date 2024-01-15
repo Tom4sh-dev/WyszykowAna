@@ -911,7 +911,7 @@ html {
   }
   .header .heading .branding {
     position: absolute;
-    top: 130px;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -930,8 +930,11 @@ html {
   }
   .main .banner {
     flex-direction: row;
+    align-content: end;
+    margin: 0 auto;
+    padding-top: 160px;
     max-width: 1200px;
-    margin: 180px auto 0;
+    min-height: calc(100vh - 40px);
   }
   .main .banner__image {
     width: 35%;
