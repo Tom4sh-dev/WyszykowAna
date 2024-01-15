@@ -44,18 +44,18 @@
 			}
 		}
 
-// OFFER
-.offer {
-	&__description-item--first {
-		padding: 20px;
-		height: 180px;
-		flex-basis: 40%;
-		transition: transform .3s;
-		&:hover {
-			transform: translate(10px, 10px) ;
+		// OFFER
+		.offer {
+			&__description-item--first {
+				padding: 20px;
+				height: 180px;
+				flex-basis: 40%;
+				transition: transform 0.3s;
+				&:hover {
+					transform: translate(10px, 10px);
+				}
+			}
 		}
-	}
-}
 
 		// REVIEWS
 		.reviews {
