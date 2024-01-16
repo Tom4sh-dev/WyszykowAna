@@ -3,7 +3,7 @@
 		font-size: 2.4rem;
 	}
 	.textbox {
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 	}
 
 	// HEADER
@@ -48,7 +48,7 @@
 		.offer {
 			&__description-item--first {
 				padding: 20px;
-				height: 180px;
+				height: 130px;
 				flex-basis: 40%;
 				transition: transform 0.3s;
 				&:hover {
@@ -61,7 +61,7 @@
 		.reviews {
 			.more-reviews {
 				&__link {
-					font-size: 1.8rem;
+					font-size: 1.6rem;
 				}
 			}
 		}
@@ -69,10 +69,16 @@
 		// CONTACT
 		.contact {
 			&__form-label {
-				font-size: 1.8rem;
+				font-size: 1.6rem;
+			}
+			&__form-input{
+				margin-bottom: 0px;
+			}
+			&__form-textarea{
+				margin-bottom: 0px;
 			}
 			&__form-btn {
-				font-size: 1.8rem;
+				font-size: 1.6rem;
 			}
 		}
 	}
@@ -80,7 +86,7 @@
 	// FOOTER
 	.footer {
 		&__text {
-			font-size: 1.8rem;
+			font-size: 1.6rem;
 		}
 	}
 }

@@ -10,7 +10,7 @@
 	}
 
 	.textbox {
-		font-size: 2rem;
+		font-size: 1.8rem;
 	}
 
 	// HEADER
@@ -107,7 +107,7 @@
 			}
 
 			&__textbox {
-				margin-bottom: 300px;
+				margin-bottom: 250px;
 				.textbox__text {
 					margin-top: 20px;
 				}
@@ -165,7 +165,6 @@
 			&__scroll-to-offer {
 				margin: 60px;
 				height: 50px;
-				font-size: 1.6rem;
 				cursor: pointer;
 				transition: 0.3s;
 
@@ -178,6 +177,7 @@
 		// OFFER
 
 		.offer {
+			
 			&__textbox {
 				width: 60%;
 				margin: 60px 0;
@@ -194,7 +194,7 @@
 			}
 
 			&__description-item--first {
-				flex-basis: 45%;
+				flex-basis: 40%;
 				transition: transform 0.3s;
 				&:hover {
 					transform: translate(10px, 10px);
@@ -217,7 +217,7 @@
 
 		.reviews {
 			.review-box {
-				margin: 100px 200px 100px;
+				margin: 100px 50px 20px;
 				cursor: pointer;
 				transition: scale 0.3s;
 				&:hover {
