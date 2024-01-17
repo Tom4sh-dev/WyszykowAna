@@ -475,6 +475,7 @@ html {
 }
 .main .offer__description-item {
   margin: 20px auto;
+  font-family: "Roboto", sans-serif;
 }
 .main .offer .textbox__text-title {
   margin-top: 50px;
@@ -486,10 +487,6 @@ html {
   display: flex;
   flex-direction: column;
   list-style: none;
-}
-.main .offer__description-item--first {
-  display: block;
-  font-family: "Roboto", sans-serif;
 }
 .main .offer__illustration {
   margin: 0 auto 40px;
@@ -510,8 +507,9 @@ html {
 }
 .main .offer__description-item--second {
   display: flex;
+  align-items: center;
+  width: 90%;
   flex-direction: column;
-  width: 70%;
   transition: scale 0.3s;
 }
 .main .offer__description-item--second:hover {
@@ -519,6 +517,8 @@ html {
 }
 .main .offer__list-image {
   margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
   border-radius: 10px;
 }
 .main .reviews__textbox {
@@ -881,7 +881,7 @@ html {
     flex-wrap: wrap;
   }
   .main .offer__description-item--second {
-    width: 40%;
+    width: 45%;
   }
   .main .reviews .more-reviews__link {
     font-size: 1.6rem;

@@ -245,6 +245,7 @@ html {
 		}
 		&__description-item {
 			margin: 20px auto;
+			font-family: 'Roboto', sans-serif;
 		}
 		.textbox__text-title {
 			margin-top: 50px;
@@ -257,10 +258,6 @@ html {
 			display: flex;
 			flex-direction: column;
 			list-style: none;
-		}
-		&__description-item--first {
-			display: block;
-			font-family: 'Roboto', sans-serif;
 		}
 
 		&__illustration {
@@ -284,8 +281,9 @@ html {
 		}
 		&__description-item--second {
 			display: flex;
+			align-items: center;
+			width: 90%;
 			flex-direction: column;
-			width: 70%;
 			transition: scale .3s;
 			&:hover {
 				scale: 1.1;
@@ -293,6 +291,8 @@ html {
 		}
 		&__list-image {
 			margin-bottom: 20px;
+			width: 100%;
+			max-width: 400px;
 			border-radius: 10px;
 		}
 	}
