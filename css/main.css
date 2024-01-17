@@ -822,6 +822,9 @@ html {
     margin-top: -200px;
     height: 200px;
   }
+  .main .social-media {
+    margin-bottom: 1000px;
+  }
   .main .about-me__scroll-to-offer {
     font-size: 1.4rem;
   }
