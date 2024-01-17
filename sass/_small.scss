@@ -34,7 +34,6 @@
 
 	// MAIN
 	.main {
-		
 		// BANNER
 		.banner {
 			flex-direction: row;
@@ -84,6 +83,20 @@
 			}
 		}
 
+		// OFFER
+
+		.offer {
+			
+			
+			&__description-list--second {
+				flex-direction: row;
+			}
+
+			&__description-item--second {
+				margin-top: 30px;
+			}
+		}
+
 		// REVIEWS
 		.reviews {
 			.more-reviews {
@@ -93,21 +106,19 @@
 					}
 				}
 			}
-		}	
+		}
 
 		// CONTACT
 		.contact {
-			
 			.popup {
 				&__title {
 					font-size: 2rem;
 				}
-			
+
 				&__icon {
 					font-size: 4rem;
 				}
 			}
 		}
 	}
-
 }

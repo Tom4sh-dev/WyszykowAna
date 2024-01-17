@@ -461,20 +461,21 @@ html {
 }
 .main .offer {
   justify-content: center;
-  background-image: linear-gradient(220deg, #065a60 0%, #312244 74%);
+  background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
+  overflow: hidden;
 }
 .main .offer__image {
   margin-bottom: 30px;
-  width: 50%;
-  border-radius: 40%;
+  width: 100vw;
+  height: 50px;
 }
 .main .offer__description-list {
   padding: 20px 20px 0;
   overflow: hidden;
 }
 .main .offer__description-item {
-  padding: 10px;
-  margin: 20px auto;
+  padding: 20px;
+  margin: auto;
   width: 80%;
 }
 .main .offer .textbox__text-title {
@@ -482,27 +483,28 @@ html {
 }
 .main .offer__description-list--first {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   list-style: none;
 }
 .main .offer__description-item--first {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  height: 100px;
-  flex-basis: 100%;
-  color: #4f4f4f;
-  background-color: rgba(255, 255, 255, 0.8470588235);
-  border-radius: 20px;
+  display: block;
   font-family: "Roboto", sans-serif;
 }
+.main .offer__illustration {
+  margin: 0 auto 40px;
+}
+.main .offer__illustration-image {
+  width: 350px;
+  border-radius: 10px;
+  background-color: #fafafa;
+}
 .main .offer__description-list--second {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
   list-style: none;
 }
 .main .offer__description-item--second {
-  box-shadow: 0px 0px 4px #fafafa;
+  width: 300px;
   border-radius: 8px;
 }
 .main .reviews__textbox {
@@ -701,7 +703,7 @@ html {
   text-decoration: none;
 }
 .footer__year {
-  margin: auto 5px;
+  margin: auto 5px auto 0px;
 }
 
 @media (min-width: 576px) {
@@ -769,6 +771,12 @@ html {
   .main .about-me__image {
     width: 70%;
   }
+  .main .offer__description-list--second {
+    flex-direction: row;
+  }
+  .main .offer__description-item--second {
+    margin-top: 30px;
+  }
   .main .reviews .more-reviews__link .fa-brands {
     font-size: 2.5rem;
   }
@@ -809,14 +817,66 @@ html {
   .main .about-me__scroll-to-offer {
     font-size: 1.4rem;
   }
-  .main .offer__description-item--first {
-    padding: 20px;
-    height: 130px;
-    flex-basis: 40%;
-    transition: transform 0.3s;
+  .main .offer__description-list--first {
+    margin-top: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-  .main .offer__description-item--first:hover {
-    transform: translate(10px, 10px);
+  .main .offer__description-list--first li {
+    margin: 20px auto;
+  }
+  .main .offer__description-list--first li:nth-child(1) {
+    order: 1;
+  }
+  .main .offer__description-list--first li:nth-child(2) {
+    order: 2;
+  }
+  .main .offer__description-list--first li:nth-child(3) {
+    order: 4;
+  }
+  .main .offer__description-list--first li:nth-child(4) {
+    order: 3;
+  }
+  .main .offer__description-list--first li:nth-child(5) {
+    order: 5;
+  }
+  .main .offer__description-list--first li:nth-child(6) {
+    order: 6;
+  }
+  .main .offer__description-list--first li:nth-child(7) {
+    order: 8;
+  }
+  .main .offer__description-list--first li:nth-child(8) {
+    order: 7;
+  }
+  .main .offer__description-list--first li:nth-child(9) {
+    order: 9;
+  }
+  .main .offer__description-list--first li:nth-child(10) {
+    order: 10;
+  }
+  .main .offer__description-item--first {
+    display: flex;
+    align-items: center;
+    flex-basis: 45%;
+  }
+  .main .offer__illustration {
+    margin-bottom: 0;
+    flex-basis: 45%;
+    max-width: 500px;
+  }
+  .main .offer__illustration-image {
+    width: 100%;
+  }
+  .main .offer__description-list--second {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main .offer__description-item--second {
+    flex-basis: 40%;
+  }
+  .main .offer__illustration {
+    flex-basis: 40%;
   }
   .main .reviews .more-reviews__link {
     font-size: 1.6rem;
@@ -989,34 +1049,14 @@ html {
     letter-spacing: 2.5px;
   }
   .main .offer__textbox {
-    width: 60%;
     margin: 60px 0;
-  }
-  .main .offer__image {
-    width: 30%;
-    max-width: 400px;
-  }
-  .main .offer__description-list--first {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-  }
-  .main .offer__description-item--first {
-    flex-basis: 40%;
-    height: 150px;
-    transition: transform 0.3s;
-  }
-  .main .offer__description-item--first:hover {
-    transform: translate(10px, 10px);
   }
   .main .offer__description-list--second {
     display: flex;
     flex-wrap: wrap;
-    width: 1000px;
   }
   .main .offer__description-item--second {
     padding: 30px;
-    flex-basis: 40%;
   }
   .main .reviews .review-box {
     margin: 100px 50px 20px;

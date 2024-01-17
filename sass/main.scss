@@ -20,9 +20,8 @@ html {
 .page {
 	font-family: 'Montserrat', sans-serif;
 	color: $main-dark;
-	background-color: $main-bright;	
+	background-color: $main-bright;
 }
-
 
 //HEADER
 
@@ -54,7 +53,7 @@ html {
 			padding: 25px;
 			text-align: center;
 		}
-		&__item-logo  {
+		&__item-logo {
 			display: none;
 		}
 		&__link {
@@ -115,7 +114,7 @@ html {
 	.banner {
 		margin-top: 20px;
 		transition: transform 0.5s;
-	
+
 		&__image {
 			width: 95%;
 			border-radius: 50%;
@@ -154,7 +153,7 @@ html {
 		width: 100%;
 		height: 400px;
 		background-image: $main-gradient;
-			z-index: -10;
+		z-index: -10;
 	}
 
 	// ABOUTME
@@ -231,21 +230,22 @@ html {
 
 	.offer {
 		justify-content: center;
-		background-image: $secondary-gradient;
+		background-image: $main-gradient;
+		overflow: hidden;
 
 		&__image {
 			margin-bottom: 30px;
-			width: 50%;
-			border-radius: 40%;
+			width: 100vw;
+			height: 50px;
 		}
-	
+
 		&__description-list {
 			padding: 20px 20px 0;
 			overflow: hidden;
 		}
 		&__description-item {
-			padding: 10px;
-			margin: 20px auto;
+			padding: 20px;
+			margin: auto;
 			width: 80%;
 		}
 		.textbox__text-title {
@@ -254,29 +254,33 @@ html {
 
 		&__description-list--first {
 			display: flex;
-			flex-wrap: wrap;
+			flex-direction: column;
 			list-style: none;
-			
 		}
 		&__description-item--first {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: 10px 20px;
-			height: 100px;
-			flex-basis: 100%;
-			color: $main-dark;
-			background-color: #ffffffd8;
-			border-radius: 20px;
+			display: block;
 			font-family: 'Roboto', sans-serif;
+		}
+		
+		&__illustration {
+			margin: 0 auto 40px;
+		}
+		
+		&__illustration-image {
+			width: 350px;
+			border-radius: 10px;
+			background-color: #fafafa;
 		}
 
 		&__description-list--second {
-			text-align: center;
+			display: flex;
+			flex-direction: column;
 			list-style: none;
 		}
 		&__description-item--second {
-			box-shadow: 0px 0px 4px $main-bright;
+			width: 300px;
+			// border: 1px solid $main-bright;
+			// background-color: rgba($color: #000000, $alpha: .2);
 			border-radius: 8px;
 		}
 	}
@@ -409,8 +413,8 @@ html {
 			color: $main-dark;
 			background-color: $main-bright;
 			cursor: pointer;
-			transition: background-color .3s;
-			&:hover{
+			transition: background-color 0.3s;
+			&:hover {
 				background-color: #e1e1e1;
 			}
 		}
@@ -418,7 +422,7 @@ html {
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translate(-50%,-50%);
+			transform: translate(-50%, -50%);
 			height: 400px;
 			width: 90%;
 			max-width: 800px;
@@ -442,15 +446,16 @@ html {
 				font-weight: normal;
 				letter-spacing: 2px;
 			}
-		
+
 			&__close-btn {
 				position: absolute;
-				bottom: 40px;right: 40px;
+				bottom: 40px;
+				right: 40px;
 				padding: 10px;
 				border: none;
 				background: transparent;
 				cursor: pointer;
-				transition: scale .3s;
+				transition: scale 0.3s;
 				&:hover {
 					scale: 1.2;
 				}
@@ -483,9 +488,8 @@ html {
 		text-decoration: none;
 	}
 	&__year {
-		margin: auto 5px;
+		margin: auto 5px auto 0px;
 	}
-	
 }
 
 @import './small';
