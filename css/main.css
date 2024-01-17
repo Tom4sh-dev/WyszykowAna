@@ -474,11 +474,12 @@ html {
   overflow: hidden;
 }
 .main .offer__description-item {
-  padding: 20px;
-  margin: auto;
-  width: 80%;
+  margin: 20px auto;
 }
 .main .offer .textbox__text-title {
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 1.8rem;
   text-transform: uppercase;
 }
 .main .offer__description-list--first {
@@ -497,6 +498,10 @@ html {
   width: 350px;
   border-radius: 10px;
   background-color: #fafafa;
+  transition: scale 0.3s;
+}
+.main .offer__illustration-image:hover {
+  scale: 1.1;
 }
 .main .offer__description-list--second {
   display: flex;
@@ -504,8 +509,17 @@ html {
   list-style: none;
 }
 .main .offer__description-item--second {
-  width: 300px;
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  transition: scale 0.3s;
+}
+.main .offer__description-item--second:hover {
+  scale: 1.1;
+}
+.main .offer__list-image {
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
 .main .reviews__textbox {
   display: inline-block;
@@ -771,12 +785,6 @@ html {
   .main .about-me__image {
     width: 70%;
   }
-  .main .offer__description-list--second {
-    flex-direction: row;
-  }
-  .main .offer__description-item--second {
-    margin-top: 30px;
-  }
   .main .reviews .more-reviews__link .fa-brands {
     font-size: 2.5rem;
   }
@@ -869,14 +877,11 @@ html {
     width: 100%;
   }
   .main .offer__description-list--second {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
   }
   .main .offer__description-item--second {
-    flex-basis: 40%;
-  }
-  .main .offer__illustration {
-    flex-basis: 40%;
+    width: 40%;
   }
   .main .reviews .more-reviews__link {
     font-size: 1.6rem;

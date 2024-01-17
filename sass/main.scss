@@ -244,11 +244,12 @@ html {
 			overflow: hidden;
 		}
 		&__description-item {
-			padding: 20px;
-			margin: auto;
-			width: 80%;
+			margin: 20px auto;
 		}
 		.textbox__text-title {
+			margin-top: 50px;
+			font-weight: bold;
+			font-size: 1.8rem;
 			text-transform: uppercase;
 		}
 
@@ -261,15 +262,19 @@ html {
 			display: block;
 			font-family: 'Roboto', sans-serif;
 		}
-		
+
 		&__illustration {
 			margin: 0 auto 40px;
 		}
-		
+
 		&__illustration-image {
 			width: 350px;
 			border-radius: 10px;
 			background-color: #fafafa;
+			transition: scale .3s;
+			&:hover {
+				scale: 1.1;
+			}
 		}
 
 		&__description-list--second {
@@ -278,10 +283,17 @@ html {
 			list-style: none;
 		}
 		&__description-item--second {
-			width: 300px;
-			// border: 1px solid $main-bright;
-			// background-color: rgba($color: #000000, $alpha: .2);
-			border-radius: 8px;
+			display: flex;
+			flex-direction: column;
+			width: 70%;
+			transition: scale .3s;
+			&:hover {
+				scale: 1.1;
+			}
+		}
+		&__list-image {
+			margin-bottom: 20px;
+			border-radius: 10px;
 		}
 	}
 

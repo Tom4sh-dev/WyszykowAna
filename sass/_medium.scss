@@ -51,9 +51,7 @@
 
 		// OFFER
 		.offer {
-			
-
-			&__description-list--first {
+						&__description-list--first {
 				margin-top: 50px;
 				flex-direction: row;
 				flex-wrap: wrap;
@@ -107,19 +105,15 @@
 			&__illustration-image {
 				width: 100%;
 			}
-			
 
 			&__description-list--second {
-				display: flex;
+				flex-direction: row;
 				flex-wrap: wrap;
-				// width: 1000px;
 			}
 			&__description-item--second {
-				flex-basis: 40%;
+				width: 40%;				
 			}
-			&__illustration {
-				flex-basis: 40%;
-			}
+
 		}
 
 		// REVIEWS
