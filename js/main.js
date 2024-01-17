@@ -6,18 +6,10 @@ const bannerSection = document.querySelector('.banner')
 const aboutMeSection = document.querySelector('.about-me')
 const offerSection = document.querySelector('.offer')
 const reviewsSection = document.querySelector('.reviews')
- 
-const item1 = document.querySelector('.item-1')
-const item2 = document.querySelector('.item-2')
-const item3 = document.querySelector('.item-3')
-const item4 = document.querySelector('.item-4')
-const item5 = document.querySelector('.item-5')
 
 const aboutMeHeading = document.querySelector('.about-me__heading')
 const aboutMeBlocks = document.querySelector('.about-me__blocks')
 const reviewsBlocks = document.querySelector('.reviews__blocks')
-
-const socialMedia = document.querySelector('.social-media')
 
 const offerItemsMove = document.querySelectorAll('.offer__description-item')
 
@@ -56,30 +48,12 @@ const handleNav = () => {
 }
 
 const scrollAnimations = () => {
-    if(window.scrollY >= bannerSection.offsetTop-100) {
-        socialMedia.classList.add('social-media--active')
-    } 
     if(window.scrollY >= aboutMeSection.offsetTop-500) {
         aboutMeHeading.classList.add('about-me__heading--active')
         aboutMeBlocks.classList.add('about-me__blocks--active')
     } 
     if (window.scrollY >= reviewsSection.offsetTop-500) {
         reviewsBlocks.classList.add('reviews__blocks--active') 
-    }
-    if (window.scrollY >= item1.offsetTop+1100) {
-        item1.classList.add('item--active') 
-    }
-    if (window.scrollY >= item2.offsetTop+1100) {
-        item2.classList.add('item--active') 
-    }
-    if (window.scrollY >= item3.offsetTop+1100) {
-        item3.classList.add('item--active') 
-    }
-    if (window.scrollY >= item4.offsetTop+1100) {
-        item4.classList.add('item--active') 
-    }
-    if (window.scrollY >= item5.offsetTop+1100) {
-        item5.classList.add('item--active') 
     }
 }
 

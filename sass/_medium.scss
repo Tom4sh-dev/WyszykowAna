@@ -8,6 +8,11 @@
 
 	// HEADER
 	.header {
+		.nav {
+			&__item {
+				padding: 40px;
+			}
+		}
 		.heading {
 			&__logo-img {
 				width: 70px;

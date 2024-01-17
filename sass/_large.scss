@@ -113,7 +113,6 @@
 				}
 			}
 			.social-media {
-				transform: translateX(0);
 				&__link {
 					margin: 0 50px;
 					font-size: 4rem;
@@ -195,6 +194,7 @@
 
 			&__description-item--first {
 				flex-basis: 40%;
+				height: 150px;
 				transition: transform 0.3s;
 				&:hover {
 					transform: translate(10px, 10px);
@@ -248,10 +248,9 @@
 	// FOOTER
 
 	.footer {
-		height: 80px;
+		height: 60px;
 		&__text {
-			line-height: 80px;
-			font-size: 2rem;
+			line-height: 60px;
 		}
 	}
 }

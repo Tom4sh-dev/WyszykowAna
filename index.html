@@ -21,6 +21,8 @@
 			src="https://kit.fontawesome.com/a7bcfeba04.js"
 			crossorigin="anonymous"
 		></script>
+
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<!-- Slick styles -->
 		<link
 			rel="stylesheet"
@@ -34,7 +36,7 @@
 		<!-- HEADER -->
 
 		<header id="home" class="header">
-			<nav class="nav header__nav">
+			<nav class="nav header__nav" data-aos="fade-down" data-aos-delay="400">
 				<ul class="nav__list nav__list--horizontal">
 					<li class="nav__item-logo item-logo">
 						<a href="#home" class="item-logo__btn"
@@ -86,24 +88,23 @@
 				<img
 					class="banner__image"
 					src="./img/header 640.png"
-					alt="Anastazja, zdjęcie profilowe z ramą kolorystyczną"
+					alt="Anastazja, zdjęcie profilowe z ramą kolorystyczną" data-aos="fade-up"
 				/>
 
 				<div class="banner__textbox textbox textbox--bright">
 					<h2
-						class="section-heading section-heading--bright banner__heading--landscape"
+						class="section-heading section-heading--bright banner__heading--landscape" data-aos="fade-up" data-aos-delay="400"
 					>
 						witaj!
 					</h2>
-					<h2 class="textbox__profile">Analiza Kolorystyczna</h2>
-					<p class="textbox__text">
+					<p class="textbox__text" data-aos="fade-up" data-aos-delay="600">
 						Chciałabym Cię zaprosić do mojego świata kolorów i stylu. Pomogę Ci
 						zbudować Twój własny, niepowtarzalny wizerunek, dzięki któremu
 						poczujesz się piękna i wyjątkowa.
 					</p>
 				</div>
 
-				<div class="banner__social-media social-media">
+				<div class="banner__social-media social-media" data-aos="fade-up" data-aos-delay="800">
 					<a
 						class="social-media__link"
 						href="https://www.facebook.com/WyszykowAna"
@@ -153,7 +154,7 @@
 					<img
 						class="about-me__image"
 						src="./img/about 640.png"
-						alt="Zdjęcie portretowe z paletami kolorystycznymi"
+						alt="Zdjęcie portretowe z paletami kolorystycznymi" data-aos="fade-up" data-aos-delay="200"
 					/>
 
 					<div class="about-me__blocks blocks">
@@ -182,22 +183,22 @@
 						kolorystycznej:
 					</p>
 					<ul class="offer__description-list offer__description-list--first">
-						<li class="offer__description-item offer__description-item--first">
+						<li class="offer__description-item offer__description-item--first" data-aos="flip-left">
 							Poznasz swój typ kolorystyczny i będziesz wiedziała jak to
 							wykorzystać w praktyce.
 						</li>
-						<li class="offer__description-item offer__description-item--first">
+						<li class="offer__description-item offer__description-item--first" data-aos="flip-right" data-aos-delay="400">
 							Sprecyzowane cele zaoszczędzą czas na zakupach ale też zmieni się
 							Twoje podejście do nich.
 						</li>
-						<li class="offer__description-item offer__description-item--first">
+						<li class="offer__description-item offer__description-item--first" data-aos="flip-left" data-aos-delay="600">
 							Świadomość dopasowania barw do Twojej urody zwiększy pewność
 							siebie i poczucie atrakcyjności.
 						</li>
-						<li class="offer__description-item offer__description-item--first">
+						<li class="offer__description-item offer__description-item--first" data-aos="flip-right" data-aos-delay="800">
 							Zawartość Twojej szafy będzie przemyślana i spójna.
 						</li>
-						<li class="offer__description-item offer__description-item--first">
+						<li class="offer__description-item offer__description-item--first"data-aos="flip-up" data-aos-delay="1000">
 							Nie będziesz miała problemów z doborem ubrań.
 						</li>
 					</ul>
@@ -210,33 +211,33 @@
 
 			
 				<div class="offer__textbox textbox textbox--bright">
-					<p class="textbox__text-title">Czego możesz się spodziewać?</p>
+					<p class="textbox__text-title">Co otrzymasz wraz z analizą?</p>
 					<ul class="offer__description-list offer__description-list--second">
 						<li
-							class="item-1 offer__description-item offer__description-item--second"
+							class="offer__description-item offer__description-item--second" data-aos="fade-right"
 						>
-							Dostaniesz prezentację składającą się z 60 stron wraz ze
+							Prezentację składającą się z 60 stron wraz ze
 							szczegółowymi opisami.
 						</li>
 						<li
-							class="item-2 offer__description-item offer__description-item--second"
+							class="offer__description-item offer__description-item--second" data-aos="fade-left" data-aos-delay="400"
 						>
 							Dowiesz się, które kolory podkreślą Twoją urodę, a których lepiej
 							unikać.
 						</li>
 						<li
-							class="item-3 offer__description-item offer__description-item--second"
+							class="offer__description-item offer__description-item--second" data-aos="fade-right" data-aos-delay="600"
 						>
 							Poznasz swoją bazę ubraniową oraz pomysły na łączenie kolorów
 							i ciekawe stylizacje.
 						</li>
 						<li
-							class="item-4 offer__description-item offer__description-item--second"
+							class="offer__description-item offer__description-item--second" data-aos="fade-left" data-aos-delay="800"
 						>
 							Dowiesz się jak dobrać makijaż do swojego typu urody.
 						</li>
 						<li
-							class="item-5 offer__description-item offer__description-item--second"
+							class="offer__description-item offer__description-item--second" data-aos="fade-up" data-aos-delay="1000"
 						>
 							Jeśli masz dylemat odnośnie koloryzacji włosów, wskazówki
 							znajdziesz w prezentacji.
@@ -354,7 +355,7 @@
 							Więcej opinii znajdziesz na moim profilu na Facebooku:
 						</p>
 						<a
-							class="more-reviews__link"
+							class="more-reviews__link" 
 							href="https://www.facebook.com/WyszykowAna"
 							target="_blank"
 							><i class="fa-brands fa-facebook"></i>WyszykowAna - Anastazja
@@ -456,6 +457,21 @@
 			</p>
 			
 		</footer>
+
+
+
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init(
+				{
+    delay:200,
+    duration:1500,
+    once:false,
+
+  }
+			);
+		  </script>
+
 
 		<!-- Slick.js -->
 		<script

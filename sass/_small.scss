@@ -97,12 +97,7 @@
 
 		// CONTACT
 		.contact {
-			&__form-label {
-				font-size: 1.8rem;
-			}
-			&__form-btn {
-				font-size: 1.8rem;
-			}
+			
 			.popup {
 				&__title {
 					font-size: 2rem;
@@ -115,10 +110,4 @@
 		}
 	}
 
-	// FOOTER
-	.footer {
-		&__text {
-			font-size: 1.8rem;
-		}
-	}
 }
