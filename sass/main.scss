@@ -70,6 +70,7 @@ html {
 		padding: 20px;
 		width: 100%;
 		text-align: center;
+		background: rgba($color: $main-bright, $alpha: .5);
 
 		&__logo-img {
 			height: 40px;
@@ -177,6 +178,7 @@ html {
 		&__blocks {
 			justify-content: space-evenly;
 			height: 0;
+			z-index: -10;
 			transition: 1s;
 			&--active {
 				height: 100%;
@@ -231,12 +233,14 @@ html {
 	.offer {
 		justify-content: center;
 		background-image: $main-gradient;
+		background-attachment: fixed;
 		overflow: hidden;
 
 		&__image {
 			margin-bottom: 30px;
 			width: 100vw;
 			height: 50px;
+			box-shadow: 0 0 30px #00000053 ;
 		}
 
 		&__description-list {
@@ -265,10 +269,10 @@ html {
 		}
 
 		&__illustration-image {
-			width: 350px;
+			width: 300px;
 			border-radius: 10px;
 			background-color: #fafafa;
-			transition: scale .3s;
+			transition: scale 0.3s;
 			&:hover {
 				scale: 1.1;
 			}
@@ -284,7 +288,7 @@ html {
 			align-items: center;
 			width: 90%;
 			flex-direction: column;
-			transition: scale .3s;
+			transition: scale 0.3s;
 			&:hover {
 				scale: 1.1;
 			}
@@ -294,7 +298,11 @@ html {
 			width: 100%;
 			max-width: 400px;
 			border-radius: 10px;
+
 		}
+
+
+
 	}
 
 	// REVIEWS

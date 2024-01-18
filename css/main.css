@@ -323,6 +323,7 @@ html {
   padding: 20px;
   width: 100%;
   text-align: center;
+  background: rgba(250, 250, 250, 0.5);
 }
 .header .heading__logo-img {
   height: 40px;
@@ -412,6 +413,7 @@ html {
 .main .about-me__blocks {
   justify-content: space-evenly;
   height: 0;
+  z-index: -10;
   transition: 1s;
 }
 .main .about-me__blocks--active {
@@ -462,12 +464,14 @@ html {
 .main .offer {
   justify-content: center;
   background-image: linear-gradient(220deg, #1b3a4b 0%, #312244 74%);
+  background-attachment: fixed;
   overflow: hidden;
 }
 .main .offer__image {
   margin-bottom: 30px;
   width: 100vw;
   height: 50px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3254901961);
 }
 .main .offer__description-list {
   padding: 20px 20px 0;
@@ -492,7 +496,7 @@ html {
   margin: 0 auto 40px;
 }
 .main .offer__illustration-image {
-  width: 350px;
+  width: 300px;
   border-radius: 10px;
   background-color: #fafafa;
   transition: scale 0.3s;
@@ -869,12 +873,12 @@ html {
   .main .offer__description-item--first {
     display: flex;
     align-items: center;
-    flex-basis: 45%;
+    flex-basis: 40%;
   }
   .main .offer__illustration {
     margin-bottom: 0;
     flex-basis: 45%;
-    max-width: 500px;
+    max-width: 400px;
   }
   .main .offer__illustration-image {
     width: 100%;
@@ -884,7 +888,7 @@ html {
     flex-wrap: wrap;
   }
   .main .offer__description-item--second {
-    width: 45%;
+    width: 40%;
   }
   .main .reviews .more-reviews__link {
     font-size: 1.6rem;
@@ -917,6 +921,9 @@ html {
   }
   .textbox {
     font-size: 1.8rem;
+  }
+  .header {
+    height: 0;
   }
   .header .nav {
     position: fixed;
@@ -996,6 +1003,7 @@ html {
     min-height: 80vh;
   }
   .main .banner__image {
+    margin-bottom: 10vh;
     width: 35%;
   }
   .main .banner__textbox {
@@ -1064,7 +1072,7 @@ html {
     flex-wrap: wrap;
   }
   .main .offer__description-item--second {
-    padding: 30px;
+    padding: 20px;
   }
   .main .reviews .review-box {
     margin: 100px 50px 20px;

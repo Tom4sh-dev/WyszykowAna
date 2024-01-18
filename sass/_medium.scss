@@ -97,13 +97,13 @@
 			&__description-item--first {
 				display: flex;
 				align-items: center;
-				flex-basis: 45%;
+				flex-basis: 40%;
 			}
 			
 			&__illustration {
 				margin-bottom: 0;
 				flex-basis: 45%;
-				max-width: 500px;
+				max-width: 400px;
 			}
 			&__illustration-image {
 				width: 100%;
@@ -114,7 +114,7 @@
 				flex-wrap: wrap;
 			}
 			&__description-item--second {
-				width: 45%;				
+				width: 40%;				
 			}
 
 		}

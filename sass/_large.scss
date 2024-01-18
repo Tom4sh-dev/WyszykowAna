@@ -16,6 +16,7 @@
 	// HEADER
 
 	.header {
+		height: 0;
 		.nav {
 			position: fixed;
 			width: 100%;
@@ -103,6 +104,7 @@
 			max-width: 1200px;
 			min-height: 80vh;
 			&__image {
+				margin-bottom: 10vh;
 				width: 35%;
 			}
 
@@ -184,11 +186,10 @@
 			&__description-list--second {
 				display: flex;
 				flex-wrap: wrap;
-				// width: 1000px;
 			}
 
 			&__description-item--second {
-				padding: 30px;
+				padding: 20px;
 			}
 		
 		}
