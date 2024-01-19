@@ -930,7 +930,7 @@ html {
 }
 @media (min-width: 992px) {
   html {
-    scroll-padding-top: 80px;
+    scroll-padding-top: 60px;
   }
   .section {
     padding: 0;
