@@ -21,7 +21,8 @@
 			src="https://kit.fontawesome.com/a7bcfeba04.js"
 			crossorigin="anonymous"
 		></script>
-
+		
+		<!-- AOS -->
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<!-- Slick styles -->
 		<link
@@ -171,7 +172,8 @@
 			<!-- OFFER -->
 
 			<section id="offer" class="offer section">
-				<h2 class="section-heading section-heading--bright offer__heading">
+			<div class="wrapper">
+					<h2 class="section-heading section-heading--bright offer__heading">
 					oferta
 				</h2>
 				<div class="offer__textbox textbox textbox--bright">
@@ -236,7 +238,7 @@
 
 			
 				<div class="offer__textbox textbox textbox--bright">
-					<p class="textbox__text-title" data-aos="zoom-in">Co otrzymasz wraz z analizą?</p>
+					<p class="textbox__text-title" data-aos="zoom-in" style="margin-bottom: 50px;">Co otrzymasz wraz z analizą?</p>
 					<ul class="offer__description-list offer__description-list--second">
 						<li
 							class="offer__description-item offer__description-item--second" 
@@ -279,10 +281,8 @@
 					</ul>
 
 
-					
 
-
-
+				</div>
 				</div>
 			</section>
 
@@ -489,10 +489,17 @@
 		<!-- FOOTER -->
 
 		<footer class="footer">
-			<a href=mailto:"wyszykowanaliza@gmail.com" class="footer__text footer__mail">
-				wyszykowanaliza@gmail.com
-			</a>
-			<p class="footer__text">
+			<p class="footer__text">Email: <a href=mailto:"wyszykowanaliza@gmail.com" class="footer__text footer__mail">
+				wyszykowanaliza@gmail.com</a></p>
+
+			<div class="footer__container">
+				<a class="footer__text footer__link footer__rules" href="">Regulamin</a>
+				<a class="footer__text footer__link" href="https://www.facebook.com/WyszykowAna" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+				<a class="footer__text footer__link" href="https://www.instagram.com/wyszykow_ana/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+			</div>
+
+			
+			<p class="footer__text footer__copyright">
 				&copy; <span class="footer__year"></span>WyszykowAna
 			</p>
 			

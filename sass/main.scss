@@ -70,7 +70,7 @@ html {
 		padding: 20px;
 		width: 100%;
 		text-align: center;
-		background: rgba($color: $main-bright, $alpha: .5);
+		background: rgba($color: $main-bright, $alpha: 0.5);
 
 		&__logo-img {
 			height: 40px;
@@ -236,11 +236,15 @@ html {
 		background-attachment: fixed;
 		overflow: hidden;
 
+		.textbox__text {
+			max-width: 700px;
+		}
+
 		&__image {
 			margin-bottom: 30px;
-			width: 100vw;
+			width: 100%;
 			height: 50px;
-			box-shadow: 0 0 30px #00000053 ;
+			box-shadow: 0 0 30px #00000053;
 		}
 
 		&__description-list {
@@ -263,7 +267,10 @@ html {
 			flex-direction: column;
 			list-style: none;
 		}
-
+		&__description-item--first {
+		max-width: 400px;
+			
+		}
 		&__illustration {
 			margin: 0 auto 40px;
 		}
@@ -287,6 +294,7 @@ html {
 			display: flex;
 			align-items: center;
 			width: 90%;
+			max-width: 450px;
 			flex-direction: column;
 			transition: scale 0.3s;
 			&:hover {
@@ -298,11 +306,7 @@ html {
 			width: 100%;
 			max-width: 400px;
 			border-radius: 10px;
-
 		}
-
-
-
 	}
 
 	// REVIEWS
@@ -312,7 +316,7 @@ html {
 			display: inline-block;
 			.review-box {
 				position: relative;
-				margin: 40px 20px 20px;
+				margin: 40px 50px 20px;
 				padding: 10px;
 				border-radius: 8px;
 				box-shadow: 3px 3px 3px #ccc;
@@ -493,20 +497,32 @@ html {
 .footer {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	flex-direction: column;
+	justify-content: center;
 	margin: auto;
 	padding: auto 10px;
-	height: 40px;
 	max-width: 1000px;
 	text-align: center;
 	&__text {
 		line-height: 40px;
 		font-size: 1.4rem;
 	}
-	&__mail {
+	&__mail,
+	&__link {
 		color: $main-dark;
 		text-decoration: none;
 	}
+	&__container {
+		display: flex;
+		justify-content: center;
+	}
+	&__link {
+		margin: auto 5px;
+	}
+	&__rules {
+		margin-right: 20px;
+	}
+
 	&__year {
 		margin: auto 5px auto 0px;
 	}

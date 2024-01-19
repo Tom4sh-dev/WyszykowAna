@@ -54,7 +54,7 @@
 
 		// OFFER
 		.offer {
-						&__description-list--first {
+				&__description-list--first {
 				margin-top: 50px;
 				flex-direction: row;
 				flex-wrap: wrap;
@@ -103,7 +103,7 @@
 			&__illustration {
 				margin-bottom: 0;
 				flex-basis: 45%;
-				max-width: 400px;
+				max-width: 350px;
 			}
 			&__illustration-image {
 				width: 100%;
@@ -121,9 +121,12 @@
 
 		// REVIEWS
 		.reviews {
+			.review-box{
+				margin: 40px 150px 20px;
+			}
 			.more-reviews {
 				&__link {
-					font-size: 1.6rem;
+					font-size: 1.4rem;
 				}
 			}
 		}

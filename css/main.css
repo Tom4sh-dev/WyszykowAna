@@ -165,7 +165,7 @@
 .wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 .stop-scrolling {
@@ -213,7 +213,6 @@
   text-align: center;
   margin-bottom: 40px;
   width: 100%;
-  max-width: 1200px;
   font-size: 1.4rem;
   letter-spacing: 1px;
 }
@@ -467,9 +466,12 @@ html {
   background-attachment: fixed;
   overflow: hidden;
 }
+.main .offer .textbox__text {
+  max-width: 700px;
+}
 .main .offer__image {
   margin-bottom: 30px;
-  width: 100vw;
+  width: 100%;
   height: 50px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3254901961);
 }
@@ -492,6 +494,9 @@ html {
   flex-direction: column;
   list-style: none;
 }
+.main .offer__description-item--first {
+  max-width: 400px;
+}
 .main .offer__illustration {
   margin: 0 auto 40px;
 }
@@ -513,6 +518,7 @@ html {
   display: flex;
   align-items: center;
   width: 90%;
+  max-width: 450px;
   flex-direction: column;
   transition: scale 0.3s;
 }
@@ -530,7 +536,7 @@ html {
 }
 .main .reviews__textbox .review-box {
   position: relative;
-  margin: 40px 20px 20px;
+  margin: 40px 50px 20px;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 3px 3px 3px #ccc;
@@ -705,10 +711,10 @@ html {
 .footer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   margin: auto;
   padding: auto 10px;
-  height: 40px;
   max-width: 1000px;
   text-align: center;
 }
@@ -716,18 +722,25 @@ html {
   line-height: 40px;
   font-size: 1.4rem;
 }
-.footer__mail {
+.footer__mail, .footer__link {
   color: #4f4f4f;
   text-decoration: none;
+}
+.footer__container {
+  display: flex;
+  justify-content: center;
+}
+.footer__link {
+  margin: auto 5px;
+}
+.footer__rules {
+  margin-right: 20px;
 }
 .footer__year {
   margin: auto 5px auto 0px;
 }
 
 @media (min-width: 576px) {
-  .textbox {
-    width: 90%;
-  }
   .header .nav__item {
     padding: 15px;
   }
@@ -788,6 +801,9 @@ html {
   }
   .main .about-me__image {
     width: 70%;
+  }
+  .main .reviews .review-box {
+    margin: 40px 100px 20px;
   }
   .main .reviews .more-reviews__link .fa-brands {
     font-size: 2.5rem;
@@ -878,7 +894,7 @@ html {
   .main .offer__illustration {
     margin-bottom: 0;
     flex-basis: 45%;
-    max-width: 400px;
+    max-width: 350px;
   }
   .main .offer__illustration-image {
     width: 100%;
@@ -890,8 +906,11 @@ html {
   .main .offer__description-item--second {
     width: 40%;
   }
+  .main .reviews .review-box {
+    margin: 40px 150px 20px;
+  }
   .main .reviews .more-reviews__link {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   .main .contact__form-label {
     font-size: 1.6rem;
@@ -919,16 +938,13 @@ html {
   .section-heading {
     font-size: 3rem;
   }
-  .textbox {
-    font-size: 1.8rem;
-  }
   .header {
     height: 0;
   }
   .header .nav {
     position: fixed;
     width: 100%;
-    height: 80px;
+    height: 60px;
     background-color: #fafafa;
     z-index: 100;
     box-shadow: 0px 1px 5px #4f4f4f;
@@ -938,7 +954,7 @@ html {
     flex-direction: row;
     justify-content: space-evenly;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1000px;
     background-image: none;
     transform: translateX(0);
   }
@@ -953,16 +969,20 @@ html {
   }
   .header .nav .item-logo {
     display: block;
+    transition: scale 0.3s;
   }
   .header .nav .item-logo__img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     z-index: 1000;
     animation: none;
   }
+  .header .nav .item-logo:hover {
+    scale: 1.1;
+  }
   .header .nav__link {
     padding: 10px;
-    font-size: 2rem;
+    font-size: 1.6rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #4f4f4f;
@@ -977,7 +997,7 @@ html {
   }
   .header .heading .branding {
     position: absolute;
-    top: 15%;
+    top: 15vh;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -999,15 +1019,16 @@ html {
     align-content: end;
     margin: 0 auto;
     padding-top: 160px;
-    max-width: 1200px;
-    min-height: 80vh;
+    max-width: 1000px;
+    min-height: 100vh;
   }
   .main .banner__image {
-    margin-bottom: 10vh;
-    width: 35%;
+    margin-bottom: 5vh;
+    width: 45vh;
+    min-width: 35%;
   }
   .main .banner__textbox {
-    margin-bottom: 250px;
+    margin-bottom: 35vh;
   }
   .main .banner__textbox .textbox__text {
     margin-top: 20px;
@@ -1064,15 +1085,19 @@ html {
   .main .about-me__scroll-to-offer:hover {
     letter-spacing: 2.5px;
   }
+  .main .offer {
+    text-align: center;
+  }
   .main .offer__textbox {
-    margin: 60px 0;
+    margin: 50px 0;
   }
   .main .offer__description-list--second {
     display: flex;
     flex-wrap: wrap;
   }
   .main .offer__description-item--second {
-    padding: 20px;
+    padding: 40px 10px 20px;
+    width: 30%;
   }
   .main .reviews .review-box {
     margin: 100px 50px 20px;
@@ -1097,11 +1122,5 @@ html {
   }
   .main .reviews__block {
     width: 5%;
-  }
-  .footer {
-    height: 60px;
-  }
-  .footer__text {
-    line-height: 60px;
   }
 }/*# sourceMappingURL=main.css.map */
