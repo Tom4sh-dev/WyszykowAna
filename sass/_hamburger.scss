@@ -6,7 +6,7 @@
  * @link https://github.com/jonsuh/hamburgers
  */
  .hamburger {
-    padding: 15px 15px;
+    padding: 10px 10px;
     display: inline-block;
     cursor: pointer;
     transition-property: opacity, filter;
@@ -73,10 +73,11 @@
   
   .hamburger--elastic.is-active .hamburger-inner {
     transform: translate3d(0, 10px, 0) rotate(135deg);
-    transition-delay: 0.075s; }
+    transition-delay: 0.075s; 
+  }
     .hamburger--elastic.is-active .hamburger-inner::before {
       transition-delay: 0s;
       opacity: 0; }
     .hamburger--elastic.is-active .hamburger-inner::after {
       transform: translate3d(0, -20px, 0) rotate(-270deg);
-      transition-delay: 0.075s; }
+      transition-delay: 0.075s;}

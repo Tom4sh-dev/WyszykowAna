@@ -26,8 +26,9 @@ html {
 //HEADER
 
 .header {
+	display: flex;
 	.nav {
-		position: absolute;
+		position: fixed;
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
@@ -68,7 +69,7 @@ html {
 		justify-content: space-between;
 		align-items: center;
 		padding: 20px;
-		width: 100%;
+		width: 80%;
 		text-align: center;
 		background: rgba($color: $main-bright, $alpha: 0.5);
 
@@ -100,10 +101,13 @@ html {
 			}
 		}
 
-		.hamburger {
-			z-index: 100;
-			animation: hamburgerShowUp 1.5s;
-		}
+	}
+	.hamburger {
+		position: fixed;
+		top: 20px;
+		right: 15px;
+		border-radius: 5px;
+		z-index: 100;
 	}
 }
 
@@ -235,83 +239,114 @@ html {
 		background-image: $main-gradient;
 		background-attachment: fixed;
 		overflow: hidden;
+		transition: transform 0.5s;
 
 		.textbox__text {
 			max-width: 700px;
 		}
 
-		&__image {
-			margin-bottom: 30px;
+		&__items-container {
 			width: 100%;
-			height: 50px;
-			box-shadow: 0 0 30px #00000053;
+			margin: 50px;
+		}
+		&__item {
+			margin: 0 auto;
+			max-width: 700px;
+			border-bottom: 1px solid rgba($color: $main-bright, $alpha: .3);
+		}
+		&__item:nth-child(1) {
+			border-top: 1px solid rgba($color: $main-bright, $alpha: .3);
+		}
+		&__item-btn {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 30px;
+			width: 100%;
+			height: 40px;
+			font-family: 'Montserrat', sans-serif;
+			color: $main-bright;
+			background-color: transparent;
+			border: none;
+			cursor: pointer;
+			transition: .3s;
+		}
+	
+		&__item-btn:hover {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+		&__item-btn-title {
+			font-size: 1.8rem;
+		}
+		&__item-btn-icon {
+			font-size: 2rem;
+			transition: rotate .3s;
+			&--active {
+				rotate: 180deg;
+			}
+		}
+		
+		&__item-text-container {
+			display: none;
+			margin: 20px;
+			text-align: left;
+			transition: display .3s;
+			&--active {
+				display: block;
+			}
+		}
+		&--nav-active {
+			transform: translateX(-100%);
 		}
 
 		&__description-list {
-			padding: 20px 20px 0;
-			overflow: hidden;
-		}
-		&__description-item {
-			margin: 20px auto;
-			font-family: 'Roboto', sans-serif;
-		}
-		.textbox__text-title {
-			margin-top: 50px;
-			font-weight: bold;
-			font-size: 1.8rem;
-			text-transform: uppercase;
-		}
-
-		&__description-list--first {
 			display: flex;
 			flex-direction: column;
-			list-style: none;
-		}
-		&__description-item--first {
-		max-width: 400px;
+			margin-top: 30px;
+			// list-style: none;
 			
 		}
+		&__description-item {
+			margin: 10px;
+		}
+		
 		&__illustration {
-			margin: 0 auto 40px;
+			margin: 20px auto;
 		}
 
 		&__illustration-image {
-			width: 300px;
-			border-radius: 10px;
-			background-color: #fafafa;
-			transition: scale 0.3s;
-			&:hover {
-				scale: 1.1;
-			}
+			width: 200px;
 		}
 
-		&__description-list--second {
-			display: flex;
-			flex-direction: column;
-			list-style: none;
-		}
-		&__description-item--second {
-			display: flex;
-			align-items: center;
-			width: 90%;
-			max-width: 450px;
-			flex-direction: column;
-			transition: scale 0.3s;
-			&:hover {
-				scale: 1.1;
-			}
-		}
-		&__list-image {
-			margin-bottom: 20px;
-			width: 100%;
-			max-width: 400px;
-			border-radius: 10px;
-		}
+		// &__description-list--second {
+		// 	display: flex;
+		// 	flex-direction: column;
+		// 	list-style: none;
+		// }
+		// &__description-item--second {
+		// 	display: flex;
+		// 	align-items: center;
+		// 	width: 90%;
+		// 	max-width: 450px;
+		// 	flex-direction: column;
+		// 	transition: scale 0.3s;
+		// 	&:hover {
+		// 		scale: 1.1;
+		// 	}
+		// }
+		// &__list-image {
+		// 	margin-bottom: 20px;
+		// 	width: 100%;
+		// 	max-width: 400px;
+		// 	border-radius: 10px;
+		// }
 	}
 
 	// REVIEWS
 
 	.reviews {
+		transition: transform 0.5s;
 		&__textbox {
 			display: inline-block;
 			.review-box {
@@ -397,6 +432,9 @@ html {
 				height: 9%;
 			}
 		}
+		&--nav-active {
+			transform: translateX(-100%);
+		}
 	}
 
 	// CONTACT
@@ -405,6 +443,7 @@ html {
 		position: relative;
 		padding-bottom: 40px;
 		background-image: $main-gradient;
+		transition: transform 0.5s;
 		&__form,
 		&__form-top {
 			display: flex;
@@ -489,6 +528,9 @@ html {
 				color: $main-bright;
 			}
 		}
+		&--nav-active {
+			transform: translateX(-100%);
+		}
 	}
 }
 
@@ -503,6 +545,7 @@ html {
 	padding: auto 10px;
 	max-width: 1000px;
 	text-align: center;
+	transition: transform 0.5s;
 	&__text {
 		line-height: 40px;
 		font-size: 1.4rem;
@@ -525,6 +568,9 @@ html {
 
 	&__year {
 		margin: auto 5px auto 0px;
+	}
+	&--nav-active {
+		transform: translateX(-100%);
 	}
 }
 

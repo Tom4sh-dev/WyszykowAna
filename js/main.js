@@ -6,6 +6,8 @@ const bannerSection = document.querySelector('.banner')
 const aboutMeSection = document.querySelector('.about-me')
 const offerSection = document.querySelector('.offer')
 const reviewsSection = document.querySelector('.reviews')
+const contactSection = document.querySelector('.contact')
+const footerSection = document.querySelector('.footer')
 
 const aboutMeHeading = document.querySelector('.about-me__heading')
 const aboutMeBlocks = document.querySelector('.about-me__blocks')
@@ -14,6 +16,8 @@ const reviewsBlocks = document.querySelector('.reviews__blocks')
 const offerItemsMove = document.querySelectorAll('.offer__description-item')
 
 const offerScroll = document.querySelector('.about-me__scroll-to-offer')
+
+const offerBtns = document.querySelectorAll('.offer__item-btn')
 
 const contactForm = document.querySelector('.contact__form')
 const contactInputs = document.querySelectorAll('.contact__form-input')
@@ -34,8 +38,12 @@ const handleNav = () => {
     navBtn.classList.toggle('is-active');
     bannerSection.classList.toggle('banner--nav-active')
     aboutMeSection.classList.toggle('about-me--nav-active')
-    document.body.classList.toggle('stop-scrolling');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    offerSection.classList.toggle('offer--nav-active')
+    reviewsSection.classList.toggle('reviews--nav-active')
+    contactSection.classList.toggle('contact--nav-active')
+    footerSection.classList.toggle('footer--nav-active')
+    // document.body.classList.toggle('stop-scrolling');
+    // window.scrollTo({ top: 0, behavior: 'smooth' });
     
     navItems.forEach(item => {
 		item.addEventListener('click', () => {
@@ -43,7 +51,11 @@ const handleNav = () => {
             navBtn.classList.remove('is-active');
             bannerSection.classList.remove('banner--nav-active')
             aboutMeSection.classList.remove('about-me--nav-active')
-            document.body.classList.remove('stop-scrolling');
+            offerSection.classList.remove('offer--nav-active')
+    reviewsSection.classList.remove('reviews--nav-active')
+    contactSection.classList.remove('contact--nav-active')
+    footerSection.classList.remove('footer--nav-active')
+            // document.body.classList.remove('stop-scrolling');
 		})})
 }
 
@@ -146,3 +158,10 @@ document.addEventListener('invalid', (function () {
       document.getElementById("email").focus();
     };
   })(), true);
+
+  offerBtns.forEach((btn)=> {
+    btn.addEventListener('click', (e)=> {
+        e.target.closest('button').nextElementSibling.classList.toggle('offer__item-text-container--active');
+        btn.querySelector('i').classList.toggle('offer__item-btn-icon--active');
+    })
+  })
