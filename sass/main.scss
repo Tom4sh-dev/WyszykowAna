@@ -100,7 +100,6 @@ html {
 				animation: headerShowUp 1.5s;
 			}
 		}
-
 	}
 	.hamburger {
 		position: fixed;
@@ -240,6 +239,9 @@ html {
 		background-attachment: fixed;
 		overflow: hidden;
 		transition: transform 0.5s;
+		&--nav-active {
+			transform: translateX(-100%);
+		}
 
 		.textbox__text {
 			max-width: 700px;
@@ -247,15 +249,15 @@ html {
 
 		&__items-container {
 			width: 100%;
-			margin: 50px;
+			margin: 50px auto;
 		}
 		&__item {
 			margin: 0 auto;
 			max-width: 700px;
-			border-bottom: 1px solid rgba($color: $main-bright, $alpha: .3);
+			border-bottom: 1px solid rgba($color: $main-bright, $alpha: 0.2);
 		}
 		&__item:nth-child(1) {
-			border-top: 1px solid rgba($color: $main-bright, $alpha: .3);
+			border-top: 1px solid rgba($color: $main-bright, $alpha: 0.2);
 		}
 		&__item-btn {
 			display: flex;
@@ -269,9 +271,9 @@ html {
 			background-color: transparent;
 			border: none;
 			cursor: pointer;
-			transition: .3s;
+			transition: 0.3s;
 		}
-	
+
 		&__item-btn:hover {
 			padding-left: 40px;
 			padding-right: 40px;
@@ -281,42 +283,62 @@ html {
 		}
 		&__item-btn-icon {
 			font-size: 2rem;
-			transition: rotate .3s;
+			transition: rotate 0.3s;
 			&--active {
 				rotate: 180deg;
 			}
 		}
-		
+
 		&__item-text-container {
 			display: none;
-			margin: 20px;
+			margin: 50px 20px 20px;
 			text-align: left;
-			transition: display .3s;
+			transition: display 0.3s;
 			&--active {
 				display: block;
 			}
 		}
-		&--nav-active {
-			transform: translateX(-100%);
-		}
+		
 
 		&__description-list {
 			display: flex;
 			flex-direction: column;
 			margin-top: 30px;
-			// list-style: none;
-			
 		}
 		&__description-item {
 			margin: 10px;
 		}
-		
+
+		&__picture {
+			margin: 50px auto;
+			width: 90%;
+			max-width: 500px;
+			list-style: none;
+		}
+
+		&__picture-image {
+			width: 100%;
+			border-radius: 10px;
+			transition: scale .3s;
+			&:hover {
+				scale: 1.05;
+			}
+		}
+
+		&__subheading {
+			margin-bottom: 50px;
+			padding: 10px;
+			text-transform: uppercase;
+			letter-spacing: 4px;
+		}
+
 		&__illustration {
-			margin: 20px auto;
+			width: 90%;
+			max-width: 500px;
 		}
 
 		&__illustration-image {
-			width: 200px;
+			width: 100%;
 		}
 
 		// &__description-list--second {
