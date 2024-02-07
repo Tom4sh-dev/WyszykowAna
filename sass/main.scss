@@ -326,13 +326,14 @@ html {
 		}
 
 		&__subheading {
-			margin-bottom: 50px;
+			margin: 50px;
 			padding: 10px;
 			text-transform: uppercase;
 			letter-spacing: 4px;
 		}
 
 		&__illustration {
+			margin-bottom: 50px;
 			width: 90%;
 			max-width: 500px;
 		}
@@ -340,29 +341,6 @@ html {
 		&__illustration-image {
 			width: 100%;
 		}
-
-		// &__description-list--second {
-		// 	display: flex;
-		// 	flex-direction: column;
-		// 	list-style: none;
-		// }
-		// &__description-item--second {
-		// 	display: flex;
-		// 	align-items: center;
-		// 	width: 90%;
-		// 	max-width: 450px;
-		// 	flex-direction: column;
-		// 	transition: scale 0.3s;
-		// 	&:hover {
-		// 		scale: 1.1;
-		// 	}
-		// }
-		// &__list-image {
-		// 	margin-bottom: 20px;
-		// 	width: 100%;
-		// 	max-width: 400px;
-		// 	border-radius: 10px;
-		// }
 	}
 
 	// REVIEWS
@@ -560,7 +538,6 @@ html {
 
 .footer {
 	display: flex;
-	flex-wrap: wrap;
 	flex-direction: column;
 	justify-content: center;
 	margin: auto;

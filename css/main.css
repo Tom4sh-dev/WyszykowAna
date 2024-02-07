@@ -551,12 +551,13 @@ html {
   scale: 1.05;
 }
 .main .offer__subheading {
-  margin-bottom: 50px;
+  margin: 50px;
   padding: 10px;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
 .main .offer__illustration {
+  margin-bottom: 50px;
   width: 90%;
   max-width: 500px;
 }
@@ -752,7 +753,6 @@ html {
 
 .footer {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   margin: auto;
@@ -919,8 +919,16 @@ html {
   .main .contact__form-btn {
     font-size: 1.6rem;
   }
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
   .footer__text {
     font-size: 1.6rem;
+  }
+  .footer__copyright {
+    flex-basis: 100%;
   }
 }
 @media (min-width: 992px) {

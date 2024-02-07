@@ -27,7 +27,7 @@
 				}
 			}
 		}
-		.hamburger{
+		.hamburger {
 			top: 30px;
 		}
 	}
@@ -57,14 +57,14 @@
 
 		// OFFER
 		.offer {
-				&__description-list {
+			&__description-list {
 				margin-top: 50px;
-				}
+			}
 		}
 
 		// REVIEWS
 		.reviews {
-			.review-box{
+			.review-box {
 				margin: 40px 150px 20px;
 			}
 			.more-reviews {
@@ -79,10 +79,10 @@
 			&__form-label {
 				font-size: 1.6rem;
 			}
-			&__form-input{
+			&__form-input {
 				margin-bottom: 0px;
 			}
-			&__form-textarea{
+			&__form-textarea {
 				margin-bottom: 0px;
 			}
 			&__form-btn {
@@ -93,8 +93,15 @@
 
 	// FOOTER
 	.footer {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
 		&__text {
 			font-size: 1.6rem;
 		}
+		&__copyright {
+			flex-basis: 100%;
+		}
+		
 	}
 }
