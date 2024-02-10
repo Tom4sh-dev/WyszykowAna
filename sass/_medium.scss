@@ -92,16 +92,26 @@
 	}
 
 	// FOOTER
+	
 	.footer {
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
-		&__text {
-			font-size: 1.6rem;
+		&__logo {
+			flex-basis: 40%;
+		}
+		&__link-container {
+			margin-top: 0;
+			flex-basis: 60%;
+		}
+		&__link {
+			transition: scale .3s;
+			&:hover {
+				scale: 1.1;
+			}
+		}
+		&__social-media {
+			font-size: 3.5rem;
 		}
 		&__copyright {
-			flex-basis: 100%;
+			margin-top: 50px;
 		}
-		
 	}
-}
+	}
