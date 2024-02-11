@@ -335,7 +335,7 @@ html {
   padding: 20px;
   width: 100%;
   text-align: center;
-  background: rgba(250, 250, 250, 0.5);
+  z-index: -1;
 }
 .header .heading__logo-img {
   height: 40px;
@@ -644,11 +644,6 @@ html {
   color: #312244;
   border: 2px solid #312244;
   border-radius: 8px;
-  transition: color 0.3s, background-color 0.3s;
-}
-.main .reviews .more-reviews__link:hover {
-  color: #fafafa;
-  background-color: #272640;
 }
 .main .reviews .more-reviews__link .fa-brands {
   margin-right: 10px;
@@ -1169,6 +1164,13 @@ html {
   }
   .main .reviews .review-box {
     margin: 100px 50px 20px;
+  }
+  .main .reviews .more-reviews__link {
+    transition: color 0.3s, background-color 0.3s;
+  }
+  .main .reviews .more-reviews__link:hover {
+    color: #fafafa;
+    background-color: #272640;
   }
   .main .reviews .more-reviews__link .fa-brands {
     margin-right: 15px;

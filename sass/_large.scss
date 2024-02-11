@@ -192,6 +192,11 @@
 			}
 			.more-reviews {
 				&__link {
+					transition: color 0.3s, background-color 0.3s;
+				&:hover {
+					color: $main-bright;
+					background-color: #272640;
+				}
 					.fa-brands {
 						margin-right: 15px;
 					}
