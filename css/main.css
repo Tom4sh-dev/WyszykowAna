@@ -261,6 +261,10 @@ img, button, .footer__copyright {
           user-select: none;
 }
 
+button:focus, input:focus {
+  outline: none;
+}
+
 *,
 *::after,
 *::before {
@@ -324,11 +328,12 @@ html {
   text-decoration: none;
 }
 .header .heading {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  width: 80%;
+  width: 100%;
   text-align: center;
   background: rgba(250, 250, 250, 0.5);
 }
@@ -336,6 +341,11 @@ html {
   height: 40px;
   width: 40px;
   animation: logoShowUp 1.5s;
+}
+.header .heading .branding {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .header .heading .branding__name {
   font-size: 2rem;
@@ -384,6 +394,12 @@ html {
   padding: 10px;
   font-size: 2.5rem;
   color: #fafafa;
+}
+.main .banner .social-media__link .fa-brands {
+  transition: scale 0.3s;
+}
+.main .banner .social-media__link .fa-brands:hover {
+  scale: 1.1;
 }
 .main .banner__gradient {
   position: absolute;
@@ -466,6 +482,11 @@ html {
   background-image: linear-gradient(220deg, #065a60 0%, #312244 74%);
   border: none;
   border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.main .about-me__scroll-to-offer:hover {
+  letter-spacing: 2.5px;
 }
 .main .about-me__scroll-to-offer--active {
   animation: shake 0.5s;
@@ -584,10 +605,15 @@ html {
 }
 .main .reviews__textbox .review-box {
   position: relative;
-  margin: 40px 30px 20px;
+  margin: 40px 30px 10px;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 3px 3px 3px #ccc;
+  cursor: pointer;
+  transition: scale 0.3s;
+}
+.main .reviews__textbox .review-box:hover {
+  scale: 1.02;
 }
 .main .reviews__textbox .review-box__title {
   display: flex;
@@ -618,6 +644,11 @@ html {
   color: #312244;
   border: 2px solid #312244;
   border-radius: 8px;
+  transition: color 0.3s, background-color 0.3s;
+}
+.main .reviews .more-reviews__link:hover {
+  color: #fafafa;
+  background-color: #272640;
 }
 .main .reviews .more-reviews__link .fa-brands {
   margin-right: 10px;
@@ -787,25 +818,36 @@ html {
   margin-top: 30px;
   flex-basis: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
 }
 .footer__link {
+  margin: auto;
   padding: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
   color: #4f4f4f;
   font-size: 1.8rem;
   text-decoration: none;
+  transition: scale 0.3s;
 }
-.footer__mail {
-  flex-basis: 100%;
+.footer__link:hover {
+  scale: 1.1;
 }
-.footer__rules {
-  flex-basis: 100%;
+.footer__social-media-container {
+  margin-top: 10px;
 }
 .footer__social-media {
   margin: 10px 20px;
   font-size: 3rem;
   color: #312244;
+}
+.footer__social-media i {
+  transition: scale 0.3s;
+}
+.footer__social-media i:hover {
+  scale: 1.1;
 }
 .footer__copyright {
   font-size: 2rem;
@@ -957,12 +999,6 @@ html {
     margin-top: 0;
     flex-basis: 60%;
   }
-  .footer__link {
-    transition: scale 0.3s;
-  }
-  .footer__link:hover {
-    scale: 1.1;
-  }
   .footer__social-media {
     font-size: 3.5rem;
   }
@@ -1082,12 +1118,6 @@ html {
     margin: 0 50px;
     font-size: 4rem;
   }
-  .main .banner .social-media__link .fa-brands {
-    transition: scale 0.3s;
-  }
-  .main .banner .social-media__link .fa-brands:hover {
-    scale: 1.1;
-  }
   .main .banner__gradient {
     height: 200px;
   }
@@ -1122,11 +1152,6 @@ html {
   .main .about-me__scroll-to-offer {
     margin: 60px;
     height: 50px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .main .about-me__scroll-to-offer:hover {
-    letter-spacing: 2.5px;
   }
   .main .offer {
     text-align: center;
@@ -1144,21 +1169,9 @@ html {
   }
   .main .reviews .review-box {
     margin: 100px 50px 20px;
-    cursor: pointer;
-    transition: scale 0.3s;
-  }
-  .main .reviews .review-box:hover {
-    scale: 1.02;
-  }
-  .main .reviews .more-reviews__link {
-    transition: color 0.3s, background-color 0.3s;
   }
   .main .reviews .more-reviews__link .fa-brands {
     margin-right: 15px;
-  }
-  .main .reviews .more-reviews__link:hover {
-    color: #fafafa;
-    background-color: #272640;
   }
   .main .reviews .more-reviews__link:nth-child(4) {
     margin-bottom: 40px;

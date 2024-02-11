@@ -9,8 +9,6 @@
 		font-size: 3rem;
 	}
 
-
-
 	// HEADER
 
 	.header {
@@ -45,7 +43,7 @@
 			}
 			.item-logo {
 				display: block;
-				transition: scale .3s;
+				transition: scale 0.3s;
 				&__img {
 					height: 40px;
 					width: 40px;
@@ -124,12 +122,6 @@
 				&__link {
 					margin: 0 50px;
 					font-size: 4rem;
-					.fa-brands {
-						transition: scale 0.3s;
-						&:hover {
-							scale: 1.1;
-						}
-					}
 				}
 			}
 			&__gradient {
@@ -170,12 +162,6 @@
 			&__scroll-to-offer {
 				margin: 60px;
 				height: 50px;
-				cursor: pointer;
-				transition: 0.3s;
-
-				&:hover {
-					letter-spacing: 2.5px;
-				}
 			}
 		}
 
@@ -196,7 +182,6 @@
 				padding: 40px 10px 20px;
 				width: 30%;
 			}
-		
 		}
 
 		// REVIEWS
@@ -204,22 +189,13 @@
 		.reviews {
 			.review-box {
 				margin: 100px 50px 20px;
-				cursor: pointer;
-				transition: scale 0.3s;
-				&:hover {
-					scale: 1.02;
-				}
 			}
 			.more-reviews {
 				&__link {
-					transition: color 0.3s, background-color 0.3s;
 					.fa-brands {
 						margin-right: 15px;
 					}
-					&:hover {
-						color: $main-bright;
-						background-color: #272640;
-					}
+
 					&:nth-child(4) {
 						margin-bottom: 40px;
 					}
@@ -232,5 +208,4 @@
 	}
 
 	// FOOTER
-
 }

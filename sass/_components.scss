@@ -93,3 +93,6 @@
 img, button, .footer__copyright {
 	user-select: none;
 }
+button:focus, input:focus {
+	outline: none;
+}
