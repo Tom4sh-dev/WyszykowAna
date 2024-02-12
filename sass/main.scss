@@ -86,8 +86,10 @@ html {
 
 		.branding {
 			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
+			left: 80px;
+			right: 80px;
+			margin: auto;
+			width: fit-content;
 			
 			&__name {
 				font-size: 2rem;
@@ -142,10 +144,10 @@ html {
 			margin: 0 20px 40px;
 			&__link {
 				margin: 10px;
-				padding: 10px;
 				font-size: 2.5rem;
 				color: $main-bright;
 				.fa-brands {
+					padding: 10px;
 					transition: scale 0.3s;
 					&:hover {
 						scale: 1.1;
@@ -588,7 +590,7 @@ html {
 		border-radius: 50%;
 	}
 	&__link-container {
-		margin-top: 30px;
+		margin: 30px auto;
 		flex-basis: 100%;
 		display: flex;
 		flex-direction: column;
@@ -612,10 +614,11 @@ html {
 	}
 
 	&__social-media {
-		margin: 10px 20px;
+		margin: 0 20px;
 		font-size: 3rem;
 		color: $secondary-color;
 		& i {
+			padding: 10px;
 			transition: scale 0.3s;
 			&:hover {
 				scale: 1.1;
